@@ -1,0 +1,70 @@
+/* Custom styles for TipTap Editor */
+
+/* Two column content wrapper - displays content in 2 columns side by side */
+.tiptap-two-column-wrapper .ProseMirror .tiptap-two-column-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  column-gap: 2rem;
+  align-items: start;
+}
+
+/* Ensure content flows naturally in columns */
+.tiptap-two-column-wrapper .ProseMirror .tiptap-two-column-content > * {
+  grid-column: span 1;
+  break-inside: avoid;
+}
+
+/* Prevent images from breaking across columns */
+.tiptap-two-column-wrapper .ProseMirror .tiptap-two-column-content img {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent headings from breaking across columns */
+.tiptap-two-column-wrapper .ProseMirror .tiptap-two-column-content h1,
+.tiptap-two-column-wrapper .ProseMirror .tiptap-two-column-content h2,
+.tiptap-two-column-wrapper .ProseMirror .tiptap-two-column-content h3 {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* Style for displaying saved two-column content (when not in edit mode) */
+.tiptap-two-column-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  column-gap: 2rem;
+}
+
+.tiptap-two-column-content > * {
+  break-inside: avoid;
+}
+
+.tiptap-two-column-content img {
+  break-inside: avoid;
+  max-width: 100%;
+  height: auto;
+}
+
+.tiptap-two-column-content h1,
+.tiptap-two-column-content h2,
+.tiptap-two-column-content h3 {
+  break-after: avoid;
+}
+
+/* Color picker button active state */
+.color-picker-active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Alignment buttons */
+.alignment-button {
+  transition: all 0.2s ease;
+}
+
+.alignment-button:hover {
+  transform: scale(1.05);
+}

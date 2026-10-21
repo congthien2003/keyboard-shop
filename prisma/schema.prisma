@@ -1,0 +1,214 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid()) @db.Uuid
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  isActive  Boolean  @default(true)
+  role      String   @default("user")
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}
+
+model Category {
+  id         String              @id @default(uuid()) @db.Uuid
+  createdAt  DateTime            @default(now())
+  updatedAt  DateTime            @updatedAt
+  translates CategoryTranslate[]
+  products   Product[]
+}
+
+model CategoryTranslate {
+  id          String   @id @default(uuid()) @db.Uuid
+  categoryId  String   @db.Uuid
+  lang        String
+  name        String
+  description String   @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  slug        String   @default("")
+
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@unique([categoryId, lang])
+}
+
+model Product {
+  id           String             @id @default(uuid()) @db.Uuid
+  thumbnail    String
+  image        String
+  status       Int
+  viewCount    Int                @default(0)
+  rating       Float              @default(0)
+  categoryId   String             @db.Uuid
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+  slug         String             @default("")
+  category     Category           @relation(fields: [categoryId], references: [id])
+  translates   ProductTranslate[]
+  orderDetails OrderDetail[]
+
+  @@index([slug])
+}
+
+model ProductTranslate {
+  id            String   @id @default(uuid()) @db.Uuid
+  productId     String   @db.Uuid
+  lang          String
+  name          String
+  description   String   @db.Text
+  info          String   @db.Text
+  price         Float
+  originalPrice Float
+  fromCountry   String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  weight        String   @default("")
+  unit          String   @default("")
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, lang])
+}
+
+model News {
+  id          String          @id @default(uuid()) @db.Uuid
+  image       String
+  published   Boolean         @default(false)
+  slug        String          @unique
+  timeReading Int?
+  authorId    String?         @db.Uuid
+  categoryId  String?         @db.Uuid
+  viewCount   Int?
+  likeCount   Int?
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime?       @updatedAt
+  translates  NewsTranslate[]
+
+  @@index([published])
+  @@index([createdAt])
+}
+
+model NewsTranslate {
+  id        String    @id @default(uuid()) @db.Uuid
+  newsId    String    @db.Uuid
+  lang      String
+  title     String
+  excerpt   String    @db.Text
+  content   String    @db.Text
+  tags      String    @db.Text
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+
+  news News @relation(fields: [newsId], references: [id], onDelete: Cascade)
+
+  @@unique([newsId, lang])
+  @@index([newsId])
+  @@index([lang])
+}
+
+model Contact {
+  id        String   @id @default(uuid()) @db.Uuid
+  name      String
+  email     String
+  phone     String
+  message   String?  @db.Text
+  status    Int      @default(0)
+  note      String?  @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  priority  Int      @default(0)
+
+  @@index([email])
+  @@index([phone])
+  @@index([status])
+  @@index([createdAt])
+}
+
+// ============================================
+// ORDER MANAGEMENT MODELS
+// ============================================
+
+model Order {
+  id      String  @id @default(uuid()) @db.Uuid
+  name    String
+  phone   String
+  email   String?
+  address String  @db.Text
+
+  message String? @db.Text
+  note    String? @db.Text
+
+  subtotal    Float
+  shippingFee Float @default(0)
+  discount    Float @default(0)
+  totalAmount Float
+
+  couponCode   String?
+  discountType String?
+
+  // 0 = PENDING
+  // 1 = CONFIRMED
+  // 2 = PROCESSING
+  // 3 = SHIPPING
+  // 4 = DELIVERED
+  // 5 = RETURNING
+  // 6 = RETURNED
+  // 7 = CANCELLED
+  orderStatus Int @default(0)
+
+  // 0 = UNPAID
+  // 1 = PENDING
+  // 2 = PAID
+  // 3 = REFUNDED
+  // 4 = FAILED
+  paymentStatus Int @default(0)
+
+  paymentMethod String    @default("COD")
+  paidAt        DateTime?
+
+  shippingMethod    String?
+  trackingNumber    String?
+  estimatedDelivery DateTime?
+  deliveredAt       DateTime?
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  cancelledAt DateTime?
+
+  orderDetails OrderDetail[]
+
+  @@index([phone])
+  @@index([email])
+  @@index([orderStatus])
+  @@index([paymentStatus])
+  @@index([createdAt])
+}
+
+model OrderDetail {
+  id        String @id @default(uuid()) @db.Uuid
+  orderId   String @db.Uuid
+  productId String @db.Uuid
+
+  price      Float
+  quantity   Int
+  totalPrice Float
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  order   Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id])
+
+  @@index([orderId])
+  @@index([productId])
+}

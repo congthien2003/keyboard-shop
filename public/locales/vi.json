@@ -1,0 +1,1144 @@
+{
+  "about": {
+    "title": "Về FreshFruit",
+    "subtitle": "Nhà Cung Cấp Trái Cây Sỉ Lẻ Đáng Tin Cậy Từ Năm 2012",
+    "description": "FreshFruit chuyên cung cấp trái cây nội địa tươi ngon, chất lượng cao cho các đại lý, cửa hàng và doanh nghiệp. Với hơn 12 năm kinh nghiệm, chúng tôi đã xây dựng mối quan hệ bền chặt với các nông dân và nhà cung cấp đáng tin cậy để đảm bảo mỗi trái cây đều đáp ứng tiêu chuẩn chất lượng nghiêm ngặt của chúng tôi.",
+    "mission": "Sứ mệnh của FreshFruit là cung cấp trái cây nội địa tươi ngon với giá bỏ sỉ cạnh tranh, hỗ trợ các đại lý và cửa hàng phát triển kinh doanh hiệu quả.",
+    "whyChoose": {
+      "title": "Tại Sao Lựa Chọn FreshFruit?",
+      "subtitle": "Những lý do khiến FreshFruit trở thành lựa chọn hàng đầu của đại lý và cửa hàng",
+      "item1": {
+        "question": "Tại sao nên chọn trái cây bỏ sỉ của FreshFruit?",
+        "answer": "FreshFruit chuyên cung cấp trái cây nội địa tươi ngon từ các vùng miền nổi tiếng của Việt Nam. Mỗi sản phẩm đều được tuyển chọn kỹ lưỡng về chất lượng và độ tươi ngon, phù hợp cho kinh doanh sỉ lẻ."
+      },
+      "item2": {
+        "question": "Làm thế nào FreshFruit đảm bảo chất lượng sản phẩm?",
+        "answer": "Chúng tôi có quy trình kiểm tra chất lượng nghiêm ngặt từ khâu thu mua đến khi giao hàng. Tất cả sản phẩm đều có xuất xứ rõ ràng và đảm bảo an toàn thực phẩm."
+      },
+      "item3": {
+        "question": "FreshFruit có giao hàng tận nơi cho đại lý không?",
+        "answer": "Có, chúng tôi cung cấp dịch vụ giao hàng tận nơi trong ngày cho các đại lý, cửa hàng và doanh nghiệp. Đóng gói cẩn thận để đảm bảo trái cây luôn tươi ngon khi đến tay khách hàng."
+      },
+      "item4": {
+        "question": "Chính sách đổi trả của FreshFruit như thế nào?",
+        "answer": "Nếu bạn không hài lòng với chất lượng sản phẩm, chúng tôi sẽ đổi mới hoặc hoàn tiền trong vòng 24 giờ kể từ khi nhận hàng. Đặc biệt hỗ trợ tốt cho các đại lý lâu năm."
+      }
+    },
+    "banner": {
+      "title": "FreshFruit - Trái Cây Nội Địa Sỉ/Lẻ",
+      "subtitle": "Cung cấp trái cây tươi ngon cho đại lý và cửa hàng",
+      "description": "Với hơn 12 năm kinh nghiệm, FreshFruit tự hào là đối tác tin cậy cung cấp trái cây nội địa tươi ngon cho nhiều đại lý và cửa hàng trên toàn quốc.",
+      "cta": "Liên Hệ Bỏ Sỉ"
+    },
+    "qualityCommitment": {
+      "title": "Cam Kết Chất Lượng",
+      "subtitle": "FreshFruit cam kết mang đến những sản phẩm tốt nhất cho đại lý",
+      "item1": {
+        "title": "Xuất Xứ Rõ Ràng",
+        "description": "Tất cả sản phẩm đều có xuất xứ rõ ràng từ các vùng miền nổi tiếng của Việt Nam và đảm bảo an toàn thực phẩm"
+      },
+      "item2": {
+        "title": "Kiểm Tra Nghiêm Ngặt",
+        "description": "Mỗi lô hàng được kiểm tra kỹ lưỡng về chất lượng, độ tươi và an toàn trước khi giao cho đại lý"
+      },
+      "item3": {
+        "title": "Bảo Quản Tối Ưu",
+        "description": "Hệ thống bảo quản lạnh chuyên nghiệp đảm bảo trái cây luôn giữ được độ tươi ngon tối đa cho kinh doanh"
+      },
+      "item4": {
+        "title": "Giao Hàng An Toàn",
+        "description": "Đóng gói cẩn thận, vận chuyển nhanh chóng với phương tiện chuyên dụng để giữ nguyên chất lượng cho đại lý"
+      }
+    },
+    "story": {
+      "title": "Câu Chuyện Của FreshFruit",
+      "subtitle": "Hành trình 12 năm phát triển",
+      "content": "Được thành lập vào năm 2012, FreshFruit bắt đầu như một doanh nghiệp gia đình nhỏ với mục tiêu đơn giản: cung cấp trái cây nội địa tươi ngon cho các đại lý và cửa hàng. Từ những ngày đầu với chỉ vài loại trái cây cơ bản, chúng tôi đã không ngừng mở rộng và phát triển mạng lưới đối tác.",
+      "milestone1": {
+        "year": "2012",
+        "title": "Thành Lập",
+        "description": "FreshFruit được thành lập với tầm nhìn cung cấp trái cây nội địa tươi ngon cho các đại lý"
+      },
+      "milestone2": {
+        "year": "2015",
+        "title": "Mở Rộng",
+        "description": "Mở rộng danh mục sản phẩm và thiết lập quan hệ đối tác với các nông trại uy tín"
+      },
+      "milestone3": {
+        "year": "2020",
+        "title": "Phát Triển Online",
+        "description": "Phát triển hệ thống bán hàng online và giao hàng tận nơi cho đại lý"
+      },
+      "milestone4": {
+        "year": "2025",
+        "title": "Hiện Tại",
+        "description": "Trở thành nhà cung cấp tin cậy với nhiều đại lý và cửa hàng hài lòng"
+      }
+    },
+    "values": {
+      "title": "Giá Trị Của Chúng Tôi",
+      "quality": {
+        "title": "Chất Lượng Đầu Tiên",
+        "description": "Mỗi trái cây được kiểm tra cẩn thận để đáp ứng tiêu chuẩn cao cho đại lý"
+      },
+      "sustainability": {
+        "title": "Hợp Tác Lâu Dài",
+        "description": "Chúng tôi xây dựng mối quan hệ hợp tác bền vững với các đại lý và nông trại"
+      },
+      "community": {
+        "title": "Hỗ Trợ Đại Lý",
+        "description": "Hỗ trợ các đại lý phát triển kinh doanh và đóng góp cho cộng đồng"
+      }
+    }
+  },
+  "admin": {
+    "login": {
+      "title": "Admin Dashboard",
+      "subtitle": "Đăng nhập để quản lý hệ thống",
+      "password": "Mật khẩu",
+      "passwordPlaceholder": "Nhập mật khẩu",
+      "submit": "Đăng nhập",
+      "error": "Mật khẩu không đúng",
+      "footer": "© 2025 FreshFruit - Trái Cây Tươi Ngon",
+      "username": "Tên đăng nhập",
+      "usernamePlaceholder": "Nhập tên đăng nhập"
+    },
+    "sidebar": {
+      "adminPanel": "Admin Panel",
+      "dashboard": "Tổng quan",
+      "categories": "Danh mục",
+      "products": "Sản phẩm",
+      "news": "Tin tức",
+      "orders": "Đơn hàng",
+      "contacts": "Liên hệ",
+      "backToSite": "Về trang chủ",
+      "logout": "Đăng xuất"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Tổng quan hệ thống",
+      "totalProducts": "Tổng sản phẩm",
+      "totalOrders": "Đơn hàng",
+      "totalRevenue": "Doanh thu",
+      "totalContacts": "Liên hệ",
+      "totalNews": "Tin tức",
+      "activeUsers": "Khách truy cập",
+      "recentOrders": "Đơn hàng gần đây"
+    },
+    "categories": {
+      "title": "Quản lý danh mục",
+      "subtitle": "Quản lý danh mục sản phẩm",
+      "search": "Tìm kiếm danh mục...",
+      "addNew": "Thêm danh mục",
+      "edit": "Sửa danh mục",
+      "nameEn": "Tên (English)",
+      "nameVi": "Tên (Tiếng Việt)",
+      "descEn": "Mô tả (English)",
+      "descVi": "Mô tả (Tiếng Việt)",
+      "confirmDelete": "Bạn có chắc muốn xóa danh mục này?",
+      "noData": "Chưa có danh mục nào",
+      "createdAt": "Ngày tạo",
+      "updatedAt": "Ngày cập nhật",
+      "slug": "Slug",
+      "actions": "Thao tác",
+      "all": "Tất cả"
+    },
+    "products": {
+      "title": "Quản lý sản phẩm",
+      "subtitle": "Quản lý sản phẩm",
+      "search": "Tìm kiếm sản phẩm...",
+      "addNew": "Thêm sản phẩm",
+      "edit": "Sửa sản phẩm",
+      "category": "Danh mục",
+      "selectCategory": "Chọn danh mục",
+      "categoryRequired": "Vui lòng chọn danh mục",
+      "name": "Tên",
+      "nameRequired": "Vui lòng nhập tên sản phẩm",
+      "nameEn": "Tên (English)",
+      "nameVi": "Tên (Tiếng Việt)",
+      "infoEn": "Thông tin (English)",
+      "infoVi": "Thông tin (Tiếng Việt)",
+      "descEn": "Mô tả (English)",
+      "descVi": "Mô tả (Tiếng Việt)",
+      "slug": "Slug",
+      "price": "Giá",
+      "priceRequired": "Vui lòng nhập giá",
+      "originalPrice": "Giá gốc",
+      "weight": "Khối lượng",
+      "weightVi": "Khối lượng (Tiếng Việt)",
+      "weightEn": "Khối lượng (English)",
+      "quantity": "Số lượng",
+      "countPerUnit": "Số lượng mỗi đơn vị",
+      "unit": "Đơn vị",
+      "unitEn": "Đơn vị (English)",
+      "unitVi": "Đơn vị (Tiếng Việt)",
+      "originEn": "Xuất xứ (English)",
+      "originVi": "Xuất xứ (Tiếng Việt)",
+      "status": "Trạng thái",
+      "statusContact": "Liên hệ",
+      "statusActive": "Còn hàng",
+      "statusDirect": "Mua trực tiếp",
+      "statusOutOfStock": "Hết hàng",
+      "statusRequired": "Vui lòng chọn trạng thái",
+      "image": "Hình ảnh chính",
+      "images": "Hình ảnh phụ (Gallery)",
+      "featured": "Sản phẩm nổi bật",
+      "createdAt": "Ngày tạo",
+      "confirmDelete": "Bạn có chắc muốn xóa sản phẩm này?",
+      "noData": "Chưa có sản phẩm nào",
+      "slugHint": "/ten-san-pham",
+      "rating": "Đánh giá",
+      "viewCount": "Lượt xem",
+      "ratingHint": "Đánh giá từ 0.0 đến 5.0",
+      "viewCountHint": "Lượt xem",
+      "updatedAt": "Ngày cập nhật",
+      "infoPlaceholder": "Nhập thông tin sản phẩm",
+      "dragToReorder": "Kéo thả để sắp xếp lại thứ tự ảnh"
+    },
+    "news": {
+      "title": "Quản lý tin tức",
+      "subtitle": "Quản lý tin tức",
+      "search": "Tìm kiếm tin tức...",
+      "addNew": "Thêm tin tức",
+      "edit": "Sửa tin tức",
+      "titleEn": "Tiêu đề (English)",
+      "titleVi": "Tiêu đề (Tiếng Việt)",
+      "excerptEn": "Tóm tắt (English)",
+      "excerptVi": "Tóm tắt (Tiếng Việt)",
+      "contentEn": "Nội dung (English)",
+      "contentVi": "Nội dung (Tiếng Việt)",
+      "image": "Hình ảnh",
+      "published": "Đã xuất bản",
+      "draft": "Nháp",
+      "publishNow": "Xuất bản ngay",
+      "confirmDelete": "Bạn có chắc muốn xóa tin tức này?",
+      "noData": "Chưa có tin tức nào",
+      "noResults": "Không tìm thấy tin tức nào",
+      "table": {
+        "image": "Hình ảnh",
+        "title": "Tiêu đề",
+        "status": "Trạng thái",
+        "timeReading": "Thời gian đọc",
+        "createdAt": "Ngày tạo",
+        "viewCount": "Lượt xem",
+        "actions": "Thao tác",
+        "noImage": "Không có ảnh",
+        "minutes": "phút",
+        "page": "Trang"
+      }
+    },
+    "orders": {
+      "title": "Quản lý đơn hàng",
+      "subtitle": "Quản lý đơn hàng",
+      "search": "Tìm kiếm đơn hàng...",
+      "orderId": "Mã đơn",
+      "customer": "Khách hàng",
+      "customerInfo": "Thông tin khách hàng",
+      "name": "Họ tên",
+      "phone": "Số điện thoại",
+      "email": "Email",
+      "address": "Địa chỉ",
+      "total": "Tổng tiền",
+      "status": "Trạng thái",
+      "allStatus": "Tất cả",
+      "pending": "Chờ xử lý",
+      "processing": "Đang xử lý",
+      "completed": "Hoàn thành",
+      "cancelled": "Đã hủy",
+      "date": "Ngày",
+      "orderDetail": "Chi tiết đơn hàng",
+      "items": "Sản phẩm",
+      "summary": "Tổng kết",
+      "subtotal": "Tạm tính",
+      "shipping": "Phí vận chuyển",
+      "notes": "Ghi chú",
+      "paid": "Đã thanh toán",
+      "noData": "Chưa có đơn hàng nào"
+    },
+    "contacts": {
+      "title": "Quản lý liên hệ",
+      "subtitle": "Quản lý {totalContacts} liên hệ",
+      "search": "Tìm kiếm liên hệ...",
+      "contactDetail": "Chi tiết liên hệ",
+      "contactInfo": "Thông tin liên hệ",
+      "name": "Họ tên",
+      "phone": "Số điện thoại",
+      "email": "Email",
+      "subject": "Chủ đề",
+      "message": "Tin nhắn",
+      "status": "Trạng thái",
+      "priority": "Độ ưu tiên",
+      "allStatus": "Tất cả trạng thái",
+      "open": "Mới",
+      "inProgress": "Đang xử lý",
+      "closed": "Đã xử lý",
+      "new": "Mới",
+      "read": "Đã đọc",
+      "replied": "Đã trả lời",
+      "date": "Ngày tạo",
+      "note": "Ghi chú",
+      "notePlaceholder": "Thêm ghi chú cho liên hệ này...",
+      "reply": "Trả lời",
+      "call": "Gọi điện",
+      "confirmDelete": "Bạn có chắc muốn xóa liên hệ này?",
+      "noData": "Chưa có liên hệ nào",
+      "table": {
+        "customer": "Khách hàng",
+        "message": "Tin nhắn",
+        "status": "Trạng thái",
+        "priority": "Độ ưu tiên",
+        "date": "Ngày",
+        "actions": "Thao tác",
+        "note": "Ghi chú"
+      }
+    },
+    "search": "Tìm kiếm...",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "view": "Xem",
+    "cancel": "Hủy",
+    "create": "Tạo mới",
+    "update": "Cập nhật",
+    "save": "Lưu",
+    "actions": "Thao tác",
+    "previous": "Trước",
+    "next": "Sau",
+    "loading": "Đang tải...",
+    "saving": "Đang lưu...",
+    "pagination": {
+      "showing": "Hiển thị {start} đến {end} của {total} kết quả",
+      "page": "Trang {page} trên {totalPages}"
+    }
+  },
+  "cart": {
+    "title": "Giỏ Hàng",
+    "empty": "Giỏ hàng trống.",
+    "orderInfo": "Thông Tin Đặt Hàng",
+    "name": "Họ và Tên",
+    "phone": "Số Điện Thoại",
+    "email": "Email (tùy chọn)",
+    "address": "Địa Chỉ",
+    "note": "Ghi Chú (tuỳ chọn)",
+    "subtotal": "Tạm tính",
+    "shipping": "Phí vận chuyển",
+    "total": "Tổng cộng",
+    "placeOrder": "Đặt Hàng",
+    "processing": "Đang xử lý...",
+    "remove": "Xóa",
+    "success": "Đặt hàng thành công!\nChúng tôi sẽ liên hệ sớm.",
+    "summary": "Tóm tắt đơn hàng",
+    "error": {
+      "validation": "Vui lòng kiểm tra lại thông tin của bạn.",
+      "submit": "Đặt hàng thất bại! Vui lòng thử lại.",
+      "emptyCart": "Giỏ hàng trống!",
+      "invalidItems": "Có sản phẩm không hợp lệ trong giỏ hàng",
+      "nameRequired": "Vui lòng nhập họ tên của bạn.",
+      "nameMinLength": "Họ tên phải có ít nhất 2 ký tự.",
+      "phoneRequired": "Vui lòng nhập số điện thoại của bạn.",
+      "phoneInvalid": "Số điện thoại không hợp lệ (ví dụ: 0912345678 hoặc +84912345678).",
+      "emailInvalid": "Địa chỉ email không hợp lệ.",
+      "addressRequired": "Vui lòng nhập địa chỉ của bạn.",
+      "addressMinLength": "Địa chỉ phải có ít nhất 10 ký tự."
+    }
+  },
+  "common": {
+    "brandName": "Trái Cây FreshFruit",
+    "nav": {
+      "home": "Trang Chủ",
+      "about": "Giới Thiệu",
+      "products": "Sản Phẩm",
+      "news": "Tin Tức",
+      "contact": "Liên Hệ",
+      "cart": "Giỏ hàng"
+    },
+    "footer": {
+      "brand": "FreshFruit",
+      "description": "FreshFruit - Nhà cung cấp sỉ/lẻ trái cây nội địa chất lượng cao đáng tin cậy",
+      "companyName": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ FreshFruit",
+      "companyTaxCode": "0311956020",
+      "companyAddress": "980/4 Hậu Giang, Phường Phú Lâm, Thành phố Hồ Chí Minh, Việt Nam",
+      "branchName": "CHI NHÁNH - CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ FreshFruit",
+      "branchTaxCode": "0311956020-002",
+      "branchAddress": "135 Đường 26, Phường Bình Phú, Thành phố Hồ Chí Minh, Việt Nam",
+      "branchPhone": "0358 244 698",
+      "taxCode": "Mã số thuế",
+      "phone": "Điện thoại",
+      "email": "Email",
+      "emailValue": "khangmyfruit.contact@gmail.com",
+      "contactInfo": "Thông Tin Liên Hệ",
+      "office": "Văn phòng",
+      "officeValue": "980/4 Hậu Giang, Phường Phú Lâm, Thành phố Hồ Chí Minh, Việt Nam",
+      "address": "Địa chỉ",
+      "agency": "Chi Nhánh",
+      "agencyValue": "CHI NHÁNH - CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ FreshFruit",
+      "taxCodeValue": "0311956020",
+      "agencyTaxCodeValue": "0311956020-002",
+      "addressValue": "135 Đường 26, Phường Phú Lâm, Thành phố Hồ Chí Minh, Việt Nam",
+      "phoneValue": "0358 244 698",
+      "quickLinks": "Liên Kết Nhanh",
+      "followUs": "Theo Dõi Chúng Tôi",
+      "newsletter": "Bản Tin",
+      "newsletterText": "Đăng ký để nhận ưu đãi đặc biệt và cập nhật",
+      "subscribe": "Đăng Ký",
+      "copyright": "© 2025 Trái Cây FreshFruit",
+      "companyInfo": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ FreshFruit | MST: 0311956020",
+      "operationDate": "Ngày hoạt động: 04/09/2012",
+      "policies": "Chính sách",
+      "policy": {
+        "privacy": "Chính sách bảo mật",
+        "delivery": "Chính sách giao hàng",
+        "orderGuide": "Hướng dẫn đặt hàng"
+      },
+      "contactSupportTitle": "Liên hệ hỗ trợ"
+    },
+    "banner": {
+      "badge": "Ưu Đãi Bỏ Sỉ",
+      "title": "FreshFruit - Giá Bỏ Sỉ Ưu Đãi Cho Tất Cả Trái Cây Nội Địa",
+      "description": "Khám phá bộ sưu tập trái cây nội địa tươi ngon của FreshFruit với giá bỏ sỉ cạnh tranh. Liên hệ ngay để được tư vấn!",
+      "cta": "Liên Hệ Bỏ Sỉ"
+    },
+    "faq": {
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Tìm câu trả lời cho những câu hỏi phổ biến nhất",
+      "q1": {
+        "question": "Trái cây của bạn có tươi không?",
+        "answer": "Có, chúng tôi nhập hàng trực tiếp từ các nông trại đối tác mỗi ngày. Tất cả trái cây được kiểm tra kỹ lưỡng về chất lượng và độ tươi trước khi giao cho khách hàng bỏ sỉ."
+      },
+      "q2": {
+        "question": "Bạn có giao hàng cho đại lý không?",
+        "answer": "Có, chúng tôi cung cấp dịch vụ giao hàng cho các đại lý, cửa hàng và doanh nghiệp. Giao hàng trong ngày cho đơn hàng đặt trước 12 giờ trưa. Phí giao hàng được tính dựa trên khoảng cách và số lượng."
+      },
+      "q3": {
+        "question": "Giá bỏ sỉ như thế nào?",
+        "answer": "Chúng tôi cung cấp giá bỏ sỉ cạnh tranh cho các đại lý. Giá sẽ được điều chỉnh theo số lượng đặt hàng và tần suất mua hàng. Vui lòng liên hệ để được báo giá chi tiết."
+      },
+      "q4": {
+        "question": "Có chính sách đổi trả cho đại lý không?",
+        "answer": "Có, chúng tôi có chính sách đổi trả linh hoạt cho đại lý. Nếu không hài lòng với chất lượng sản phẩm, vui lòng liên hệ trong vòng 24 giờ để được hỗ trợ đổi hàng hoặc hoàn tiền."
+      },
+      "q5": {
+        "question": "Có hỗ trợ tư vấn cho đại lý mới không?",
+        "answer": "Có, chúng tôi có đội ngũ tư vấn chuyên nghiệp hỗ trợ đại lý mới về cách bảo quản, trưng bày và kinh doanh trái cây hiệu quả. Chúng tôi cũng cung cấp tài liệu hướng dẫn chi tiết."
+      }
+    },
+    "quality": {
+      "title": "Cam Kết Chất Lượng",
+      "subtitle": "Chúng tôi đảm bảo mang đến cho bạn những sản phẩm tốt nhất",
+      "item1": {
+        "title": "Chứng Nhận Chất Lượng",
+        "description": "Tất cả sản phẩm đều có chứng nhận an toàn thực phẩm và xuất xứ rõ ràng"
+      },
+      "item2": {
+        "title": "Hữu Cơ & Tự Nhiên",
+        "description": "Ưu tiên các sản phẩm hữu cơ, không hóa chất độc hại"
+      },
+      "item3": {
+        "title": "Kiểm Tra Nghiêm Ngặt",
+        "description": "Mỗi lô hàng được kiểm tra kỹ lưỡng trước khi đến tay khách hàng"
+      },
+      "item4": {
+        "title": "Giao Hàng An Toàn",
+        "description": "Đóng gói cẩn thận, vận chuyển nhanh chóng để giữ độ tươi"
+      }
+    },
+    "partners": {
+      "title": "Đối Tác Của Chúng Tôi",
+      "subtitle": "Hợp tác với các thương hiệu uy tín hàng đầu"
+    },
+    "ads": {
+      "specialOffer": {
+        "title": "Ưu Đãi Bỏ Sỉ Đặc Biệt",
+        "description": "Giảm 10% cho đơn hàng trên 100kg",
+        "cta": "Liên Hệ Ngay"
+      },
+      "dailyDelivery": {
+        "title": "Giao Hàng Tươi Mỗi Ngày",
+        "description": "Giao hàng trong ngày cho tất cả đại lý",
+        "cta": "Tìm Hiểu Thêm"
+      },
+      "qualityGuarantee": {
+        "title": "Cam Kết Chất Lượng",
+        "description": "100% hài lòng hoặc hoàn tiền",
+        "cta": "Xem Sản Phẩm"
+      }
+    },
+    "testimonials": {
+      "title": "Đại Lý Nói Gì Về Chúng Tôi",
+      "subtitle": "Nhiều đại lý tin tưởng và hợp tác lâu dài với chúng tôi",
+      "customer1": {
+        "name": "Nguyễn Văn Thành",
+        "role": "Chủ Cửa Hàng Trái Cây",
+        "content": "Làm đại lý với FreshFruit đã 3 năm, tôi rất hài lòng với chất lượng trái cây và dịch vụ. Giá bỏ sỉ cạnh tranh, giao hàng đúng hẹn. Khách hàng của tôi luôn khen trái cây tươi ngon!"
+      },
+      "customer2": {
+        "name": "Trần Thị Thu Hà",
+        "role": "Chủ Siêu Thị Mini",
+        "content": "FreshFruit là nhà cung cấp đáng tin cậy của tôi. Trái cây luôn tươi, giá cả hợp lý, dịch vụ chuyên nghiệp. Hỗ trợ tư vấn rất nhiệt tình, giúp tôi kinh doanh hiệu quả hơn."
+      },
+      "customer3": {
+        "name": "Lê Văn Dũng",
+        "role": "Đại Lý Mới",
+        "content": "Mới bắt đầu kinh doanh trái cây và được giới thiệu đến FreshFruit. Rất ấn tượng với chất lượng sản phẩm và dịch vụ hỗ trợ. Đội ngũ tư vấn hướng dẫn tận tình, giúp tôi nhanh chóng ổn định kinh doanh."
+      }
+    },
+    "new": "Mới",
+    "origin": "Xuất xứ",
+    "addToCart": "Thêm vào giỏ hàng",
+    "pagination": {
+      "previous": "Trước",
+      "next": "Tiếp"
+    },
+    "notFound": {
+      "title": "404 - Trang không tìm thấy",
+      "heading": "404",
+      "message": "Trang bạn đang tìm kiếm không tồn tại",
+      "description": "Xin lỗi, trang bạn đang tìm kiếm có thể đã bị xóa hoặc địa chỉ URL không chính xác.",
+      "goHome": "Về Trang Chủ",
+      "goProducts": "Xem Sản Phẩm",
+      "searchProducts": "Tìm Kiếm Sản Phẩm"
+    }
+  },
+  "contact": {
+    "title": "Liên Hệ Bỏ Sỉ",
+    "subtitle": "Liên hệ với chúng tôi để được tư vấn về dịch vụ bỏ sỉ",
+    "hero-title": "Liên Hệ Chúng Tôi",
+    "hero-subtitle": "Chúng tôi rất mong nhận được tin nhắn từ bạn",
+    "formTitle": "Gửi Tin Nhắn Cho Chúng Tôi",
+    "name": "Họ và Tên",
+    "email": "Địa Chỉ Email",
+    "phone": "Số Điện Thoại",
+    "message": "Tin Nhắn",
+    "submit": "Gửi Tin Nhắn",
+    "submitting": "Đang gửi...",
+    "info": {
+      "title": "Thông Tin Liên Hệ",
+      "address": "980/4 Hậu Giang, Phường Phú Lâm, Thành phố Hồ Chí Minh, Việt Nam",
+      "phone": "0358 244 698",
+      "email": "khangmyfruit.contact@gmail.com",
+      "hours": "Thứ 2-7: 8 Giờ Sáng - 8 Giờ Tối"
+    },
+    "success": "Cảm ơn bạn đã gửi tin nhắn! Chúng tôi sẽ liên hệ lại với bạn sớm nhất.",
+    "error": {
+      "validation": "Vui lòng kiểm tra lại thông tin của bạn.",
+      "submit": "Đã có lỗi xảy ra. Vui lòng thử lại sau.",
+      "nameRequired": "Vui lòng nhập họ tên của bạn.",
+      "nameMinLength": "Họ tên phải có ít nhất 2 ký tự.",
+      "emailRequired": "Vui lòng nhập địa chỉ email của bạn.",
+      "emailInvalid": "Địa chỉ email không hợp lệ.",
+      "phoneRequired": "Vui lòng nhập số điện thoại của bạn.",
+      "phoneInvalid": "Số điện thoại không hợp lệ (ví dụ: 0912345678 hoặc +84912345678).",
+      "messageRequired": "Vui lòng nhập nội dung tin nhắn.",
+      "messageMinLength": "Nội dung tin nhắn phải có ít nhất 10 ký tự."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Trái Cây Nội Địa Tươi Ngon",
+      "subtitle": "Nhà Cung Cấp Giao Sỉ/Lẻ Trái Cây Việt Nam Chất Lượng Cao",
+      "description": "Chuyên cung cấp trái cây nội địa tươi ngon cho các đại lý, cửa hàng và doanh nghiệp. Cam kết chất lượng và giá cả cạnh tranh.",
+      "cta": "Liên Hệ Bỏ Sỉ",
+      "ctaSecondary": "Xem Sản Phẩm"
+    },
+    "features": {
+      "title": "Tại Sao Chọn Chúng Tôi",
+      "feature1": {
+        "title": "Chất Lượng Đảm Bảo",
+        "description": "Trái cây được chọn lọc từ các vùng miền nổi tiếng của Việt Nam"
+      },
+      "feature2": {
+        "title": "Tươi Mỗi Ngày",
+        "description": "Nhập hàng trực tiếp từ nông trại, đảm bảo độ tươi tối đa"
+      },
+      "feature3": {
+        "title": "Giá Bỏ Sỉ Cạnh Tranh",
+        "description": "Giá cả hợp lý cho đại lý, cửa hàng và doanh nghiệp"
+      },
+      "feature4": {
+        "title": "Dịch Vụ Chuyên Nghiệp",
+        "description": "Hỗ trợ tư vấn và giao hàng tận nơi cho khách hàng bỏ sỉ"
+      }
+    },
+    "localFruitsWholesale": {
+      "title": "Trái Cây Nội Địa Sỉ/Lẻ",
+      "subtitle": "FreshFruit - Chuyên cung cấp trái cây nội địa tươi ngon cho đại lý và cửa hàng",
+      "new": "Mới",
+      "origin": "Xuất xứ",
+      "addToCart": "Liên Hệ",
+      "viewAll": "Xem Tất Cả Sản Phẩm"
+    },
+    "localFruits": {
+      "title": "Trái Cây Theo Vùng Miền",
+      "subtitle": "Đa dạng trái cây từ các vùng miền khác nhau của Việt Nam với hương vị đặc trưng",
+      "viewAll": "Xem Tất Cả Trái Cây Theo Vùng"
+    },
+    "seasonalFruits": {
+      "title": "Trái Cây Theo Mùa",
+      "subtitle": "Thưởng thức những loại trái cây tươi ngon nhất theo từng mùa trong năm",
+      "viewAll": "Xem Tất Cả Trái Cây Theo Mùa"
+    },
+    "defaultFruits": {
+      "title": "Trái Cây",
+      "subtitle": "Thưởng thức những loại trái cây tươi ngon nhất",
+      "viewAll": "Xem Tất Cả Trái Cây"
+    },
+    "products": {
+      "title": "Sản Phẩm Bỏ Sỉ",
+      "subtitle": "Khám Phá Bộ Sưu Tập Trái Cây Nội Địa",
+      "imported": "Trái Cây Đặc Sản",
+      "local": "Trái Cây Tươi Nội Địa",
+      "seasonal": "Đặc Sản Theo Mùa",
+      "viewAll": "Xem Tất Cả Sản Phẩm",
+      "categories": {
+        "title": "Danh Mục Sản Phẩm",
+        "all": "Tất Cả Sản Phẩm",
+        "imported": "Trái Cây Đặc Sản",
+        "local": "Trái Cây Nội Địa",
+        "seasonal": "Theo Mùa",
+        "organic": "Hữu Cơ"
+      }
+    },
+    "newsVideo": {
+      "title": "Tin Tức",
+      "subtitle": "Cập nhật thông tin mới nhất về sản phẩm và dịch vụ của chúng tôi",
+      "news": "Tin Tức",
+      "video": "Video",
+      "readMore": "Đọc Thêm",
+      "playVideo": "Phát Video",
+      "videoTitle": "Giới Thiệu Về FreshFruit",
+      "videoDescription": "Xem video giới thiệu về quy trình sản xuất và cung cấp trái cây tươi ngon của chúng tôi",
+      "videoPlaceholder": "Video Demo Sẽ Được Thêm Vào",
+      "noNews": "Chưa có tin tức nào"
+    },
+    "customers": {
+      "title": "Khách Hàng Của Chúng Tôi",
+      "subtitle": "Nhiều đại lý và cửa hàng tin tưởng sử dụng sản phẩm của chúng tôi",
+      "badge": "Được tin tưởng bởi nhiều đại lý",
+      "stats": {
+        "partners": "Đối tác",
+        "yearsExperience": "Năm kinh nghiệm",
+        "trust": "Uy tín"
+      }
+    },
+    "partners": {
+      "title": "Đối Tác Của Chúng Tôi",
+      "subtitle": "Hợp tác với các thương hiệu uy tín hàng đầu",
+      "badge": "Đối Tác Chiến Lược"
+    },
+    "quality": {
+      "title": "Cam Kết Chất Lượng",
+      "subtitle": "FreshFruit tự hào mang đến những sản phẩm trái cây tươi ngon nhất với cam kết chất lượng tuyệt đối",
+      "statements": {
+        "title": "Khẳng Định Chất Lượng",
+        "item1": {
+          "title": "Chất Lượng Đảm Bảo",
+          "description": "Mỗi sản phẩm đều được kiểm tra nghiêm ngặt trước khi giao hàng"
+        },
+        "item2": {
+          "title": "Nguồn Gốc Rõ Ràng",
+          "description": "Tất cả trái cây đều có xuất xứ và chứng nhận an toàn thực phẩm"
+        },
+        "item3": {
+          "title": "Cam Kết 100%",
+          "description": "Hoàn tiền hoặc đổi mới nếu không hài lòng về chất lượng"
+        }
+      },
+      "certificates": {
+        "title": "Chứng Nhận & Cam Kết",
+        "item1": {
+          "title": "Uy Tín Chất Lượng",
+          "description": "12 năm kinh nghiệm trong ngành trái cây"
+        },
+        "item2": {
+          "title": "An Toàn Thực Phẩm",
+          "description": "Chứng nhận an toàn thực phẩm quốc tế"
+        },
+        "item3": {
+          "title": "Giao Hàng Nhanh Chóng",
+          "description": "Giao hàng trong ngày cho đại lý và cửa hàng"
+        },
+        "item4": {
+          "title": "Giá Cả Hợp Lý",
+          "description": "Giá bỏ sỉ cạnh tranh, hỗ trợ đại lý phát triển"
+        }
+      },
+      "trustBadge": "Được tin tưởng bởi nhiều đại lý"
+    }
+  },
+  "news": {
+    "meta": {
+      "title": "Tin Tức - Cập Nhật Mới Nhất | FreshFruit",
+      "description": "Cập nhật tin tức mới nhất về trái cây, sức khỏe, dinh dưỡng và các chương trình khuyến mãi từ FreshFruit.",
+      "keywords": "tin tức, trái cây, sức khỏe, dinh dưỡng, khuyến mãi, FreshFruit",
+      "ogTitle": "Tin Tức - Cập Nhật Mới Nhất | FreshFruit",
+      "ogDescription": "Cập nhật tin tức mới nhất về trái cây, sức khỏe, dinh dưỡng và các chương trình khuyến mãi từ FreshFruit"
+    },
+    "title": "Tin Tức & Cập Nhật Mới Nhất",
+    "subtitle": "Cập nhật thông tin về sản phẩm và khuyến mãi mới nhất",
+    "readMore": "Đọc Thêm",
+    "recent": "Bài Viết Gần Đây",
+    "categories": "Danh Mục",
+    "search": "Tìm kiếm tin tức...",
+    "noResults": "Không tìm thấy bài viết nào",
+    "pagination": {
+      "previous": "Trước",
+      "next": "Tiếp",
+      "page": "Trang"
+    },
+    "detail": {
+      "breadcrumb": {
+        "home": "Trang Chủ",
+        "news": "Tin Tức"
+      },
+      "backToNews": "Quay Lại Tin Tức",
+      "share": "Chia Sẻ",
+      "shareModal": {
+        "shareNews": "Chia Sẻ Tin Tức",
+        "shareToYourFriends": "Chia Sẻ Với Bạn Bè",
+        "title": "Chia Sẻ Bài Viết",
+        "shareToFacebook": "Chia Sẻ Lên Facebook",
+        "copyLink": "Sao Chép Liên Kết",
+        "linkCopied": "Đã sao chép liên kết!",
+        "copyLinkFailed": "Không thể sao chép liên kết"
+      },
+      "aboutAuthor": "Về Tác Giả",
+      "authorTitle": "Đội Ngũ Biên Tập FreshFruit",
+      "articleStats": "Thống Kê Bài Viết",
+      "views": "Lượt Xem",
+      "likes": "Lượt Thích",
+      "readTime": "Thời Gian Đọc",
+      "relatedArticles": "Bài Viết Liên Quan",
+      "viewsSuffix": "lượt xem",
+      "likesSuffix": "lượt thích",
+      "timeReadingSuffix": "phút",
+      "author": "Đội ngũ biên tập FreshFruit"
+    },
+    "popup": {
+      "addTitle": "Thêm Bài Viết Mới",
+      "editTitle": "Sửa Bài Viết",
+      "fields": {
+        "image": "Hình Ảnh Bài Viết",
+        "author": "Tác Giả",
+        "authorNone": "Không có",
+        "timeReading": "Thời Gian Đọc (phút)",
+        "timeReadingPlaceholder": "5",
+        "published": "Xuất Bản Ngay",
+        "titleVi": "Tiêu Đề",
+        "titleViPlaceholder": "Nhập tiêu đề bài viết...",
+        "titleViRequired": "Tiêu đề *",
+        "excerptVi": "Tóm Tắt",
+        "excerptViPlaceholder": "Tóm tắt ngắn về bài viết...",
+        "contentVi": "Nội Dung",
+        "contentViPlaceholder": "Nhập nội dung bài viết...",
+        "contentViRequired": "Nội dung *",
+        "tagsVi": "Tags (phân cách bằng dấu phẩy)",
+        "tagsViPlaceholder": "trái cây, sức khỏe, dinh dưỡng",
+        "titleEn": "Title",
+        "titleEnPlaceholder": "Enter article title...",
+        "excerptEn": "Excerpt",
+        "excerptEnPlaceholder": "Short excerpt about the article...",
+        "contentEn": "Content",
+        "contentEnPlaceholder": "Enter article content...",
+        "tagsEn": "Tags (comma separated)",
+        "tagsEnPlaceholder": "fruits, health, nutrition",
+        "slug": "Slug (URL)",
+        "slugPlaceholder": "article-slug",
+        "slugHint": "Tự động tạo từ tiêu đề tiếng Việt. Có thể chỉnh sửa."
+      },
+      "tabs": {
+        "vietnamese": "🇻🇳 Tiếng Việt *",
+        "english": "🇬🇧 English"
+      },
+      "buttons": {
+        "cancel": "Hủy",
+        "create": "Tạo Mới",
+        "update": "Cập Nhật",
+        "creating": "Đang tạo...",
+        "updating": "Đang cập nhật..."
+      },
+      "validation": {
+        "titleRequired": "Tiêu đề là bắt buộc",
+        "contentRequired": "Nội dung là bắt buộc",
+        "imageRequired": "Hình ảnh bài viết là bắt buộc",
+        "timeReadingRequired": "Thời gian đọc là bắt buộc",
+        "timeReadingMin": "Thời gian đọc phải lớn hơn 0",
+        "excerptViRequired": "Tóm tắt là bắt buộc",
+        "tagsViRequired": "Tags là bắt buộc",
+        "titleEnRequired": "Tiêu đề là bắt buộc",
+        "excerptEnRequired": "Tóm tắt là bắt buộc",
+        "contentEnRequired": "Nội dung là bắt buộc",
+        "tagsEnRequired": "Tags là bắt buộc"
+      }
+    },
+    "api": {
+      "errors": {
+        "fetchList": "Không thể tải danh sách bài viết",
+        "fetchDetail": "Không thể tải chi tiết bài viết",
+        "create": "Không thể tạo bài viết",
+        "update": "Không thể cập nhật bài viết",
+        "delete": "Không thể xóa bài viết",
+        "togglePublish": "Không thể thay đổi trạng thái xuất bản",
+        "network": "Lỗi kết nối mạng",
+        "unknown": "Đã xảy ra lỗi không xác định"
+      },
+      "success": {
+        "created": "Tạo bài viết thành công",
+        "updated": "Cập nhật bài viết thành công",
+        "deleted": "Xóa bài viết thành công",
+        "published": "Xuất bản bài viết thành công",
+        "unpublished": "Hủy xuất bản bài viết thành công"
+      }
+    }
+  },
+  "policy": {
+    "orderGuide": {
+      "meta": {
+        "title": "Hướng Dẫn Đặt Hàng Và Thanh Toán",
+        "description": "Quy trình đặt hàng đơn giản, thanh toán linh hoạt với nhiều hình thức"
+      },
+      "hero": {
+        "badge": "HƯỚNG DẪN ĐẶT HÀNG",
+        "title": "Hướng Dẫn Đặt Hàng Và Thanh Toán",
+        "description": "Quy trình đặt hàng đơn giản, thanh toán linh hoạt với nhiều hình thức"
+      },
+      "intro": {
+        "title": "CÁC CÁCH ĐẶT HÀNG TẠI FreshFruit",
+        "visitStore": "Quý khách vui lòng đến cửa hàng {storeName} để trực tiếp chọn lựa sản phẩm ưng ý và thanh toán ngay tại cửa hàng.",
+        "orderRemote": "Hoặc Quý Khách có thể đặt hàng từ xa qua:",
+        "orderRemotely": "Hoặc Quý Khách có thể đặt hàng từ xa qua:",
+        "payOnDelivery": "Và thanh toán ngay sau khi nhận hàng tại nhà."
+      },
+      "method1": {
+        "title": "1. Thanh toán trực tiếp tại cửa hàng FreshFruit",
+        "description": "Quý Khách vui lòng đến cửa hàng FreshFruit để trực tiếp chọn lựa những sản phẩm ưng ý, chúng tôi chấp nhận thanh toán:",
+        "cash": "Tiền mặt",
+        "transfer": "Chuyển khoản",
+        "card": "Quẹt thẻ",
+        "cardTypes": "ATM, Visa, Master, JCB",
+        "pos": "Thanh toán qua máy POS ngay tại cửa hàng",
+        "transferNote": "Chấp nhận thanh toán chuyển khoản",
+        "benefit": "Quý khách có thể nhận sản phẩm ngay sau khi thanh toán."
+      },
+      "method2": {
+        "title": "2. Thanh toán khi nhận hàng COD",
+        "description": "Quý Khách có thể không đến cửa hàng FreshFruit và đặt hàng với chúng tôi từ xa qua:",
+        "phone": "Điện thoại",
+        "website": "Website",
+        "facebook": "Facebook",
+        "fanpage": "Fanpage FreshFruit",
+        "message": "Tin nhắn",
+        "messageDesc": "Liên hệ với chúng tôi qua ứng dụng nhắn tin",
+        "paymentType": "Thanh toán sẽ được thực hiện khi nhận hàng.",
+        "payAfterReceive": "Và thanh toán ngay sau khi nhận hàng tại địa chỉ Quý Khách yêu cầu.",
+        "note": {
+          "title": "Lưu ý quan trọng:",
+          "codOnly": "Thanh toán COD chỉ áp dụng cho các đơn hàng nội thành TP.HCM",
+          "otherAreas": "Các đơn hàng ngoại thành và tỉnh thành khác: Vui lòng thanh toán trước bằng chuyển khoản"
+        },
+        "noteTitle": "Lưu ý quan trọng:",
+        "note1": "Thanh toán COD chỉ áp dụng cho các đơn hàng nội thành TP.HCM",
+        "note2": "Các đơn hàng ngoại thành và tỉnh thành khác: Vui lòng thanh toán trước bằng chuyển khoản"
+      },
+      "method3": {
+        "title": "3. Thanh toán qua tài khoản ngân hàng",
+        "processTitle": "Quy trình thanh toán chuyển khoản:",
+        "stepsTitle": "Quy trình thanh toán chuyển khoản:",
+        "step1": {
+          "title": "Đặt hàng từ xa",
+          "description": "Quý khách chọn hình thức đặt hàng từ xa qua điện thoại, website hoặc đặt hàng online"
+        },
+        "step1Title": "Đặt hàng từ xa",
+        "step1Desc": "Quý khách chọn hình thức đặt hàng từ xa qua điện thoại, website hoặc đặt hàng online",
+        "step2": {
+          "title": "Kiểm tra đơn hàng",
+          "description": "Sau khi kiểm tra đơn hàng đã đúng, Quý Khách tiến hành chuyển khoản"
+        },
+        "step2Title": "Kiểm tra đơn hàng",
+        "step2Desc": "Sau khi kiểm tra đơn hàng đã đúng, Quý Khách tiến hành chuyển khoản",
+        "step3": {
+          "title": "Nội dung chuyển khoản",
+          "syntax": "Cú pháp:",
+          "format": "[Họ tên] + [Số điện thoại] + [Tên sản phẩm]",
+          "example": "Ví dụ: Nguyen Van A + 0987654321 + Tao Envy"
+        },
+        "step3Title": "Nội dung chuyển khoản",
+        "bankInfo": "Thông tin tài khoản ngân hàng:",
+        "accountNumber": "Vui lòng liên hệ với chúng tôi để biết thông tin tài khoản ngân hàng",
+        "transferNote": "Cú pháp nội dung chuyển khoản: [Họ tên] + [Số điện thoại] + [Tên sản phẩm]",
+        "step4": {
+          "title": "Gửi xác nhận",
+          "description": "Sau đó Quý Khách nhắn tin và gửi ảnh chụp chuyển khoản thành công cho chúng tôi qua:",
+          "hotlineZalo": "Hotline/Zalo: {phone}",
+          "facebookFanpage": "Facebook Fanpage"
+        },
+        "step4Title": "Gửi xác nhận",
+        "step4Desc": "Sau đó Quý Khách nhắn tin và gửi ảnh chụp chuyển khoản thành công cho chúng tôi qua:",
+        "step4Phone": "Hotline/Zalo: {phone}",
+        "step4Message": "Facebook Fanpage",
+        "step5": {
+          "title": "Xác nhận và giao hàng",
+          "description": "Nhân viên {storeName} nhận được tiền chuyển khoản sẽ liên hệ lại thông báo cho khách hàng biết và bắt đầu soạn đơn hàng để giao."
+        },
+        "step5Title": "Xác nhận và giao hàng",
+        "step5Desc": "Nhân viên {storeName} nhận được tiền chuyển khoản sẽ liên hệ lại thông báo cho khách hàng biết và bắt đầu soạn đơn hàng để giao.",
+        "specialCase": {
+          "title": "Trường hợp đặc biệt:",
+          "description": "Trường hợp Quý Khách đã chuyển khoản thành công nhưng tài khoản ngân hàng chúng tôi vẫn chưa nhận được tiền thì cả 2 bên đều liên hệ với ngân hàng cung cấp tài khoản để kiểm tra xác minh giao dịch đó có thành công hay chưa. Chúng tôi sẽ soạn đơn hàng và gửi ngay cho Quý Khách khi nhận được tiền chuyển khoản."
+        },
+        "specialNoteTitle": "Trường hợp đặc biệt:",
+        "specialNoteDescription": "Trường hợp Quý Khách đã chuyển khoản thành công nhưng tài khoản ngân hàng chúng tôi vẫn chưa nhận được tiền thì cả 2 bên đều liên hệ với ngân hàng cung cấp tài khoản để kiểm tra xác minh giao dịch đó có thành công hay chưa. Chúng tôi sẽ soạn đơn hàng và gửi ngay cho Quý Khách khi nhận được tiền chuyển khoản."
+      },
+      "comparison": {
+        "title": "So sánh các phương thức thanh toán",
+        "inStore": {
+          "title": "Tại cửa hàng",
+          "feature1": "Chọn sản phẩm trực tiếp",
+          "feature2": "Nhiều hình thức thanh toán",
+          "feature3": "Nhận hàng ngay"
+        },
+        "instoreTitle": "Tại cửa hàng",
+        "instoreFeature1": "Chọn sản phẩm trực tiếp",
+        "instoreFeature2": "Nhiều hình thức thanh toán",
+        "instoreFeature3": "Nhận hàng ngay",
+        "cod": {
+          "title": "COD",
+          "feature1": "Thanh toán khi nhận",
+          "feature2": "Chỉ nội thành TP.HCM",
+          "feature3": "Tiện lợi, an toàn"
+        },
+        "codTitle": "COD",
+        "codFeature1": "Thanh toán khi nhận",
+        "codFeature2": "Chỉ nội thành TP.HCM",
+        "codFeature3": "Tiện lợi, an toàn",
+        "transfer": {
+          "title": "Chuyển khoản",
+          "feature1": "Toàn quốc",
+          "feature2": "Thanh toán trước",
+          "feature3": "Nhanh chóng"
+        },
+        "transferTitle": "Chuyển khoản",
+        "transferFeature1": "Toàn quốc",
+        "transferFeature2": "Thanh toán trước",
+        "transferFeature3": "Nhanh chóng"
+      },
+      "cta": {
+        "title": "Cần hỗ trợ đặt hàng?",
+        "description": "Liên hệ ngay với chúng tôi để được tư vấn và hỗ trợ đặt hàng",
+        "callButton": "Gọi đặt hàng",
+        "emailButton": "Email"
+      }
+    },
+    "shipping": {
+      "meta": {
+        "title": "Chính Sách Giao Hàng Và Đổi Trả",
+        "description": "Cam kết giao hàng nhanh chóng và chính sách đổi trả linh hoạt, đảm bảo quyền lợi khách hàng"
+      },
+      "hero": {
+        "badge": "GIAO HÀNG & ĐỔI TRẢ",
+        "title": "Chính Sách Giao Hàng Và Đổi Trả",
+        "description": "Cam kết giao hàng nhanh chóng và chính sách đổi trả linh hoạt, đảm bảo quyền lợi khách hàng"
+      },
+      "fees": {
+        "title": "PHÍ GIAO HÀNG",
+        "freeShipping": "Miễn phí giao hàng với đơn hàng trên 500.000đ trong vòng bán kính 6km, từ km thứ 7 sẽ tính 5.000đ/km.",
+        "standardFee": "Đối với đơn hàng dưới 500.000đ: Phí giao hàng là 30.000đ/đơn hàng, cho 6km đầu tiên. Từ km thứ 7 sẽ tính thêm 5.000đ/km."
+      },
+      "policy": {
+        "title": "I. Chính sách giao hàng tại TP. Hồ Chí Minh",
+        "freeShipping": "Miễn phí giao hàng với đơn hàng trên 500.000đ trong vòng bán kính 6km, từ km thứ 7 sẽ tính 5.000đ/km.",
+        "standardFee": "Đối với đơn hàng dưới 500.000đ: Phí giao hàng là 30.000đ/đơn hàng, cho 6km đầu tiên. Từ km thứ 7 sẽ tính thêm 5.000đ/km."
+      },
+      "return": {
+        "title": "II. Chính sách đổi trả hàng hóa và hoàn tiền",
+        "beforeReceiving": {
+          "title": "1. Trước khi nhận hàng",
+          "description": "Khách hàng được quyền từ chối nhận hàng và từ chối thanh toán khi nhân viên giao hàng giao không đúng sản phẩm trong đơn đặt hàng hoặc phát hiện sản phẩm bị lỗi."
+        },
+        "afterReceiving": {
+          "title": "2. Sau khi nhận hàng",
+          "requirement": "Yêu cầu: Khách hàng đến đổi, trả phải mang kèm theo hóa đơn mua hàng có sản phẩm cần đổi trả.",
+          "customerFault": {
+            "title": "Đổi hàng do lỗi từ phía khách hàng:",
+            "description": "Khi khách hàng không có ý định mua nữa thì hàng hóa đó phải:",
+            "condition1": "Còn nguyên bao bì",
+            "condition2": "Chất lượng hàng hóa còn đảm bảo",
+            "condition3": "Bề ngoài hàng hóa không khác biệt so với hàng hóa cùng loại",
+            "note": "Khách hàng sẽ được đổi lấy một loại hàng hóa khác có giá trị bằng hoặc cao hơn. Khách hàng chịu trách nhiệm bù tiền chênh lệch nếu sản phẩm muốn đổi có giá trị cao hơn."
+          },
+          "storeFault": {
+            "title": "Đổi hàng do lỗi của cửa hàng:",
+            "description": "Sản phẩm bị dập, hỏng hoặc do lỗi từ nhà cung cấp (hàng hóa bên trong bao bì không đảm bảo chất lượng) thì khách hàng sẽ được đổi lấy hàng hóa tương đương cùng loại."
+          },
+          "refund": {
+            "title": "Hoàn tiền:",
+            "description": "Hàng hóa chỉ được trả lại tiền trong trường hợp hàng hóa bị lỗi của cửa hàng hay do lỗi từ nhà cung cấp và không có hàng hóa tương đương cùng loại để đổi tại thời điểm khách đến đổi hàng."
+          },
+          "timeLimit": {
+            "title": "Thời gian đổi trả:",
+            "fresh": "Hàng tươi sống: 12 giờ",
+            "other": "Các mặt hàng khác: 24 giờ",
+            "note": "* Tính từ giờ được ghi trên hóa đơn mua hàng của cửa hàng"
+          }
+        },
+        "contact": {
+          "title": "3. Liên hệ đổi trả tại FreshFruit",
+          "visitStore": "Khách hàng mang sản phẩm kèm hóa đơn mua hàng có sản phẩm đến tại địa chỉ cửa hàng in trên hóa đơn để được giải quyết việc đổi trả.",
+          "hotline": "Trong trường hợp có các khiếu nại khác, khách hàng vui lòng liên hệ hotline: {phone} {storeName} để được hỗ trợ tốt nhất."
+        }
+      },
+      "summary": {
+        "title": "Tóm tắt chính sách",
+        "accepted": {
+          "title": "Được đổi trả",
+          "item1": "Sản phẩm bị lỗi từ cửa hàng",
+          "item2": "Giao sai sản phẩm",
+          "item3": "Còn nguyên bao bì, chất lượng"
+        },
+        "rejected": {
+          "title": "Không đổi trả",
+          "item1": "Quá thời gian quy định",
+          "item2": "Không có hóa đơn mua hàng",
+          "item3": "Sản phẩm đã qua sử dụng"
+        }
+      },
+      "cta": {
+        "title": "Cần hỗ trợ về giao hàng hoặc đổi trả?",
+        "description": "Đội ngũ chăm sóc khách hàng luôn sẵn sàng hỗ trợ bạn 24/7",
+        "callButton": "Gọi hotline",
+        "emailButton": "Gửi email"
+      }
+    },
+    "privacy": {
+      "meta": {
+        "title": "Chính Sách Bảo Mật Thông Tin",
+        "description": "FreshFruit cam kết bảo vệ thông tin cá nhân của khách hàng với các biện pháp an ninh nghiêm ngặt"
+      },
+      "hero": {
+        "badge": "BẢO MẬT THÔNG TIN",
+        "title": "Chính Sách Bảo Mật Thông Tin",
+        "description": "FreshFruit cam kết bảo vệ thông tin cá nhân của khách hàng với các biện pháp an ninh nghiêm ngặt"
+      },
+      "commitment": {
+        "title": "CAM KẾT BẢO MẬT",
+        "description": "{storeName} không bán, chia sẻ hay trao đổi thông tin cá nhân của khách hàng thu thập trên trang web cho một bên thứ ba nào khác. Thông tin cá nhân thu thập được sẽ chỉ được sử dụng trong nội bộ cửa hàng."
+      },
+      "section1": {
+        "title": "1. Mục đích và phạm vi thu thập thông tin",
+        "intro": "FreshFruit không bán, chia sẻ hay trao đổi thông tin cá nhân của khách hàng thu thập trên trang web cho một bên thứ ba nào khác. Thông tin cá nhân thu thập được sẽ chỉ được sử dụng trong nội bộ cửa hàng.",
+        "collected": {
+          "title": "Khi quý khách cung cấp thông tin cho chúng tôi, thông tin cá nhân mà chúng tôi thu thập bao gồm:",
+          "name": "Tên Khách hàng",
+          "email": "Địa chỉ Email",
+          "phone": "Số điện thoại",
+          "address": "Địa chỉ giao hàng",
+          "receiver": "Tên người nhận"
+        },
+        "usage": {
+          "title": "Những thông tin trên sẽ được sử dụng cho một hoặc tất cả các mục đích sau đây:",
+          "delivery": "Giao hàng cho quý khách đã mua tại FreshFruit",
+          "notification": "Thông báo về việc giao hàng và hỗ trợ khách hàng",
+          "productInfo": "Cung cấp thông tin liên quan đến sản phẩm",
+          "orderProcessing": "Xử lý đơn đặt hàng và cung cấp dịch vụ theo yêu cầu của quý khách"
+        }
+      },
+      "section2": {
+        "title": "2. Phạm vi sử dụng thông tin",
+        "description": "Thông tin cá nhân thu thập được sẽ chỉ được sử dụng trong nội bộ cửa hàng. Chúng tôi có thể chia sẻ tên và địa chỉ của quý khách cho dịch vụ chuyển phát nhanh hoặc nhà cung cấp của chúng tôi để có thể giao hàng cho quý khách."
+      },
+      "section3": {
+        "title": "3. Thời gian lưu trữ thông tin",
+        "computerData": "Chúng tôi lưu trữ thông tin là 2 năm (dữ liệu máy tính).",
+        "personalData": "Đối với thông tin cá nhân, chúng tôi chỉ xóa đi dữ liệu này nếu khách hàng có yêu cầu."
+      },
+      "section4": {
+        "title": "4. Địa chỉ của đơn vị thu thập và quản lý thông tin cá nhân",
+        "taxCode": "MST:",
+        "phone": "Điện thoại:",
+        "email": "Email:"
+      },
+      "section5": {
+        "title": "5. Phương tiện và công cụ để người dùng tiếp cận và chỉnh sửa dữ liệu cá nhân",
+        "description": "Người dùng có thể đăng nhập vào tài khoản cá nhân của mình trên website và dùng chức năng \"Chỉnh Sửa\" để điều chỉnh hoặc xóa đi dữ liệu cá nhân của mình. Hoặc có thể liên hệ trực tiếp {storeName} để chỉnh sửa hoặc xóa."
+      },
+      "section6": {
+        "title": "6. Cam kết bảo mật thông tin cá nhân khách hàng",
+        "intro": "Tại {storeName}, sự riêng tư của khách truy cập của chúng tôi là cực kỳ quan trọng.",
+        "policy": "Chúng tôi sẽ không chia sẻ thông tin của quý khách cho bất kỳ một công ty nào khác ngoại trừ những công ty và các bên thứ ba có liên quan trực tiếp đến việc giao hàng mà quý khách đã mua tại {storeName}. Trong một vài trường hợp đặc biệt, chúng tôi có thể bị yêu cầu phải tiết lộ thông tin cá nhân, ví dụ như khi có căn cứ cho việc tiết lộ thông tin là cần thiết để ngăn chặn các mối đe dọa về tính mạng và sức khỏe, hay cho mục đích thực thi pháp luật. Chúng tôi cam kết tuân thủ Đạo Luật Bảo Mật và các Nguyên Tắc Bảo Mật Quốc Gia.",
+        "contact": "Nếu quý khách tin rằng bảo mật của quý khách bị xâm phạm, xin vui lòng liên hệ với chúng tôi tại địa chỉ email {email} để được giải quyết vấn đề."
+      },
+      "cta": {
+        "title": "Cần hỗ trợ thêm?",
+        "description": "Nếu bạn có bất kỳ câu hỏi nào về chính sách bảo mật, vui lòng liên hệ với chúng tôi",
+        "callButton": "Gọi ngay",
+        "emailButton": "Gửi email"
+      }
+    }
+  },
+  "products": {
+    "title": "Sản Phẩm",
+    "subtitle": "Khám phá bộ sưu tập trái cây cao cấp của chúng tôi",
+    "categories": {
+      "title": "Danh Mục Sản Phẩm",
+      "all": "Tất Cả Sản Phẩm",
+      "imported": "Trái Cây Đặc Sản",
+      "local": "Trái Cây Nội Địa",
+      "seasonal": "Theo Mùa",
+      "organic": "Hữu Cơ"
+    },
+    "filters": {
+      "sortBy": "Sắp xếp theo",
+      "price": "Giá",
+      "origin": "Xuất xứ",
+      "category": "Danh mục"
+    },
+    "product": {
+      "addToCart": "Thêm vào giỏ",
+      "viewDetails": "Xem chi tiết",
+      "outOfStock": "Hết hàng",
+      "inStock": "Còn hàng"
+    },
+    "pagination": {
+      "showing": "Hiển thị",
+      "of": "trong",
+      "total": "tổng số",
+      "products": "sản phẩm",
+      "page": "Trang",
+      "pageOf": "trang"
+    },
+    "detail": {
+      "breadcrumb": {
+        "home": "Trang chủ",
+        "products": "Sản phẩm"
+      },
+      "rating": "đánh giá",
+      "views": "Lượt xem",
+      "createdDate": "Ngày tạo",
+      "unit": "Đơn vị tính",
+      "weight": "Trọng lượng",
+      "origin": "Xuất xứ",
+      "status": "Tình trạng",
+      "statusContact": "Liên hệ",
+      "statusOutOfStock": "Hết hàng",
+      "statusActive": "Còn hàng",
+      "order": "Đặt hàng",
+      "quantity": "Số lượng",
+      "addToCart": "Thêm vào giỏ",
+      "buyNow": "Mua ngay",
+      "addToWishlist": "Yêu thích",
+      "share": "Chia sẻ",
+      "description": "Mô tả sản phẩm",
+      "productInfo": "Thông tin sản phẩm",
+      "relatedProducts": "Sản phẩm liên quan",
+      "addToCartRelated": "Thêm vào giỏ hàng",
+      "qualityCommitment": "FreshFruit cam kết 100% nói không với chất bảo quản & trái cây Trung Quốc!",
+      "contact": "Liên hệ"
+    },
+    "showEntriesProduct": {
+      "showing": "Hiển thị",
+      "of": "trong",
+      "total": "tổng số",
+      "products": "sản phẩm",
+      "page": "Trang",
+      "pageOf": "trang"
+    }
+  }
+}

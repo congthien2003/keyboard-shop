@@ -1,0 +1,1145 @@
+{
+  "about": {
+    "title": "About FreshFruit",
+    "subtitle": "Your Trusted Wholesale Fruit Supplier Since 2012",
+    "description": "FreshFruit specializes in providing fresh, high-quality local fruits to retailers, stores, and businesses. With over 12 years of experience, we've built strong relationships with trusted farmers and suppliers to ensure every fruit meets our strict quality standards.",
+    "mission": "FreshFruit's mission is to provide fresh local fruits at competitive wholesale prices, supporting retailers and stores in developing efficient businesses.",
+    "whyChoose": {
+      "title": "Why Choose FreshFruit?",
+      "subtitle": "Reasons that make FreshFruit the top choice for retailers and stores",
+      "item1": {
+        "question": "Why choose FreshFruit's wholesale fruits?",
+        "answer": "FreshFruit specializes in providing fresh local fruits from famous regions of Vietnam. Each product is carefully selected for quality and freshness, suitable for wholesale and retail business."
+      },
+      "item2": {
+        "question": "How does FreshFruit ensure product quality?",
+        "answer": "We have a strict quality control process from sourcing to delivery. All products have clear origin and food safety assurance."
+      },
+      "item3": {
+        "question": "Does FreshFruit offer delivery to retailers?",
+        "answer": "Yes, we provide same-day delivery service to retailers, stores, and businesses. Careful packaging ensures fruits remain fresh when they reach customers."
+      },
+      "item4": {
+        "question": "What is FreshFruit's return policy?",
+        "answer": "If you're not satisfied with product quality, we will replace or refund within 24 hours of delivery. Special support for long-term retailers."
+      }
+    },
+    "banner": {
+      "title": "FreshFruit - Local Fruits Wholesale",
+      "subtitle": "Providing fresh fruits for retailers and stores",
+      "description": "With over 12 years of experience, FreshFruit is proud to be a trusted partner providing fresh local fruits to retailers and stores nationwide.",
+      "cta": "Contact for Wholesale"
+    },
+    "qualityCommitment": {
+      "title": "Quality Commitment",
+      "subtitle": "FreshFruit commits to bringing you the best products for retailers",
+      "item1": {
+        "title": "Clear Origin",
+        "description": "All products have clear origin from famous regions of Vietnam and food safety assurance"
+      },
+      "item2": {
+        "title": "Strict Inspection",
+        "description": "Each batch is thoroughly inspected for quality, freshness, and safety before delivery to retailers"
+      },
+      "item3": {
+        "title": "Optimal Storage",
+        "description": "Professional cold storage system ensures fruits maintain maximum freshness for business"
+      },
+      "item4": {
+        "title": "Safe Delivery",
+        "description": "Careful packaging and fast delivery with specialized vehicles to maintain quality for retailers"
+      }
+    },
+    "story": {
+      "title": "FreshFruit's Story",
+      "subtitle": "12 years of development journey",
+      "content": "Founded in 2012, FreshFruit started as a small family business with a simple goal: to provide fresh local fruits to retailers and stores. From the early days with just a few basic fruits, we have continuously expanded and developed our partner network.",
+      "milestone1": {
+        "year": "2012",
+        "title": "Founded",
+        "description": "FreshFruit was established with the vision of providing fresh local fruits to retailers"
+      },
+      "milestone2": {
+        "year": "2015",
+        "title": "Expansion",
+        "description": "Expanded product range and established partnerships with reputable farms"
+      },
+      "milestone3": {
+        "year": "2020",
+        "title": "Online Development",
+        "description": "Developed online sales system and delivery service for retailers"
+      },
+      "milestone4": {
+        "year": "2025",
+        "title": "Present",
+        "description": "Became a trusted supplier with satisfied retailers and stores"
+      }
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": {
+        "title": "Quality First",
+        "description": "Every fruit is carefully inspected to meet our high standards for retailers"
+      },
+      "sustainability": {
+        "title": "Long-term Partnership",
+        "description": "We build sustainable partnerships with retailers and farms"
+      },
+      "community": {
+        "title": "Retailer Support",
+        "description": "Supporting retailers in business development and contributing to the community"
+      }
+    }
+  },
+  "admin": {
+    "login": {
+      "title": "Admin Dashboard",
+      "subtitle": "Login to manage the system",
+      "password": "Password",
+      "passwordPlaceholder": "Enter password",
+      "submit": "Login",
+      "error": "Incorrect password",
+      "footer": "© 2025 FreshFruit - Fresh Fruits",
+      "username": "Username",
+      "usernamePlaceholder": "Enter username"
+    },
+    "sidebar": {
+      "adminPanel": "Admin Panel",
+      "dashboard": "Dashboard",
+      "categories": "Categories",
+      "products": "Products",
+      "news": "News",
+      "orders": "Orders",
+      "contacts": "Contacts",
+      "backToSite": "Back to Site",
+      "logout": "Logout"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "System Overview",
+      "totalProducts": "Total Products",
+      "totalOrders": "Orders",
+      "totalRevenue": "Revenue",
+      "totalContacts": "Contacts",
+      "totalNews": "News",
+      "activeUsers": "Active Users",
+      "recentOrders": "Recent Orders"
+    },
+    "categories": {
+      "title": "Category Management",
+      "subtitle": "Manage product categories",
+      "search": "Search categories...",
+      "addNew": "Add Category",
+      "edit": "Edit Category",
+      "nameEn": "Name (English)",
+      "nameVi": "Name (Vietnamese)",
+      "descEn": "Description (English)",
+      "descVi": "Description (Vietnamese)",
+      "confirmDelete": "Are you sure you want to delete this category?",
+      "noData": "No categories yet",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "slug": "Slug",
+      "actions": "Actions",
+      "all": "All"
+    },
+    "products": {
+      "title": "Product Management",
+      "subtitle": "Manage products",
+      "search": "Search products...",
+      "addNew": "Add Product",
+      "edit": "Edit Product",
+      "category": "Category",
+      "selectCategory": "Select category",
+      "categoryRequired": "Please select category",
+      "name": "Name",
+      "nameRequired": "Please enter product name",
+      "nameEn": "Name (English)",
+      "nameVi": "Name (Vietnamese)",
+      "infoEn": "Info (English)",
+      "infoVi": "Info (Vietnamese)",
+      "descEn": "Description (English)",
+      "descVi": "Description (Vietnamese)",
+      "slug": "Slug",
+      "price": "Price",
+      "priceRequired": "Please enter price",
+      "originalPrice": "Original Price",
+      "weight": "Weight",
+      "weightEn": "Weight (English)",
+      "weightVi": "Weight (Vietnamese)",
+      "quantity": "Quantity",
+      "countPerUnit": "Count per Unit",
+      "unit": "Unit",
+      "unitEn": "Unit (English)",
+      "unitVi": "Unit (Vietnamese)",
+      "originEn": "Origin (English)",
+      "originVi": "Origin (Vietnamese)",
+      "status": "Status",
+      "statusContact": "Price Contact",
+      "statusActive": "In Stock",
+      "statusDirect": "Buy Direct",
+      "statusOutOfStock": "Out of Stock",
+      "statusRequired": "Please select status",
+      "image": "Main Image",
+      "images": "Additional Images (Gallery)",
+      "featured": "Featured Product",
+      "createdAt": "Created At",
+      "confirmDelete": "Are you sure you want to delete this product?",
+      "noData": "No products yet",
+      "slugHint": "/product-name",
+      "rating": "Rating",
+      "viewCount": "View Count",
+      "ratingHint": "Rating from 0.0 to 5.0",
+      "viewCountHint": "View count",
+      "updatedAt": "Updated At",
+      "infoPlaceholder": "Enter product information",
+      "dragToReorder": "Drag to reorder images"
+    },
+    "news": {
+      "title": "News Management",
+      "subtitle": "Manage news",
+      "search": "Search news...",
+      "addNew": "Add News",
+      "edit": "Edit News",
+      "titleEn": "Title (English)",
+      "titleVi": "Title (Vietnamese)",
+      "excerptEn": "Excerpt (English)",
+      "excerptVi": "Excerpt (Vietnamese)",
+      "contentEn": "Content (English)",
+      "contentVi": "Content (Vietnamese)",
+      "image": "Image",
+      "published": "Published",
+      "draft": "Draft",
+      "publishNow": "Publish Now",
+      "confirmDelete": "Are you sure you want to delete this news?",
+      "noData": "No news yet",
+      "noResults": "No news found",
+      "table": {
+        "image": "Image",
+        "title": "Title",
+        "status": "Status",
+        "timeReading": "Reading Time",
+        "createdAt": "Created At",
+        "viewCount": "Views",
+        "actions": "Actions",
+        "noImage": "No Image",
+        "minutes": "min",
+        "page": "Page"
+      }
+    },
+    "orders": {
+      "title": "Order Management",
+      "subtitle": "Manage orders",
+      "search": "Search orders...",
+      "orderId": "Order ID",
+      "customer": "Customer",
+      "customerInfo": "Customer Information",
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "total": "Total",
+      "status": "Status",
+      "allStatus": "All",
+      "pending": "Pending",
+      "processing": "Processing",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "date": "Date",
+      "orderDetail": "Order Detail",
+      "items": "Items",
+      "summary": "Summary",
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "notes": "Notes",
+      "paid": "Paid",
+      "noData": "No orders yet"
+    },
+    "contacts": {
+      "title": "Contact Management",
+      "subtitle": "Manage {totalContacts} contacts",
+      "search": "Search contacts...",
+      "contactDetail": "Contact Details",
+      "contactInfo": "Contact Information",
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "status": "Status",
+      "priority": "Priority",
+      "allStatus": "All Status",
+      "open": "New",
+      "inProgress": "In Progress",
+      "closed": "Resolved",
+      "new": "New",
+      "read": "Read",
+      "replied": "Replied",
+      "date": "Date Created",
+      "note": "Notes",
+      "notePlaceholder": "Add notes for this contact...",
+      "reply": "Reply",
+      "call": "Call",
+      "confirmDelete": "Are you sure you want to delete this contact?",
+      "noData": "No contacts yet",
+      "table": {
+        "customer": "Customer",
+        "message": "Message",
+        "status": "Status",
+        "priority": "Priority",
+        "date": "Date",
+        "actions": "Actions",
+        "note": "Note"
+      }
+    },
+    "search": "Search...",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "cancel": "Cancel",
+    "create": "Create",
+    "update": "Update",
+    "save": "Save",
+    "actions": "Actions",
+    "previous": "Previous",
+    "next": "Next",
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "pagination": {
+      "showing": "Showing {start} to {end} of {total} results",
+      "page": "Page {page} of {totalPages}"
+    }
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty.",
+    "orderInfo": "Order Information",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "email": "Email (optional)",
+    "address": "Address",
+    "note": "Note (optional)",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping Fee",
+    "total": "Total",
+    "placeOrder": "Place Order",
+    "processing": "Processing...",
+    "remove": "Remove",
+    "success": "Order placed successfully!\nWe will contact you soon.",
+    "summary": "Order Summary",
+    "error": {
+      "validation": "Please check your information again.",
+      "submit": "Failed to place order! Please try again.",
+      "emptyCart": "Your cart is empty!",
+      "invalidItems": "There are invalid items in your cart",
+      "nameRequired": "Please enter your name.",
+      "nameMinLength": "Name must be at least 2 characters.",
+      "phoneRequired": "Please enter your phone number.",
+      "phoneInvalid": "Invalid phone number (e.g., 0912345678 or +84912345678).",
+      "emailInvalid": "Invalid email address.",
+      "addressRequired": "Please enter your address.",
+      "addressMinLength": "Address must be at least 10 characters."
+    }
+  },
+  "common": {
+    "brandName": "FreshFruit Fruit",
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "products": "Products",
+      "news": "News",
+      "contact": "Contact",
+      "cart": "Cart"
+    },
+    "footer": {
+      "brand": "FreshFruit",
+      "description": "FreshFruit - Your trusted wholesale supplier of high-quality local fruits",
+      "companyName": "FreshFruit TRADING SERVICE COMPANY LIMITED",
+      "companyTaxCode": "0311956020",
+      "companyAddress": "980/4 Hau Giang, Ward Phu Lam, Ho Chi Minh City, Vietnam",
+      "branchName": "BRANCH - FreshFruit TRADING SERVICE COMPANY LIMITED",
+      "branchTaxCode": "0311956020-002",
+      "branchAddress": "135 Street 26, Ward Binh Phu, Ho Chi Minh City, Vietnam",
+      "branchPhone": "0358 244 698",
+      "taxCode": "Tax Code",
+      "phone": "Phone",
+      "email": "Email",
+      "emailValue": "khangmyfruit.contact@gmail.com",
+      "contactInfo": "Contact Information",
+      "office": "Office",
+      "officeValue": "980/4 Hau Giang, Ward Phu Lam, Ho Chi Minh City, Vietnam",
+      "address": "Address",
+      "addressValue": "135 Street 26, Ward Binh Phu, Ho Chi Minh City, Vietnam",
+      "agency": "Agency",
+      "agencyValue": "FreshFruit Trading Service Company Limited",
+      "taxCodeValue": "0311956020-002",
+      "representative": "Legal Representative",
+      "representativeValue": "TRUONG PHUOC THO",
+      "phoneValue": "0358 244 698",
+      "quickLinks": "Quick Links",
+      "followUs": "Follow Us",
+      "newsletter": "Newsletter",
+      "newsletterText": "Subscribe to get special offers and updates",
+      "subscribe": "Subscribe",
+      "copyright": "© 2025 FreshFruit Fruits",
+      "companyInfo": "FreshFruit TRADING SERVICE COMPANY LIMITED | Tax ID: 0311956020",
+      "operationDate": "Operation Date: 04/09/2012",
+      "policies": "Policies",
+      "policy": {
+        "privacy": "Privacy Policy",
+        "delivery": "Delivery Policy",
+        "orderGuide": "Order Guide"
+      },
+      "contactSupportTitle": "Contact Support"
+    },
+    "banner": {
+      "badge": "Wholesale Offer",
+      "title": "FreshFruit - Competitive Wholesale Prices for All Local Fruits",
+      "description": "Discover FreshFruit's collection of fresh local fruits at competitive wholesale prices. Contact us for consultation!",
+      "cta": "Contact for Wholesale"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to the most common questions",
+      "q1": {
+        "question": "Are your fruits fresh?",
+        "answer": "Yes, we source directly from partner farms daily. All fruits are thoroughly inspected for quality and freshness before delivery to wholesale customers."
+      },
+      "q2": {
+        "question": "Do you deliver to retailers?",
+        "answer": "Yes, we provide delivery service to retailers, stores and businesses. Same-day delivery for orders placed before 12 PM. Delivery fees are calculated based on distance and quantity."
+      },
+      "q3": {
+        "question": "What are your wholesale prices?",
+        "answer": "We offer competitive wholesale prices for retailers. Prices are adjusted based on order quantity and purchase frequency. Please contact us for detailed pricing."
+      },
+      "q4": {
+        "question": "Do you have return policy for retailers?",
+        "answer": "Yes, we have flexible return policy for retailers. If not satisfied with product quality, please contact us within 24 hours for exchange or refund support."
+      },
+      "q5": {
+        "question": "Do you provide consultation for new retailers?",
+        "answer": "Yes, we have professional consultation team to support new retailers with storage, display and fruit business advice. We also provide detailed guidance materials."
+      }
+    },
+    "quality": {
+      "title": "Quality Commitment",
+      "subtitle": "We ensure to bring you the best products",
+      "item1": {
+        "title": "Quality Certified",
+        "description": "All products are certified for food safety with clear origin"
+      },
+      "item2": {
+        "title": "Organic & Natural",
+        "description": "Priority given to organic products without harmful chemicals"
+      },
+      "item3": {
+        "title": "Strict Inspection",
+        "description": "Each batch is thoroughly inspected before reaching customers"
+      },
+      "item4": {
+        "title": "Safe Delivery",
+        "description": "Carefully packaged, fast shipping to maintain freshness"
+      }
+    },
+    "partners": {
+      "title": "Our Partners",
+      "subtitle": "Partnering with leading trusted brands"
+    },
+    "ads": {
+      "specialOffer": {
+        "title": "Special Wholesale Offer",
+        "description": "Get 10% off on orders over 100kg",
+        "cta": "Contact Now"
+      },
+      "dailyDelivery": {
+        "title": "Fresh Daily Delivery",
+        "description": "Same-day delivery for all retailers",
+        "cta": "Learn More"
+      },
+      "qualityGuarantee": {
+        "title": "Quality Guarantee",
+        "description": "100% satisfaction or money back",
+        "cta": "View Products"
+      }
+    },
+    "testimonials": {
+      "title": "What Our Retailers Say",
+      "subtitle": "Retailers trust and maintain long-term partnerships with us",
+      "customer1": {
+        "name": "Nguyen Van Thanh",
+        "role": "Fruit Store Owner",
+        "content": "Been a retailer with FreshFruit for 3 years, very satisfied with fruit quality and service. Competitive wholesale prices, on-time delivery. My customers always praise the fresh and delicious fruits!"
+      },
+      "customer2": {
+        "name": "Tran Thi Thu Ha",
+        "role": "Mini Supermarket Owner",
+        "content": "FreshFruit is my reliable supplier. Fruits are always fresh, reasonable prices, professional service. Very enthusiastic consultation support, helping me run my business more efficiently."
+      },
+      "customer3": {
+        "name": "Le Van Dung",
+        "role": "New Retailer",
+        "content": "Just started fruit business and was introduced to FreshFruit. Very impressed with product quality and support service. Consultation team guides thoroughly, helping me quickly stabilize my business."
+      }
+    },
+    "new": "New",
+    "origin": "Origin",
+    "addToCart": "Add to Cart",
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "notFound": {
+      "title": "404 - Page Not Found",
+      "heading": "404",
+      "message": "The page you are looking for does not exist",
+      "description": "Sorry, the page you are looking for may have been removed or the URL address is incorrect.",
+      "goHome": "Go Home",
+      "goProducts": "View Products",
+      "searchProducts": "Search Products"
+    }
+  },
+  "contact": {
+    "title": "Wholesale Contact",
+    "subtitle": "Contact us for wholesale consultation",
+    "hero-title": "Contact Us",
+    "hero-subtitle": "We'd love to hear from you",
+    "formTitle": "Send Us A Message",
+    "name": "Your Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Message",
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "info": {
+      "title": "Contact Information",
+      "address": "980/4 Hau Giang, Ward Phu Lam, Ho Chi Minh City, Vietnam",
+      "phone": "0358 244 698",
+      "email": "khangmyfruit.contact@gmail.com",
+      "hours": "Mon-Sat: 8AM - 8PM"
+    },
+    "success": "Thank you for your message! We will get back to you soon.",
+    "error": {
+      "validation": "Please check your information again.",
+      "submit": "An error occurred. Please try again later.",
+      "nameRequired": "Please enter your name.",
+      "nameMinLength": "Name must be at least 2 characters.",
+      "emailRequired": "Please enter your email address.",
+      "emailInvalid": "Invalid email address.",
+      "phoneRequired": "Please enter your phone number.",
+      "phoneInvalid": "Invalid phone number (e.g., 0912345678 or +84912345678).",
+      "messageRequired": "Please enter a message.",
+      "messageMinLength": "Message must be at least 10 characters."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Fresh Local Vietnamese Fruits",
+      "subtitle": "Wholesale Supplier of High-Quality Vietnamese Fruits",
+      "description": "Specializing in providing fresh local fruits to retailers, stores and businesses. Committed to quality and competitive pricing.",
+      "cta": "Contact for Wholesale",
+      "ctaSecondary": "View Products"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "feature1": {
+        "title": "Guaranteed Quality",
+        "description": "Fruits carefully selected from famous regions of Vietnam"
+      },
+      "feature2": {
+        "title": "Fresh Daily",
+        "description": "Direct sourcing from farms, ensuring maximum freshness"
+      },
+      "feature3": {
+        "title": "Competitive Wholesale Prices",
+        "description": "Reasonable prices for retailers, stores and businesses"
+      },
+      "feature4": {
+        "title": "Professional Service",
+        "description": "Consultation support and delivery service for wholesale customers"
+      }
+    },
+    "localFruitsWholesale": {
+      "title": "Local Fruits Wholesale",
+      "subtitle": "FreshFruit - Specializing in fresh local fruits for retailers and stores",
+      "new": "New",
+      "origin": "Origin",
+      "addToCart": "Contact",
+      "viewAll": "View All Products"
+    },
+    "localFruits": {
+      "title": "Fruits by Region",
+      "subtitle": "Diverse fruits from different regions of Vietnam with distinctive flavors",
+      "viewAll": "View All Regional Fruits"
+    },
+    "seasonalFruits": {
+      "title": "Seasonal Fruits",
+      "subtitle": "Enjoy the freshest and most delicious fruits available throughout the seasons",
+      "viewAll": "View All Seasonal Fruits"
+    },
+    "defaultFruits": {
+      "title": "Fruits",
+      "subtitle": "Enjoy the freshest and most delicious fruits",
+      "viewAll": "View All Fruits"
+    },
+    "products": {
+      "title": "Wholesale Products",
+      "subtitle": "Discover Our Local Fruit Collection",
+      "imported": "Specialty Fruits",
+      "local": "Fresh Local Fruits",
+      "seasonal": "Seasonal Specials",
+      "viewAll": "View All Products",
+      "categories": {
+        "title": "Product Categories",
+        "all": "All Products",
+        "imported": "Specialty Fruits",
+        "local": "Local Fruits",
+        "seasonal": "Seasonal",
+        "organic": "Organic"
+      }
+    },
+    "newsVideo": {
+      "title": "News",
+      "subtitle": "Latest updates about our products and services",
+      "news": "News",
+      "video": "Video",
+      "readMore": "Read More",
+      "playVideo": "Play Video",
+      "videoTitle": "About FreshFruit",
+      "videoDescription": "Watch our introduction video about the production and supply process of fresh fruits",
+      "videoPlaceholder": "Demo Video Will Be Added",
+      "noNews": "No news yet"
+    },
+    "customers": {
+      "title": "Our Customers",
+      "subtitle": "Retailers and stores trust and use our products",
+      "badge": "Trusted by Retailers",
+      "stats": {
+        "partners": "Partners",
+        "yearsExperience": "Years of Experience",
+        "trust": "Trust"
+      }
+    },
+    "partners": {
+      "title": "Our Partners",
+      "subtitle": "Partnering with leading trusted brands",
+      "badge": "Trusted Partner"
+    },
+    "quality": {
+      "title": "Quality Commitment",
+      "subtitle": "FreshFruit proudly delivers the freshest fruit products with absolute quality commitment",
+      "statements": {
+        "title": "Quality Statements",
+        "item1": {
+          "title": "Quality Guaranteed",
+          "description": "Every product is strictly inspected before delivery"
+        },
+        "item2": {
+          "title": "Clear Origin",
+          "description": "All fruits have clear origin and food safety certificates"
+        },
+        "item3": {
+          "title": "100% Commitment",
+          "description": "Money back or replacement if not satisfied with quality"
+        }
+      },
+      "certificates": {
+        "title": "Certifications & Commitments",
+        "item1": {
+          "title": "Quality Reputation",
+          "description": "12 years of experience in fruit industry"
+        },
+        "item2": {
+          "title": "Food Safety",
+          "description": "International food safety certification"
+        },
+        "item3": {
+          "title": "Fast Delivery",
+          "description": "Same-day delivery for retailers and stores"
+        },
+        "item4": {
+          "title": "Reasonable Prices",
+          "description": "Competitive wholesale prices, supporting retailer growth"
+        }
+      },
+      "trustBadge": "Trusted by retailers"
+    }
+  },
+  "news": {
+    "meta": {
+      "title": "News - Latest Updates | FreshFruit",
+      "description": "Stay updated with the latest news about fruits, health, nutrition and promotions from FreshFruit.",
+      "keywords": "news, fruits, health, nutrition, promotions, FreshFruit",
+      "ogTitle": "News - Latest Updates | FreshFruit",
+      "ogDescription": "Stay updated with the latest news about fruits, health, nutrition and promotions from FreshFruit"
+    },
+    "title": "Latest News & Updates",
+    "subtitle": "Stay informed about our latest products and promotions",
+    "readMore": "Read More",
+    "recent": "Recent Posts",
+    "categories": "Categories",
+    "search": "Search news...",
+    "noResults": "No articles found",
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page"
+    },
+    "detail": {
+      "breadcrumb": {
+        "home": "Home",
+        "news": "News"
+      },
+      "backToNews": "Back to News",
+      "share": "Share",
+      "shareModal": {
+        "shareNews": "Share News",
+        "shareToYourFriends": "Share to your friends",
+        "title": "Share Article",
+        "shareToFacebook": "Share to Facebook",
+        "copyLink": "Copy Link",
+        "linkCopied": "Link copied!",
+        "copyLinkFailed": "Failed to copy link"
+      },
+      "aboutAuthor": "About Author",
+      "authorTitle": "Khang-My's Editorial Team",
+      "articleStats": "Article Stats",
+      "views": "Views",
+      "likes": "Likes",
+      "readTime": "Read Time",
+      "relatedArticles": "Related Articles",
+      "viewsSuffix": "views",
+      "likesSuffix": "likes",
+      "timeReadingSuffix": "minutes",
+      "author": "Khang-My's Editorial Team"
+    },
+    "popup": {
+      "addTitle": "Add New Article",
+      "editTitle": "Edit Article",
+      "fields": {
+        "image": "Article Image",
+        "author": "Author",
+        "authorNone": "None",
+        "timeReading": "Reading Time (minutes)",
+        "timeReadingPlaceholder": "5",
+        "published": "Publish Now",
+        "titleVi": "Title (Vietnamese)",
+        "titleViPlaceholder": "Enter article title...",
+        "titleViRequired": "Title *",
+        "excerptVi": "Excerpt (Vietnamese)",
+        "excerptViPlaceholder": "Short excerpt about the article...",
+        "contentVi": "Content (Vietnamese)",
+        "contentViPlaceholder": "Enter article content...",
+        "contentViRequired": "Content *",
+        "tagsVi": "Tags (comma separated)",
+        "tagsViPlaceholder": "fruits, health, nutrition",
+        "titleEn": "Title (English)",
+        "titleEnPlaceholder": "Enter article title...",
+        "excerptEn": "Excerpt (English)",
+        "excerptEnPlaceholder": "Short excerpt about the article...",
+        "contentEn": "Content (English)",
+        "contentEnPlaceholder": "Enter article content...",
+        "tagsEn": "Tags (comma separated)",
+        "tagsEnPlaceholder": "fruits, health, nutrition",
+        "slug": "Slug (URL)",
+        "slugPlaceholder": "article-slug",
+        "slugHint": "Automatically generated from title in Vietnamese. Can be edited."
+      },
+      "tabs": {
+        "vietnamese": "Vietnamese *",
+        "english": "English"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "create": "Create",
+        "update": "Update",
+        "creating": "Creating...",
+        "updating": "Updating..."
+      },
+      "validation": {
+        "titleRequired": "Title is required",
+        "contentRequired": "Content is required",
+        "imageRequired": "Article image is required",
+        "timeReadingRequired": "Reading time is required",
+        "timeReadingMin": "Reading time must be greater than 0",
+        "excerptViRequired": "Excerpt is required",
+        "tagsViRequired": "Tags are required",
+        "titleEnRequired": "Title is required",
+        "excerptEnRequired": "Excerpt is required",
+        "contentEnRequired": "Content is required",
+        "tagsEnRequired": "Tags are required"
+      }
+    },
+    "api": {
+      "errors": {
+        "fetchList": "Failed to fetch news list",
+        "fetchDetail": "Failed to fetch news detail",
+        "create": "Failed to create news",
+        "update": "Failed to update news",
+        "delete": "Failed to delete news",
+        "togglePublish": "Failed to toggle publish status",
+        "network": "Network connection error",
+        "unknown": "An unknown error occurred"
+      },
+      "success": {
+        "created": "News created successfully",
+        "updated": "News updated successfully",
+        "deleted": "News deleted successfully",
+        "published": "News published successfully",
+        "unpublished": "News unpublished successfully"
+      }
+    }
+  },
+  "policy": {
+    "orderGuide": {
+      "meta": {
+        "title": "Order Guide and Payment Methods",
+        "description": "Simple ordering process with flexible payment options"
+      },
+      "hero": {
+        "badge": "ORDER GUIDE",
+        "title": "Order Guide and Payment Methods",
+        "description": "Simple ordering process with flexible payment options"
+      },
+      "intro": {
+        "title": "HOW TO ORDER AT FreshFruit",
+        "visitStore": "Please visit {storeName} store to directly select your desired products and pay at the store.",
+        "orderRemote": "Or you can order remotely via:",
+        "orderRemotely": "Or you can order remotely via:",
+        "payOnDelivery": "And pay immediately upon receiving the goods at your home."
+      },
+      "method1": {
+        "title": "1. Pay directly at FreshFruit store",
+        "description": "Please visit FreshFruit store to directly select your desired products. We accept the following payment methods:",
+        "cash": "Cash",
+        "transfer": "Bank Transfer",
+        "card": "Card Payment",
+        "cardTypes": "ATM, Visa, Master, JCB",
+        "pos": "Payment via POS machine at the store",
+        "transferNote": "Bank transfer accepted",
+        "benefit": "You can receive your products immediately after payment."
+      },
+      "method2": {
+        "title": "2. Cash on Delivery (COD)",
+        "description": "You can order remotely without visiting FreshFruit store via:",
+        "phone": "Phone",
+        "website": "Website",
+        "facebook": "Facebook",
+        "fanpage": "FreshFruit Fanpage",
+        "message": "Message",
+        "messageDesc": "Contact us via messaging apps",
+        "paymentType": "Payment will be made when receiving the goods.",
+        "payAfterReceive": "And pay immediately upon receiving the goods at your requested address.",
+        "note": {
+          "title": "Important Note:",
+          "codOnly": "COD payment is only available for orders within Ho Chi Minh City",
+          "otherAreas": "For orders outside the city and other provinces: Please pay in advance via bank transfer"
+        },
+        "noteTitle": "Important Note:",
+        "note1": "COD payment is only available for orders within Ho Chi Minh City",
+        "note2": "For orders outside the city and other provinces: Please pay in advance via bank transfer"
+      },
+      "method3": {
+        "title": "3. Bank Transfer Payment",
+        "processTitle": "Bank transfer payment process:",
+        "stepsTitle": "Bank transfer payment process:",
+        "step1": {
+          "title": "Remote Order",
+          "description": "Choose to order remotely via phone, website or online ordering"
+        },
+        "step1Title": "Remote Order",
+        "step1Desc": "Choose to order remotely via phone, website or online ordering",
+        "step2": {
+          "title": "Verify Order",
+          "description": "After verifying the order is correct, proceed with the bank transfer"
+        },
+        "step2Title": "Verify Order",
+        "step2Desc": "After verifying the order is correct, proceed with the bank transfer",
+        "step3": {
+          "title": "Transfer Content",
+          "syntax": "Syntax:",
+          "format": "[Full Name] + [Phone Number] + [Product Name]",
+          "example": "Example: Nguyen Van A + 0987654321 + Tao Envy"
+        },
+        "step3Title": "Transfer Content",
+        "bankInfo": "Bank Account Information:",
+        "accountNumber": "Please contact us for bank account details",
+        "transferNote": "Transfer content format: [Full Name] + [Phone Number] + [Product Name]",
+        "step4": {
+          "title": "Send Confirmation",
+          "description": "Then send a message and photo of the successful transfer to us via:",
+          "hotlineZalo": "Hotline/Zalo: {phone}",
+          "facebookFanpage": "Facebook Fanpage"
+        },
+        "step4Title": "Send Confirmation",
+        "step4Desc": "Then send a message and photo of the successful transfer to us via:",
+        "step4Phone": "Hotline/Zalo: {phone}",
+        "step4Message": "Facebook Fanpage",
+        "step5": {
+          "title": "Confirmation and Delivery",
+          "description": "{storeName} staff will contact you upon receiving the transfer to confirm and begin preparing your order for delivery."
+        },
+        "step5Title": "Confirmation and Delivery",
+        "step5Desc": "{storeName} staff will contact you upon receiving the transfer to confirm and begin preparing your order for delivery.",
+        "specialCase": {
+          "title": "Special Case:",
+          "description": "If you have successfully transferred but our bank account has not received the payment, both parties should contact the bank to verify the transaction. We will prepare and send your order immediately upon receiving the transfer."
+        },
+        "specialNoteTitle": "Special Case:",
+        "specialNoteDescription": "If you have successfully transferred but our bank account has not received the payment, both parties should contact the bank to verify the transaction. We will prepare and send your order immediately upon receiving the transfer."
+      },
+      "comparison": {
+        "title": "Payment Method Comparison",
+        "inStore": {
+          "title": "In Store",
+          "feature1": "Select products directly",
+          "feature2": "Multiple payment options",
+          "feature3": "Receive immediately"
+        },
+        "instoreTitle": "In Store",
+        "instoreFeature1": "Select products directly",
+        "instoreFeature2": "Multiple payment options",
+        "instoreFeature3": "Receive immediately",
+        "cod": {
+          "title": "COD",
+          "feature1": "Pay on delivery",
+          "feature2": "HCM City only",
+          "feature3": "Convenient & safe"
+        },
+        "codTitle": "COD",
+        "codFeature1": "Pay on delivery",
+        "codFeature2": "HCM City only",
+        "codFeature3": "Convenient & safe",
+        "transfer": {
+          "title": "Bank Transfer",
+          "feature1": "Nationwide",
+          "feature2": "Pay in advance",
+          "feature3": "Fast"
+        },
+        "transferTitle": "Bank Transfer",
+        "transferFeature1": "Nationwide",
+        "transferFeature2": "Pay in advance",
+        "transferFeature3": "Fast"
+      },
+      "cta": {
+        "title": "Need Order Support?",
+        "description": "Contact us now for consultation and order support",
+        "callButton": "Call to Order",
+        "emailButton": "Email"
+      }
+    },
+    "shipping": {
+      "meta": {
+        "title": "Shipping and Return Policy",
+        "description": "Fast delivery commitment and flexible return policy, ensuring customer rights"
+      },
+      "hero": {
+        "badge": "SHIPPING & RETURNS",
+        "title": "Shipping and Return Policy",
+        "description": "Fast delivery commitment and flexible return policy, ensuring customer rights"
+      },
+      "fees": {
+        "title": "SHIPPING FEES",
+        "freeShipping": "Free shipping for orders over 500,000 VND within 6km radius, 5,000 VND/km from the 7th km onwards.",
+        "standardFee": "For orders under 500,000 VND: Shipping fee is 30,000 VND/order for the first 6km. From the 7th km onwards, an additional 5,000 VND/km applies."
+      },
+      "policy": {
+        "title": "I. Shipping Policy in Ho Chi Minh City",
+        "freeShipping": "Free shipping for orders over 500,000 VND within 6km radius, 5,000 VND/km from the 7th km onwards.",
+        "standardFee": "For orders under 500,000 VND: Shipping fee is 30,000 VND/order for the first 6km. From the 7th km onwards, an additional 5,000 VND/km applies."
+      },
+      "return": {
+        "title": "II. Return and Refund Policy",
+        "beforeReceiving": {
+          "title": "1. Before Receiving",
+          "description": "Customers have the right to refuse delivery and payment if the delivery staff delivers incorrect products or if defective products are detected."
+        },
+        "afterReceiving": {
+          "title": "2. After Receiving",
+          "requirement": "Requirement: Customers must bring the purchase invoice with the product to be returned.",
+          "customerFault": {
+            "title": "Return due to customer's fault:",
+            "description": "When customers no longer wish to purchase, the product must:",
+            "condition1": "Have original packaging",
+            "condition2": "Product quality is still guaranteed",
+            "condition3": "Product appearance is not different from similar products",
+            "note": "Customers can exchange for another product of equal or higher value. Customers are responsible for paying the price difference if the exchanged product has higher value."
+          },
+          "storeFault": {
+            "title": "Return due to store's fault:",
+            "description": "Products that are damaged, defective, or due to supplier error (product inside packaging does not meet quality standards) will be exchanged for equivalent products of the same type."
+          },
+          "refund": {
+            "title": "Refund:",
+            "description": "Products are only refunded if they are defective due to store or supplier error and there are no equivalent products available for exchange at the time of return."
+          },
+          "timeLimit": {
+            "title": "Return Time Limit:",
+            "fresh": "Fresh products: 12 hours",
+            "other": "Other products: 24 hours",
+            "note": "* Calculated from the time stated on the store's purchase invoice"
+          }
+        },
+        "contact": {
+          "title": "3. Contact for Returns at FreshFruit",
+          "visitStore": "Customers should bring the product with the purchase invoice to the store address printed on the invoice for return processing.",
+          "hotline": "For other complaints, please contact hotline: {phone} {storeName} for the best support."
+        }
+      },
+      "summary": {
+        "title": "Policy Summary",
+        "accepted": {
+          "title": "Accepted Returns",
+          "item1": "Products defective from store",
+          "item2": "Wrong product delivered",
+          "item3": "Original packaging & quality intact"
+        },
+        "rejected": {
+          "title": "Not Accepted",
+          "item1": "Exceeded time limit",
+          "item2": "No purchase invoice",
+          "item3": "Used products"
+        }
+      },
+      "cta": {
+        "title": "Need Shipping or Return Support?",
+        "description": "Our customer service team is always ready to support you 24/7",
+        "callButton": "Call Hotline",
+        "emailButton": "Send Email"
+      }
+    },
+    "privacy": {
+      "meta": {
+        "title": "Privacy Policy",
+        "description": "FreshFruit is committed to protecting customer personal information with strict security measures"
+      },
+      "hero": {
+        "badge": "PRIVACY POLICY",
+        "title": "Privacy Policy",
+        "description": "FreshFruit is committed to protecting customer personal information with strict security measures"
+      },
+      "commitment": {
+        "title": "PRIVACY COMMITMENT",
+        "description": "{storeName} does not sell, share or exchange customer personal information collected on the website to any third party. Personal information collected will only be used internally."
+      },
+      "section1": {
+        "title": "1. Purpose and Scope of Information Collection",
+        "intro": "FreshFruit does not sell, share or exchange customer personal information collected on the website to any third party. Personal information collected will only be used internally.",
+        "collected": {
+          "title": "When you provide information to us, the personal information we collect includes:",
+          "name": "Customer Name",
+          "email": "Email Address",
+          "phone": "Phone Number",
+          "address": "Delivery Address",
+          "receiver": "Receiver Name"
+        },
+        "usage": {
+          "title": "This information will be used for one or all of the following purposes:",
+          "delivery": "Deliver products purchased at FreshFruit",
+          "notification": "Notify about delivery and customer support",
+          "productInfo": "Provide product-related information",
+          "orderProcessing": "Process orders and provide services as requested"
+        }
+      },
+      "section2": {
+        "title": "2. Scope of Information Use",
+        "description": "Personal information collected will only be used internally. We may share your name and address with courier services or our suppliers to deliver products to you."
+      },
+      "section3": {
+        "title": "3. Information Storage Time",
+        "computerData": "We store information for 2 years (computer data).",
+        "personalData": "For personal information, we only delete this data upon customer request."
+      },
+      "section4": {
+        "title": "4. Address of Personal Information Collection and Management Unit",
+        "taxCode": "Tax Code:",
+        "phone": "Phone:",
+        "email": "Email:"
+      },
+      "section5": {
+        "title": "5. Tools for Users to Access and Edit Personal Data",
+        "description": "Users can log into their personal account on the website and use the \"Edit\" function to adjust or delete their personal data. Or contact {storeName} directly to edit or delete."
+      },
+      "section6": {
+        "title": "6. Commitment to Customer Personal Information Security",
+        "intro": "At {storeName}, the privacy of our visitors is extremely important.",
+        "policy": "We will not share your information with any other company except companies and third parties directly related to the delivery of products you purchased at {storeName}. In some special cases, we may be required to disclose personal information, for example when there is a basis for disclosure to prevent threats to life and health, or for law enforcement purposes. We are committed to complying with the Privacy Act and National Privacy Principles.",
+        "contact": "If you believe your privacy has been violated, please contact us at {email} to resolve the issue."
+      },
+      "cta": {
+        "title": "Need More Support?",
+        "description": "If you have any questions about our privacy policy, please contact us",
+        "callButton": "Call Now",
+        "emailButton": "Send Email"
+      }
+    }
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "Discover our premium fruit collection",
+    "categories": {
+      "title": "Product Categories",
+      "all": "All Products",
+      "imported": "Imported Fruits",
+      "local": "Local Fruits",
+      "seasonal": "Seasonal",
+      "organic": "Organic"
+    },
+    "filters": {
+      "sortBy": "Sort by",
+      "price": "Price",
+      "origin": "Origin",
+      "category": "Category"
+    },
+    "product": {
+      "addToCart": "Add to Cart",
+      "viewDetails": "View Details",
+      "outOfStock": "Out of Stock",
+      "inStock": "In Stock"
+    },
+    "pagination": {
+      "showing": "Showing",
+      "of": "of",
+      "total": "total",
+      "products": "products",
+      "page": "Page",
+      "pageOf": "of"
+    },
+    "detail": {
+      "breadcrumb": {
+        "home": "Home",
+        "products": "Products"
+      },
+      "rating": "reviews",
+      "views": "Views",
+      "createdDate": "Created",
+      "unit": "Unit",
+      "weight": "Weight",
+      "origin": "Origin",
+      "status": "Status",
+      "statusContact": "Contact",
+      "statusOutOfStock": "Out of Stock",
+      "statusActive": "In Stock",
+      "order": "Order",
+      "quantity": "Quantity",
+      "addToCart": "Add to Cart",
+      "buyNow": "Buy Now",
+      "addToWishlist": "Add to Wishlist",
+      "share": "Share",
+      "description": "Product Description",
+      "productInfo": "Product Information",
+      "relatedProducts": "Related Products",
+      "addToCartRelated": "Add to Cart",
+      "qualityCommitment": "FreshFruit commits 100% to say no to preservatives & Chinese fruits!",
+      "contact": "Contact"
+    },
+    "showEntriesProduct": {
+      "showing": "Showing",
+      "of": "of",
+      "total": "total",
+      "products": "products",
+      "page": "Page",
+      "pageOf": "of"
+    }
+  }
+}

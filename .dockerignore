@@ -1,0 +1,38 @@
+# Dependencies
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build output (we build inside Docker)
+.next
+out
+build
+deploy-package
+
+# Env (never bake into image; use Coolify env)
+.env
+.env.*
+!.env.example
+
+# Git & IDE
+.git
+.gitignore
+.cursor
+*.md
+!README.md
+
+# Misc
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Optional: reduce image size (uncomment if you don't need these in build)
+# /public/assets_old
+# TIPTOP_EDITOR_GUIDE.md
+# DEPLOYMENT.md
+# package-for-deploy.ps1
