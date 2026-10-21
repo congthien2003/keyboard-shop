@@ -43,6 +43,11 @@ model CategoryTranslate {
 }
 
 model Product {
+  brand        String?
+  layout       String?
+  switchType   String?
+  connectivity String[] @default([])
+  hotSwappable Boolean?
   id           String             @id @default(uuid()) @db.Uuid
   thumbnail    String
   image        String

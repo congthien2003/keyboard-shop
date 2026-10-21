@@ -30,6 +30,11 @@ import { TipTapEditor } from "../tiptap-editor";
 import { X, GripVertical } from "lucide-react";
 
 type ProductFormData = {
+  brand: string;
+  layout: string;
+  switchType: string;
+  connectivity: string[];
+  hotSwappable: string;
   categoryId: string;
   name: string;
   nameVi: string;
@@ -80,6 +85,7 @@ export function ProductPopup({
     uploadGallery,
     deleteImages,
     loading,
+    error,
   } = useProduct();
 
   const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
@@ -87,6 +93,7 @@ export function ProductPopup({
   const [imagesToDelete, setImagesToDelete] = useState<string[]>([]);
 
   const defaultValues: ProductFormData = {
+    brand: "", layout: "", switchType: "", connectivity: [], hotSwappable: "",
     categoryId: "",
     name: "",
     nameVi: "",
@@ -132,6 +139,8 @@ export function ProductPopup({
       const translateVi = product.translates.find((t) => t.lang === "vi");
 
       reset({
+        brand: product.brand || "", layout: product.layout || "", switchType: product.switchType || "",
+        connectivity: product.connectivity || [], hotSwappable: product.hotSwappable == null ? "" : String(product.hotSwappable),
         categoryId: product.categoryId,
         name: translateEn?.name || "",
         nameVi: translateVi?.name || "",
@@ -240,6 +249,8 @@ export function ProductPopup({
       slug:
         formData.productSlug ||
         generateSlug(watch("nameVi") || watch("name") || ""),
+      brand: formData.brand.trim() || null, layout: formData.layout.trim() || null, switchType: formData.switchType.trim() || null,
+      connectivity: formData.connectivity, hotSwappable: formData.hotSwappable === "" ? null : formData.hotSwappable === "true",
       categoryId: formData.categoryId,
       rating: formData.rating || 0,
       viewCount: formData.viewCount || 0,
@@ -273,14 +284,16 @@ export function ProductPopup({
     };
 
     if (product) {
-      await updateProduct(product.id, input);
+      const saved = await updateProduct(product.id, input);
+      if (!saved) return;
       // After successfully updating the product, delete the marked images
       if (imagesToDelete.length > 0) {
         await deleteImages(imagesToDelete);
         setImagesToDelete([]); // Reset the list
       }
     } else {
-      await createProduct(input);
+      const saved = await createProduct(input);
+      if (!saved) return;
     }
     onOpenChange(false);
     onSuccess();
@@ -298,6 +311,23 @@ export function ProductPopup({
         </DialogHeader>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          <fieldset className="grid gap-4 rounded-lg border p-4 sm:grid-cols-2">
+            <legend className="px-2 font-semibold">{locale === "vi" ? "Thông số sản phẩm" : "Product specifications"}</legend>
+            {([ ["brand", locale === "vi" ? "Thương hiệu" : "Brand"], ["layout", "Layout"], ["switchType", "Switch"] ] as const).map(([field, label]) => (
+              <label key={field} className="space-y-2 text-sm">{label}<Input {...register(field)} maxLength={100} /></label>
+            ))}
+            <label className="space-y-2 text-sm">Hot-swap
+              <select {...register("hotSwappable")} className="w-full rounded-md border bg-background p-2">
+                <option value="">{locale === "vi" ? "Không áp dụng" : "Not applicable"}</option>
+                <option value="true">{locale === "vi" ? "Có" : "Yes"}</option>
+                <option value="false">{locale === "vi" ? "Không" : "No"}</option>
+              </select>
+            </label>
+            <div className="sm:col-span-2"><p className="mb-2 text-sm">{locale === "vi" ? "Kết nối" : "Connectivity"}</p>
+              <div className="flex flex-wrap gap-5">{["USB-C", "Bluetooth", "2.4GHz"].map(value => <label key={value} className="flex items-center gap-2 text-sm"><input type="checkbox" value={value} {...register("connectivity")} />{value}</label>)}</div>
+            </div>
+          </fieldset>
+          {error && <p role="alert" className="text-destructive">{error}</p>}
           {/* Category */}
           <div className="space-y-2">
             <label className="text-sm font-medium">

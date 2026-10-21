@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
+import { ProductImage as Image } from "@/components/common/product-image";
 
 interface ProductImageGalleryProps {
   thumbnail: string;
@@ -22,7 +22,7 @@ export function ProductImageGallery({
         <Image
           src={selectedImage === 0 ? thumbnail : images[selectedImage - 1]}
           alt={productName}
-          className="h-full w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
+          className="h-full w-full object-contain transition-transform duration-300 hover:scale-[1.02]"
           width={800}
           height={800}
         />
@@ -41,7 +41,7 @@ export function ProductImageGallery({
           <Image
             src={thumbnail}
             alt={`${productName} ${1}`}
-            className="h-20 w-20 object-cover"
+            className="h-20 w-20 object-contain"
             width={200}
             height={200}
           />
@@ -59,7 +59,7 @@ export function ProductImageGallery({
             <Image
               src={thumb}
               alt={`${productName} ${index + 2}`}
-              className="h-20 w-20 object-cover"
+              className="h-20 w-20 object-contain"
               width={200}
               height={200}
             />

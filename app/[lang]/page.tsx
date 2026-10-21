@@ -1,161 +1,31 @@
-import { Metadata } from "next";
-import { HeroSection } from "@/components/home-page/hero-section";
-import { FruitsSection } from "@/components/home-page/fruits-section";
-import { NewsVideoSectionServer } from "@/components/home-page/news-video-section-server";
-import { AboutSectionServer } from "@/components/home-page/about-section-server";
-import { ContactSection } from "@/components/home-page/contact-section";
-import { QualitySection } from "@/components/home-page/quality-section";
-import { FAQServer } from "@/components/home-page/faq-server";
-import { CustomersServer } from "@/components/home-page/customers-server";
-import { TestimonialsServer } from "@/components/home-page/testimonials-server";
-import { productService } from "@/services/product-service";
-import { newsService } from "@/services/news-service";
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowUpRight, ArrowRight, Keyboard, Layers, Cable, SlidersHorizontal } from "lucide-react";
 import { prisma } from "@/lib/prisma";
-import { COMPANY_INFO } from "@/data/company-info";
-import { NewsData } from "@/types/news";
-import { getTranslations, createTranslator, Locale } from "@/lib/i18n-server";
-
-const baseUrl = `https://${COMPANY_INFO.contact.website}`;
-
-type Props = {
-  params: { lang: Locale };
-};
-export default async function HomePage({ params }: Props) {
-  // Fetch data server-side
-  const { lang } = await params;
-  const translations = await getTranslations(lang ?? "vi");
-  const t = createTranslator(translations);
-
-  // Fetch products and news in parallel
-  const [products, newsResult] = await Promise.all([
-    productService.getProducts(1, 12),
-    prisma.news.findMany({
-      where: { published: true },
-      include: {
-        translates: true,
-      },
-      orderBy: { createdAt: "desc" },
-      take: 5,
-    }),
-  ]);
-
-  // Format news data with translations
-  const formattedNews: NewsData[] = newsResult.map((news) => {
-    const translateVi = news.translates.find((t) => t.lang === "vi");
-    const translateEn = news.translates.find((t) => t.lang === "en");
-    const translate = lang === "vi" ? translateVi : translateEn;
-    const fallbackTranslate = translateVi || translateEn || news.translates[0];
-
-    // Parse tags from JSON string
-    let tagsVi: string[] = [];
-    let tagsEn: string[] = [];
-    try {
-      tagsVi = translateVi?.tags ? JSON.parse(translateVi.tags) : [];
-    } catch {
-      tagsVi = [];
-    }
-    try {
-      tagsEn = translateEn?.tags ? JSON.parse(translateEn.tags) : [];
-    } catch {
-      tagsEn = [];
-    }
-
-    return {
-      id: news.id,
-      slug: news.slug,
-      image: news.image,
-      published: news.published,
-      timeReading: news.timeReading,
-      viewCount: news.viewCount || 0,
-      likeCount: news.likeCount || 0,
-      createdAt: news.createdAt.toISOString(),
-      updatedAt: news.updatedAt?.toISOString() || null,
-      authorId: news.authorId,
-      categoryId: news.categoryId,
-      // Use current locale translation with fallback
-      title: translate?.title || fallbackTranslate?.title || "",
-      titleVi: translateVi?.title || fallbackTranslate?.title || "",
-      titleEn: translateEn?.title || fallbackTranslate?.title || "",
-      excerpt: translate?.excerpt || fallbackTranslate?.excerpt || "",
-      excerptVi: translateVi?.excerpt || fallbackTranslate?.excerpt || "",
-      excerptEn: translateEn?.excerpt || fallbackTranslate?.excerpt || "",
-      content: translate?.content || fallbackTranslate?.content || "",
-      contentVi: translateVi?.content || fallbackTranslate?.content || "",
-      contentEn: translateEn?.content || fallbackTranslate?.content || "",
-      tags: lang === "vi" ? tagsVi : tagsEn,
-      tagsVi: tagsVi,
-    };
-  });
-
-  // Structured data for SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: COMPANY_INFO.name.vi,
-    alternateName: COMPANY_INFO.name.en,
-    url: `${baseUrl}/${lang}`,
-    logo: `${baseUrl}/images/logo-khangmy.webp`,
-    description:
-      lang === "vi"
-        ? "Nhà cung cấp sỉ/lẻ trái cây nội địa chất lượng cao đáng tin cậy"
-        : "Your trusted wholesale/retail supplier of high-quality local fruits",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "980/4 Hậu Giang, Phường Phú Lâm",
-      addressLocality: "Quận 6",
-      addressRegion: "Thành phố Hồ Chí Minh",
-      addressCountry: "VN",
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: COMPANY_INFO.contact.phone,
-      contactType: "customer service",
-      areaServed: "VN",
-      availableLanguage: ["Vietnamese", "English"],
-    },
-    sameAs: [COMPANY_INFO.contact.facebook, COMPANY_INFO.contact.zalo],
-  };
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
-      />
-      <div className="min-h-screen">
-        <main>
-          {/* H1 is in HeroSection component */}
-          <HeroSection lang={lang} />
-          <FruitsSection products={products} showNewBadge={false} lang={lang} />
-          {/* <FruitsSection
-					titleKey="home.seasonalFruits.title"
-					subtitleKey="home.seasonalFruits.subtitle"
-					viewAllKey="home.seasonalFruits.viewAll"
-					products={seasonalFruits}
-					backgroundColor="bg-background"
-					accentColor="bg-primary"
-					showNewBadge={true}
-				/>
-				<FruitsSection
-					titleKey="home.organicFruits.title"
-					subtitleKey="home.organicFruits.subtitle"
-					viewAllKey="home.organicFruits.viewAll"
-					products={organicFruits}
-					backgroundColor="bg-secondary/30"
-					accentColor="bg-accent"
-					showNewBadge={false}
-				/> */}
-          <TestimonialsServer lang={lang} />
-          <CustomersServer lang={lang} />
-          <QualitySection lang={lang} />
-          <NewsVideoSectionServer newsList={formattedNews} lang={lang} />
-          <FAQServer lang={lang} />
-          <AboutSectionServer lang={lang} />
-          <ContactSection lang={lang} />
-        </main>
-      </div>
-    </>
-  );
+import { productService } from "@/services/product-service";
+import { categoryService } from "@/services/category-service";
+import { ProductCard } from "@/components/common/product-card";
+import type { Locale } from "@/lib/i18n-server";
+import type { Metadata } from "next";
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+ const { lang } = await params;
+ return { title: lang === "vi" ? "Bàn phím cơ & phụ kiện" : "Mechanical keyboards & accessories", description: lang === "vi" ? "Khám phá bàn phím cơ, kit custom, switch, keycap và phụ kiện tại SB-MechKey." : "Find your next keyboard, custom kit, switches and keycaps at SB-MechKey." };
+}
+export default async function HomePage({ params }: { params: Promise<{ lang: Locale }> }) {
+ const { lang } = await params; const vi = lang === "vi";
+ const [products, categories, news] = await Promise.all([productService.getAllProducts(), categoryService.getAllCategories(), prisma.news.findMany({ where: { published: true }, include: { translates: true }, orderBy: { createdAt: "desc" }, take: 3 })]);
+ const accessoryIds = new Set(categories.filter(c => c.translates.some(t => /switch|keycap|accessor|phu-kien/i.test(t.slug))).map(c => c.id));
+ const keyboards = products.filter(p => !accessoryIds.has(p.categoryId));
+ const accessories = products.filter(p => accessoryIds.has(p.categoryId));
+ const sections = [ { title: vi ? "Mới trên kệ." : "Fresh on the desk.", kicker: "01 / NEW ARRIVALS", items: products.slice(0,4) }, { title: vi ? "Tìm chất riêng trong từng phím." : "Find your daily driver.", kicker: "02 / KEYBOARDS", items: keyboards.slice(0,4) }, { title: vi ? "Chi tiết nhỏ. Khác biệt lớn." : "Small parts. Big difference.", kicker: "03 / COMPONENTS & ACCESSORIES", items: accessories.slice(0,4) } ];
+ return <>
+  <section className="sb-hero"><div className="sb-container sb-hero-grid">
+   <div className="sb-reveal relative z-10"><p className="sb-kicker">SB-MECHKEY / THE KEYBOARD STORE</p><h1>{vi ? <>Một góc bàn.<br/>Một <span className="text-primary">chất riêng.</span></> : <>Your desk.<br/>Your <span className="text-primary">signature.</span></>}</h1><p className="max-w-md text-sm leading-7 text-muted-foreground md:text-base">{vi ? "Từ bàn phím đầu tiên đến bản build mang dấu ấn của bạn. Tìm cảm giác gõ, âm thanh và thiết kế khiến bạn muốn ngồi vào bàn." : "From your first mechanical keyboard to a build that feels like you. Find the sound, feel and design that bring you back to your desk."}</p><div className="my-8 flex flex-wrap gap-3"><Link className="sb-button" href={`/${lang}/san-pham`}>{vi ? "Khám phá bàn phím" : "Shop keyboards"}<ArrowUpRight size={18}/></Link><a className="sb-button-outline" href="#build-guide">{vi ? "Tìm gu của bạn" : "Find your fit"}</a></div><div className="flex gap-5 text-xs text-muted-foreground"><span>MECHANICAL</span><span>WIRELESS</span><span>CUSTOM</span></div></div>
+   <div className="sb-hero-art sb-reveal"><span className="absolute right-0 top-0 font-mono text-[clamp(60px,10vw,140px)] font-bold tracking-tighter text-white/[0.04]" aria-hidden="true">MECH.</span><Image src="/images/mechkey/keyboard.svg" alt={vi ? "Minh họa bàn phím SB-MechKey đỏ trắng" : "Red and white SB-MechKey keyboard illustration"} width={900} height={600} priority/><div className="sb-hero-caption"><span>DESIGNED AROUND YOU</span><span>KEYBOARD / SWITCH / KEYCAP</span></div></div>
+  </div></section>
+  <section className="sb-container py-14"><div className="mb-7 flex items-end justify-between gap-4"><div><p className="sb-kicker mb-3">EXPLORE THE COLLECTION</p><h2 className="sb-section-heading">{vi ? "Bắt đầu từ điều bạn thích." : "Start with what you love."}</h2></div><span className="hidden font-mono text-sm text-muted-foreground md:block">{String(categories.length).padStart(2,"0")} / CATEGORIES</span></div><div className="grid grid-cols-2 gap-3 md:grid-cols-4 xl:grid-cols-7">{categories.map((c,i) => { const tr = c.translates.find(t => t.lang === lang) || c.translates[0]; const categoryKey = c.translates.map(t => t.slug).join(" "); const Icon = /switch|keycap/.test(categoryKey) ? Layers : /kit/.test(categoryKey) ? SlidersHorizontal : /wireless|khong-day|phu-kien|accessor/.test(categoryKey) ? Cable : Keyboard; return <Link className="sb-category" key={c.id} href={`/${lang}/san-pham?category=${encodeURIComponent(tr?.slug || c.id)}`}><div className="flex justify-between"><Icon size={28} strokeWidth={1.3}/><span className="sb-category-number">{String(i+1).padStart(2,"0")}</span></div><div className="flex items-end justify-between gap-2"><span className="text-sm font-semibold">{tr?.name}</span><ArrowUpRight size={16} className="shrink-0 text-primary"/></div></Link>; })}</div>{!categories.length && <p className="py-6 text-muted-foreground">{vi ? "Danh mục đang được cập nhật." : "Collections are being updated."}</p>}</section>
+  {sections.map(section => <section className="sb-container py-12" key={section.kicker}><div className="mb-8 flex flex-wrap items-end justify-between gap-4"><div><p className="sb-kicker mb-3">{section.kicker}</p><h2 className="sb-section-heading">{section.title}</h2></div><Link className="flex items-center gap-2 text-sm" href={`/${lang}/san-pham`}>{vi ? "Xem bộ sưu tập" : "View collection"}<ArrowRight size={16}/></Link></div><div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{section.items.map(p => <ProductCard key={p.id} product={p} lang={lang}/>)}</div>{!section.items.length && <p className="rounded-lg border border-dashed p-10 text-center text-muted-foreground">{vi ? "Sản phẩm đang được cập nhật. Hãy quay lại sớm." : "New products are on the way. Check back soon."}</p>}</section>)}
+  <section id="build-guide" className="sb-container py-16"><div className="grid overflow-hidden rounded-lg border border-border bg-card lg:grid-cols-2"><div className="flex flex-col justify-center p-8 md:p-12"><p className="sb-kicker">THE STARTER GUIDE</p><h2 className="sb-section-heading my-5">{vi ? "Bàn phím đúng gu. Bắt đầu từ đâu?" : "Your kind of keyboard. Where to begin?"}</h2><p className="mb-8 text-sm leading-7 text-muted-foreground">{vi ? "Chọn layout phù hợp góc bàn, cảm giác switch bạn thích và kết nối cho thiết bị đang dùng. Một lựa chọn nhỏ có thể thay đổi cả trải nghiệm." : "Choose a layout for your desk, switches for your preferred feel, and connectivity for your devices. Small choices shape the whole experience."}</p><div className="grid gap-4 border-t border-border pt-6">{(vi ? ["01 — Layout: nhỏ gọn hay đầy đủ phím?", "02 — Switch: linear, tactile hay clicky?", "03 — Kết nối: có dây hay không dây?"] : ["01 — Layout: compact or full size?", "02 — Switch: linear, tactile or clicky?", "03 — Connection: wired or wireless?"]).map(t => <p className="text-sm" key={t}>{t}</p>)}</div><Link href={`/${lang}/lien-he`} className="sb-button mt-8 self-start">{vi ? "Nhận tư vấn" : "Get advice"}<ArrowUpRight size={16}/></Link></div><div className="sb-product-image flex items-center"><Image src="/images/mechkey/switch.svg" alt={vi ? "Minh họa switch bàn phím" : "Keyboard switch illustration"} width={900} height={600}/></div></div></section>
+  {news.length > 0 && <section className="sb-container pb-20"><p className="sb-kicker mb-3">THE JOURNAL</p><h2 className="sb-section-heading mb-8">{vi ? "Chuyện quanh góc bàn." : "Stories from the desk."}</h2><div className="grid gap-6 md:grid-cols-3">{news.map(n => { const tr = n.translates.find(t => t.lang === lang) || n.translates[0]; return <Link className="storefront-card overflow-hidden" key={n.id} href={`/${lang}/tin-tuc/${n.slug}`}><Image src={n.image || "/images/mechkey/keyboard.svg"} alt={tr?.title || ""} width={600} height={360} className="aspect-[5/3] w-full object-cover"/><div className="p-6"><h3 className="mb-3 text-lg font-semibold">{tr?.title}</h3><p className="line-clamp-2 text-sm text-muted-foreground">{tr?.excerpt}</p></div></Link>; })}</div></section>}
+ </>;
 }

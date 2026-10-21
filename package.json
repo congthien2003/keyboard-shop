@@ -1,5 +1,5 @@
 {
-  "name": "fresh-fruit",
+  "name": "sb-mechkey",
   "version": "1.0.2",
   "private": true,
   "scripts": {
@@ -10,7 +10,8 @@
     "prebuild": "prisma generate",
     "update-database": "npx prisma migrate deploy && npx prisma generate",
     "seed:admin": "npx ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} prisma/seed-admin.ts",
-    "format": "bun prettier . --write"
+    "format": "bun prettier . --write",
+    "seed:keyboard": "ts-node --project prisma/tsconfig.seed.json prisma/seed-keyboard.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.18.0",

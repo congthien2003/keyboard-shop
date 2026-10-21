@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle2, AlertCircle } from "lucide-react";
-import Image from "next/image";
+import { ProductImage as Image } from "@/components/common/product-image";
 import {
   CartItem,
   getCart,
@@ -218,6 +218,7 @@ export function CartPageClient({ lang, translations: t }: CartPageClientProps) {
   };
 
   const handlePlaceOrder = async () => {
+    if (isSubmitting || loading) return;
     setSubmitStatus("idle");
     setErrorMessage("");
 
@@ -244,10 +245,10 @@ export function CartPageClient({ lang, translations: t }: CartPageClientProps) {
           item.id != null &&
           item.id !== undefined &&
           typeof item.id === "string" &&
-          item.id.trim().length > 0,
+          item.id.trim().length > 0 && Number.isSafeInteger(item.quantity) && item.quantity > 0,
       );
 
-      if (validItems.length === 0) {
+      if (validItems.length !== items.length || validItems.length === 0) {
         setSubmitStatus("error");
         setErrorMessage(t.error.invalidItems);
         setIsSubmitting(false);
@@ -298,10 +299,7 @@ export function CartPageClient({ lang, translations: t }: CartPageClientProps) {
         });
 
         setSubmitStatus("success");
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          setSubmitStatus("idle");
-        }, 5000);
+
       } else {
         setSubmitStatus("error");
         setErrorMessage(t.error.submit);
@@ -414,6 +412,7 @@ export function CartPageClient({ lang, translations: t }: CartPageClientProps) {
                       <Input
                         type="text"
                         value={name}
+                        aria-label={t.name}
                         onChange={handleNameChange}
                         onBlur={handleNameBlur}
                         className={errors.name ? "border-red-500" : ""}
@@ -432,6 +431,7 @@ export function CartPageClient({ lang, translations: t }: CartPageClientProps) {
                       <Input
                         type="tel"
                         value={phone}
+                        aria-label={t.phone}
                         onChange={handlePhoneChange}
                         onBlur={handlePhoneBlur}
                         className={errors.phone ? "border-red-500" : ""}
@@ -450,6 +450,7 @@ export function CartPageClient({ lang, translations: t }: CartPageClientProps) {
                       <Input
                         type="email"
                         value={email}
+                        aria-label={t.email}
                         onChange={handleEmailChange}
                         onBlur={handleEmailBlur}
                         className={errors.email ? "border-red-500" : ""}
@@ -467,6 +468,7 @@ export function CartPageClient({ lang, translations: t }: CartPageClientProps) {
                       </label>
                       <Textarea
                         value={address}
+                        aria-label={t.address}
                         onChange={handleAddressChange}
                         onBlur={handleAddressBlur}
                         className={errors.address ? "border-red-500" : ""}
@@ -485,6 +487,7 @@ export function CartPageClient({ lang, translations: t }: CartPageClientProps) {
                       </label>
                       <Textarea
                         value={note}
+                        aria-label={t.note}
                         onChange={(e) => setNote(e.target.value)}
                         rows={3}
                       />
@@ -500,7 +503,7 @@ export function CartPageClient({ lang, translations: t }: CartPageClientProps) {
 
                   {/* Status Messages */}
                   {submitStatus === "success" && (
-                    <div className="mb-4 flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50/80 p-3 text-emerald-800">
+                    <div role="status" className="mb-4 flex items-center gap-2 rounded-xl border border-border bg-secondary p-3 text-foreground">
                       <CheckCircle2 className="h-5 w-5" />
                       <span className="text-sm whitespace-pre-line">
                         {t.success}
@@ -509,7 +512,7 @@ export function CartPageClient({ lang, translations: t }: CartPageClientProps) {
                   )}
 
                   {submitStatus === "error" && (
-                    <div className="mb-4 flex items-center gap-2 rounded-xl border border-red-200 bg-red-50/80 p-3 text-red-800">
+                    <div role="alert" className="mb-4 flex items-center gap-2 rounded-xl border border-primary/40 bg-primary/10 p-3 text-destructive">
                       <AlertCircle className="h-5 w-5" />
                       <span className="text-sm">{errorMessage}</span>
                     </div>

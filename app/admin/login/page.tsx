@@ -52,8 +52,8 @@ export default function AdminLoginPage() {
         <CardHeader className="space-y-4 text-center pb-8">
           <div className="flex justify-center">
             <Image
-              src="/images/logo-khangmy.webp"
-              alt="FreshFruit Logo"
+              src="/images/mechkey/logo.svg"
+              alt="SB-MechKey Logo"
               width={100}
               height={100}
               className="rounded-full shadow-lg"
@@ -144,7 +144,7 @@ export default function AdminLoginPage() {
           <div className="mt-6 text-center text-sm text-muted-foreground">
             <p>
               {t("admin.login.footer") ||
-                "© 2025 FreshFruit - Trái Cây Tươi Ngon"}
+                "© 2025 SB-MechKey - Bàn Phím & Phụ Kiện"}
             </p>
           </div>
         </CardContent>

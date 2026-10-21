@@ -6,10 +6,10 @@ import { NewsGrid } from "./components/news-grid";
 import { NewsPagination } from "./components/news-pagination";
 import { NewsData } from "@/types/news";
 import NewsHero from "./components/news-hero";
-import { COMPANY_INFO } from "@/data/company-info";
+import { COMPANY_INFO, SITE_URL } from "@/data/company-info";
 
 const ITEMS_PER_PAGE = 6;
-const baseUrl = `https://${COMPANY_INFO.contact.website}`;
+const baseUrl = SITE_URL;
 
 export async function generateMetadata({
   params,
@@ -132,8 +132,8 @@ export default async function NewsPage({ params, searchParams }: PageProps) {
     "@type": "CollectionPage",
     name: isVi ? "Tin Tức Trái Cây" : "Fruit News",
     description: isVi
-      ? "Tin tức và bài viết về trái cây, dinh dưỡng và sức khỏe"
-      : "News and articles about fruits, nutrition and health",
+      ? "Tin tức và bài viết về bàn phím, dinh dưỡng và sức khỏe"
+      : "News and articles about keyboards, nutrition and health",
     url: `${baseUrl}/${lang}/tin-tuc`,
     mainEntity: {
       "@type": "ItemList",
@@ -145,7 +145,7 @@ export default async function NewsPage({ params, searchParams }: PageProps) {
           "@type": "NewsArticle",
           headline: news.title || "",
           description: news.excerpt || "",
-          image: news.image || `${baseUrl}/images/logo-khangmy.webp`,
+          image: news.image || `${baseUrl}/images/mechkey/logo.svg`,
           url: `${baseUrl}/${lang}/tin-tuc/${news.slug}`,
           datePublished: news.createdAt,
           dateModified: news.updatedAt || news.createdAt,

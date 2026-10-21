@@ -4,10 +4,10 @@ import { AdminProvider } from "@/contexts/admin-context";
 import { I18nProvider } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Admin - FreshFruit",
-  description: "Admin Dashboard - FreshFruit Fruit Store",
+  title: "Admin - SB-MechKey",
+  description: "Admin Dashboard - SB-MechKey Keyboard Store",
   icons: {
-    icon: "/images/logo-khangmy.webp",
+    icon: "/images/mechkey/logo.svg",
   },
 };
 

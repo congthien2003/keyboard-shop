@@ -1,0 +1,6 @@
+ALTER TABLE "Product"
+ADD COLUMN "brand" TEXT,
+ADD COLUMN "layout" TEXT,
+ADD COLUMN "switchType" TEXT,
+ADD COLUMN "connectivity" TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[],
+ADD COLUMN "hotSwappable" BOOLEAN;

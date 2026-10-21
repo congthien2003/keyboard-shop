@@ -1,130 +1,16 @@
 "use client";
-
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ShoppingCart, Star } from "lucide-react";
-import { useI18n } from "@/lib/i18n";
-import { ProductResponse } from "@/services/product-service";
+import Link from "next/link";
+import { useState } from "react";
+import { ArrowUpRight, Plus, Check } from "lucide-react";
+import { ProductImage } from "./product-image";
+import type { ProductResponse } from "@/services/product-service";
 import { formatUsd, formatVnd } from "@/lib/formatAmount";
-import Image from "next/image";
 import { addToCart } from "@/lib/cart";
 import type { Locale } from "@/lib/types";
-
-interface ProductCardProps {
-  product: ProductResponse;
-  showNewBadge?: boolean;
-  onAddToCart?: (product: ProductResponse) => void;
-  lang: Locale;
-}
-
-export function ProductCard({
-  product,
-  showNewBadge = true,
-  onAddToCart,
-  lang = "vi",
-}: ProductCardProps) {
-  const handleAddToCart = () => {
-    addToCart({
-      id: product.id,
-      name: product.translates.find((t) => t.lang === lang)?.name || "",
-      nameVi: product.translates.find((t) => t.lang === "vi")?.name || "",
-      price: product.translates.find((t) => t.lang === "en")?.price || 0,
-      priceVND: product.translates.find((t) => t.lang === "vi")?.price || 0,
-      image: product.thumbnail || "",
-      unit: product.translates.find((t) => t.lang === "en")?.unit || "",
-      unitVi: product.translates.find((t) => t.lang === "vi")?.unit || "",
-      quantity: 1,
-    });
-  };
-
-  const handleContact = () => {
-    window.location.href = "/lien-he";
-  };
-
-  const handleViewDetails = () => {
-    window.location.href = `/${lang}/san-pham/${product.slug}`;
-  };
-
-  return (
-    <Card
-      className="storefront-card storefront-card-interactive group cursor-pointer overflow-hidden py-0"
-      onClick={handleViewDetails}
-    >
-      <CardContent className="p-0">
-        {/* Product Image */}
-        <div className="relative aspect-square overflow-hidden bg-muted">
-          <Image
-            src={product.thumbnail || "/placeholder.svg"}
-            alt={product.translates?.find((t) => t.lang === lang)?.name || ""}
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-            width={400}
-            height={400}
-            unoptimized={product.thumbnail?.startsWith("/assets/")}
-          />
-          {/* {showNewBadge && (
-						<div className="absolute top-3 right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
-							{t("new")}
-						</div>
-					)} */}
-        </div>
-
-        {/* Product Info */}
-        <div className="space-y-4 p-5">
-          <div>
-            <h3 className="line-clamp-1 text-lg font-semibold text-foreground transition-colors group-hover:text-primary">
-              {product.translates.find((t) => t.lang === lang)?.name || ""}
-            </h3>
-            <div className="flex justify-between items-center gap-2">
-              <div className="flex items-center gap-1">
-                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                <span className="text-sm font-medium text-foreground">
-                  {product.rating.toFixed(1)} / 5.0
-                </span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                {lang === "vi" ? "Xuất xứ" : "Origin"}:{" "}
-                {product.translates.find((t) => t.lang === lang)?.fromCountry ||
-                  ""}
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between">
-            <span className="text-xl font-bold text-primary">
-              {product.status === 3
-                ? lang === "vi"
-                  ? formatVnd(
-                      product.translates.find((t) => t.lang === "vi")?.price ||
-                        0,
-                    )
-                  : formatUsd(
-                      product.translates.find((t) => t.lang === "en")?.price ||
-                        0,
-                    )
-                : lang === "vi"
-                  ? "Liên hệ"
-                  : "Contact"}
-            </span>
-            <Button
-              size="sm"
-              className="gap-2 border-primary/20 bg-card hover:bg-secondary hover:text-secondary-foreground"
-              variant={"outline"}
-              onClick={(e) => {
-                e.stopPropagation();
-                handleAddToCart();
-              }}
-            >
-              <ShoppingCart className="h-4 w-4" />
-              {lang === "vi" ? "Thêm vào giỏ hàng" : "Add to Cart"}
-            </Button>
-          </div>
-
-          {/* Contact Button - Full Width */}
-          <Button className="w-full gap-2" onClick={handleContact}>
-            {lang === "vi" ? "Liên hệ" : "Contact"}
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  );
+export function ProductCard({ product, lang, onAddToCart }: { product: ProductResponse; lang: Locale; showNewBadge?: boolean; onAddToCart?: (product: ProductResponse) => void }) {
+ const [added,setAdded] = useState(false); const vi=lang==="vi";
+ const tr=product.translates.find(t=>t.lang===lang)||product.translates[0];
+ const en=product.translates.find(t=>t.lang==="en"); const vn=product.translates.find(t=>t.lang==="vi");
+ const add=()=>{if(product.status!==3)return;addToCart({id:product.id,name:en?.name||tr?.name||"",nameVi:vn?.name||tr?.name||"",price:en?.price||0,priceVND:vn?.price||0,image:product.thumbnail,unit:en?.unit,unitVi:vn?.unit,quantity:1});setAdded(true);onAddToCart?.(product);};
+ return <article className="storefront-card storefront-card-interactive flex flex-col overflow-hidden"><Link href={`/${lang}/san-pham/${product.slug}`} className="sb-product-image relative block overflow-hidden"><ProductImage src={product.thumbnail} alt={tr?.name||""} width={600} height={450} className="aspect-[4/3] w-full transition-transform duration-300 hover:scale-105"/>{product.status===2 && <span className="absolute left-3 top-3 rounded bg-background/90 px-3 py-1 text-xs">{vi?"Hết hàng":"Sold out"}</span>}</Link><div className="flex flex-1 flex-col p-5"><p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{product.brand||"SB-MECHKEY"}</p><Link href={`/${lang}/san-pham/${product.slug}`} className="mb-3 text-lg font-bold hover:text-primary">{tr?.name}</Link><p className="mb-6 min-h-5 font-mono text-xs text-muted-foreground">{[product.layout,product.switchType,...(product.connectivity||[])].filter(Boolean).join(" / ")}</p><div className="mt-auto flex items-center justify-between gap-2 border-t border-border pt-4"><span className="text-lg font-bold">{product.status===1 ? (vi?"Liên hệ":"Contact") : vi?formatVnd(tr?.price||0):formatUsd(tr?.price||0)}</span>{product.status===3 ? <button className="flex items-center gap-1 rounded-md bg-primary px-3 py-2 text-xs font-semibold text-white" onClick={add} aria-label={`${vi?"Thêm vào giỏ":"Add to cart"}: ${tr?.name}`}>{added?<Check size={16}/>:<Plus size={16}/>}<span>{vi?"Thêm":"Add"}</span></button> : product.status===1 ? <Link href={`/${lang}/lien-he`} aria-label={vi?"Liên hệ":"Contact"} className="rounded-md border p-2"><ArrowUpRight size={18}/></Link> : <span className="text-xs text-muted-foreground">{vi?"Tạm hết":"Unavailable"}</span>}</div><span className="sr-only" role="status">{added?(vi?"Đã thêm vào giỏ hàng":"Added to cart"):""}</span></div></article>;
 }

@@ -1,4 +1,4 @@
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import fs from "fs";
 import path from "path";
 import type { Locale } from "./types";
@@ -10,9 +10,10 @@ interface Translations {
 }
 
 export async function getLocale(): Promise<Locale> {
+  const routeLocale = (await headers()).get("x-shop-locale");
+  if (routeLocale === "vi" || routeLocale === "en") return routeLocale;
   const cookieStore = await cookies();
-  const locale = cookieStore.get("locale")?.value as Locale;
-  return locale || "vi";
+  return cookieStore.get("locale")?.value === "en" ? "en" : "vi";
 }
 
 export async function getTranslations(locale: Locale): Promise<Translations> {

@@ -22,7 +22,7 @@ type NotFoundContentProps = {
 
 export function NotFoundContent({ lang, translations }: NotFoundContentProps) {
   return (
-    <div className="flex min-h-[calc(100vh-200px)] items-center justify-center bg-[radial-gradient(circle_at_top,oklch(0.96_0.04_105),transparent_52%)] px-4 py-16">
+    <div className="flex min-h-[calc(100vh-200px)] items-center justify-center bg-background px-4 py-16">
       <div className="storefront-card w-full max-w-2xl space-y-8 p-8 text-center md:p-12">
         {/* 404 Heading */}
         <div className="space-y-4">

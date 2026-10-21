@@ -153,13 +153,13 @@ export default function ProductsPage() {
     const statusNum = typeof status === "string" ? parseInt(status) : status;
     switch (statusNum) {
       case 1: // CONTACT
-        return "bg-blue-100 text-blue-700";
+        return "bg-secondary text-foreground";
       case 3: // ACTIVE
-        return "bg-green-100 text-green-700";
+        return "bg-secondary text-foreground";
       case 2: // SOLD
         return "bg-red-100 text-red-700";
       default:
-        return "bg-gray-100 text-gray-700";
+        return "bg-secondary text-muted-foreground";
     }
   };
 
@@ -378,7 +378,7 @@ export default function ProductsPage() {
                                   </p>
                                 )}
                                 {product.rating && (
-                                  <span className="inline-block mt-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-700">
+                                  <span className="inline-block mt-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-secondary text-foreground">
                                     ⭐ {product.rating.toFixed(1)}
                                   </span>
                                 )}

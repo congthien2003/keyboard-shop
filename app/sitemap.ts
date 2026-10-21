@@ -1,10 +1,10 @@
 import { MetadataRoute } from "next";
 import { productService } from "@/services/product-service";
 import { newsService } from "@/services/news-service";
-import { COMPANY_INFO } from "@/data/company-info";
+import { COMPANY_INFO, SITE_URL } from "@/data/company-info";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = `https://${COMPANY_INFO.contact.website}`;
+  const baseUrl = SITE_URL;
   const locales = ["vi", "en"] as const;
 
   // Static pages with locale in URL

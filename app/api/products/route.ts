@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { productSpecsSchema } from "@/lib/product-specs";
 import { prisma } from "@/lib/prisma";
 
 // GET /api/products - return all products with translates
@@ -34,9 +35,12 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
+    const specs = productSpecsSchema.safeParse(body);
+    if (!specs.success) return NextResponse.json({ error: "Invalid product specifications", details: specs.error.flatten() }, { status: 400 });
     // Expecting CreateProductInput shape from hooks/useProduct
     const created = await prisma.product.create({
       data: {
+        ...specs.data,
         thumbnail: body.thumbnail,
         image: JSON.stringify(body.image || []),
         status: body.status,

@@ -12,7 +12,7 @@ import {
   ArrowLeft,
   Clock,
 } from "lucide-react";
-import Image from "next/image";
+import { ProductImage as Image } from "@/components/common/product-image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NewsData } from "@/types/news";
@@ -40,13 +40,13 @@ export function NewsDetailClient({
     vi: {
       breadcrumbHome: "Trang Chủ",
       breadcrumbNews: "Tin Tức",
-      author: "Đội ngũ biên tập FreshFruit",
+      author: "Đội ngũ biên tập SB-MechKey",
       timeReadingSuffix: "phút",
       viewsSuffix: "lượt xem",
       likes: "Lượt Thích",
       share: "Chia Sẻ",
       aboutAuthor: "Về Tác Giả",
-      authorTitle: "Đội Ngũ Biên Tập FreshFruit",
+      authorTitle: "Đội Ngũ Biên Tập SB-MechKey",
       articleStats: "Thống Kê Bài Viết",
       views: "Lượt Xem",
       readTime: "Thời Gian Đọc",
@@ -63,13 +63,13 @@ export function NewsDetailClient({
     en: {
       breadcrumbHome: "Home",
       breadcrumbNews: "News",
-      author: "FreshFruit Editorial Team",
+      author: "SB-MechKey Editorial Team",
       timeReadingSuffix: "minutes",
       viewsSuffix: "views",
       likes: "Likes",
       share: "Share",
       aboutAuthor: "About Author",
-      authorTitle: "FreshFruit's Editorial Team",
+      authorTitle: "SB-MechKey's Editorial Team",
       articleStats: "Article Stats",
       views: "Views",
       readTime: "Read Time",
@@ -94,7 +94,6 @@ export function NewsDetailClient({
           {t.errorTitle}
         </h1>
         <p className="text-muted-foreground mb-6">{t.notFound}</p>
-        // check
         <Link href={`/${lang}/tin-tuc`}>
           <Button variant="outline" className="gap-2">
             <ArrowLeft className="h-4 w-4" />

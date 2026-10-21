@@ -1,26 +1,7 @@
-import { Button } from "@/components/ui/button";
+"use client";
 import { Globe } from "lucide-react";
-import { Locale } from "@/lib/i18n-server";
-export function LanguageSwitcher({ lang }: { lang: Locale }) {
-  return (
-    <Button
-      variant="ghost"
-      size="sm"
-      onClick={() =>
-        lang === "en"
-          ? (window.location.href = `/vi/${window.location.pathname
-              .split("/")
-              .slice(2)
-              .join("/")}`)
-          : (window.location.href = `/en/${window.location.pathname
-              .split("/")
-              .slice(2)
-              .join("/")}`)
-      }
-      className="gap-2 border border-primary-foreground/10 bg-primary-foreground/5 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground focus-visible:ring-primary-foreground/60"
-    >
-      <Globe className="h-4 w-4" />
-      <span className="font-medium">{lang === "en" ? "EN" : "VI"}</span>
-    </Button>
-  );
+import type { Locale } from "@/lib/types";
+export function LanguageSwitcher({lang}:{lang:Locale}) {
+ const target=lang==="vi"?"en":"vi";
+ return <button type="button" aria-label={lang==="vi"?"Switch to English":"Chuyển sang tiếng Việt"} onClick={()=>{document.cookie=`locale=${target};path=/;max-age=31536000;SameSite=Lax`;window.location.href=`/${target}/${window.location.pathname.split("/").slice(2).join("/")}${window.location.search}`;}} className="flex items-center gap-2 rounded-md border px-3 py-2 text-xs"><Globe size={15}/>{lang.toUpperCase()}</button>;
 }

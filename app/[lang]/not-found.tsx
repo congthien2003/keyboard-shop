@@ -5,11 +5,11 @@ import {
   createTranslator,
   getLocale,
 } from "@/lib/i18n-server";
-import { COMPANY_INFO } from "@/data/company-info";
+import { COMPANY_INFO, SITE_URL } from "@/data/company-info";
 import { NotFoundTracking } from "../../components/not-fund/not-found-tracking";
 import { NotFoundContent } from "../../components/not-fund/not-found-content";
 
-const baseUrl = `https://${COMPANY_INFO.contact.website}`;
+const baseUrl = SITE_URL;
 const DEFAULT_LOCALE: Locale = "vi";
 
 type Props = {
@@ -39,8 +39,8 @@ export async function generateMetadata({
   const isVi = lang === "vi";
 
   const title = isVi
-    ? "404 - Trang không tìm thấy | FreshFruit"
-    : "404 - Page Not Found | FreshFruit";
+    ? "404 - Trang không tìm thấy | SB-MechKey"
+    : "404 - Page Not Found | SB-MechKey";
   const description = isVi
     ? "Trang bạn đang tìm kiếm không tồn tại. Vui lòng quay lại trang chủ hoặc xem các sản phẩm của chúng tôi."
     : "The page you are looking for does not exist. Please return to the home page or browse our products.";
@@ -61,11 +61,11 @@ export async function generateMetadata({
       description,
       url: `${baseUrl}/${lang}/404`,
       siteName: isVi
-        ? "FreshFruit - Trái Cây Tươi Ngon"
-        : "FreshFruit - Premium Fresh Fruits",
+        ? "SB-MechKey - Bàn Phím & Phụ Kiện"
+        : "SB-MechKey - Keyboards & Accessories",
       images: [
         {
-          url: `${baseUrl}/images/logo-khangmy.webp`,
+          url: `${baseUrl}/images/mechkey/logo.svg`,
           width: 1200,
           height: 630,
           alt: title,
@@ -79,7 +79,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [`${baseUrl}/images/logo-khangmy.webp`],
+      images: [`${baseUrl}/images/mechkey/logo.svg`],
     },
   };
 }

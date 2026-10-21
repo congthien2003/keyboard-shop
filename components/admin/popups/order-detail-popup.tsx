@@ -44,23 +44,23 @@ export function OrderDetailPopup({
   const getStatusColor = (status: OrderStatus) => {
     switch (status) {
       case OrderStatus.DELIVERED:
-        return "bg-green-100 text-green-700";
+        return "bg-secondary text-foreground";
       case OrderStatus.SHIPPING:
-        return "bg-blue-100 text-blue-700";
+        return "bg-secondary text-foreground";
       case OrderStatus.PROCESSING:
-        return "bg-purple-100 text-purple-700";
+        return "bg-secondary text-foreground";
       case OrderStatus.CONFIRMED:
         return "bg-cyan-100 text-cyan-700";
       case OrderStatus.PENDING:
-        return "bg-yellow-100 text-yellow-700";
+        return "bg-secondary text-foreground";
       case OrderStatus.CANCELLED:
         return "bg-red-100 text-red-700";
       case OrderStatus.RETURNING:
-        return "bg-orange-100 text-orange-700";
+        return "bg-secondary text-foreground";
       case OrderStatus.RETURNED:
-        return "bg-gray-100 text-gray-700";
+        return "bg-secondary text-muted-foreground";
       default:
-        return "bg-gray-100 text-gray-700";
+        return "bg-secondary text-muted-foreground";
     }
   };
 
@@ -90,17 +90,17 @@ export function OrderDetailPopup({
   const getPaymentStatusColor = (status: PaymentStatus) => {
     switch (status) {
       case PaymentStatus.PAID:
-        return "bg-green-100 text-green-700";
+        return "bg-secondary text-foreground";
       case PaymentStatus.PENDING:
-        return "bg-yellow-100 text-yellow-700";
+        return "bg-secondary text-foreground";
       case PaymentStatus.UNPAID:
-        return "bg-gray-100 text-gray-700";
+        return "bg-secondary text-muted-foreground";
       case PaymentStatus.REFUNDED:
-        return "bg-blue-100 text-blue-700";
+        return "bg-secondary text-foreground";
       case PaymentStatus.FAILED:
         return "bg-red-100 text-red-700";
       default:
-        return "bg-gray-100 text-gray-700";
+        return "bg-secondary text-muted-foreground";
     }
   };
 

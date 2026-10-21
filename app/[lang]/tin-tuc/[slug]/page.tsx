@@ -2,10 +2,10 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { newsService } from "@/services/news-service";
 import { Locale } from "@/lib/i18n-server";
-import { COMPANY_INFO } from "@/data/company-info";
+import { COMPANY_INFO, SITE_URL } from "@/data/company-info";
 import { NewsDetailClient } from "./NewsDetailClient";
 
-const baseUrl = `https://${COMPANY_INFO.contact.website}`;
+const baseUrl = SITE_URL;
 
 export async function generateMetadata({
   params,
@@ -25,36 +25,36 @@ export async function generateMetadata({
 
   const title = isVi ? article.titleVi : article.titleEn;
   const excerpt = isVi ? article.excerptVi : article.excerptEn;
-  const imageUrl = article.image || `${baseUrl}/images/logo-khangmy.webp`;
+  const imageUrl = article.image || `${baseUrl}/images/mechkey/logo.svg`;
   const url = `${baseUrl}/${lang}/tin-tuc/${slug}`;
   const publishedTime = article.createdAt;
   const modifiedTime = article.updatedAt || article.createdAt;
 
   return {
     title: isVi
-      ? `${title} | FreshFruit - Trái Cây Tươi Ngon`
-      : `${title} | FreshFruit - Premium Fresh Fruits`,
+      ? `${title} | SB-MechKey - Bàn Phím & Phụ Kiện`
+      : `${title} | SB-MechKey - Keyboards & Accessories`,
     description:
       excerpt ||
       (isVi
-        ? `Đọc tin tức ${title} tại FreshFruit`
-        : `Read news ${title} at FreshFruit`),
+        ? `Đọc tin tức ${title} tại SB-MechKey`
+        : `Read news ${title} at SB-MechKey`),
     keywords: isVi
-      ? `${title}, tin tức, trái cây, ${title} FreshFruit, tin tức trái cây`
-      : `${title}, news, fruits, ${title} FreshFruit, fruit news`,
+      ? `${title}, tin tức, bàn phím, ${title} SB-MechKey, tin tức bàn phím`
+      : `${title}, news, keyboards, ${title} SB-MechKey, keyboard news`,
     openGraph: {
       title: isVi
-        ? `${title} | FreshFruit - Trái Cây Tươi Ngon`
-        : `${title} | FreshFruit - Premium Fresh Fruits`,
+        ? `${title} | SB-MechKey - Bàn Phím & Phụ Kiện`
+        : `${title} | SB-MechKey - Keyboards & Accessories`,
       description:
         excerpt ||
         (isVi
-          ? `Đọc tin tức ${title} tại FreshFruit`
-          : `Read news ${title} at FreshFruit`),
+          ? `Đọc tin tức ${title} tại SB-MechKey`
+          : `Read news ${title} at SB-MechKey`),
       url,
       siteName: isVi
-        ? "FreshFruit - Trái Cây Tươi Ngon"
-        : "FreshFruit - Premium Fresh Fruits",
+        ? "SB-MechKey - Bàn Phím & Phụ Kiện"
+        : "SB-MechKey - Keyboards & Accessories",
       images: [
         {
           url: imageUrl,
@@ -72,12 +72,12 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: isVi ? `${title} | FreshFruit` : `${title} | FreshFruit`,
+      title: isVi ? `${title} | SB-MechKey` : `${title} | SB-MechKey`,
       description:
         excerpt ||
         (isVi
-          ? `Đọc tin tức ${title} tại FreshFruit`
-          : `Read news ${title} at FreshFruit`),
+          ? `Đọc tin tức ${title} tại SB-MechKey`
+          : `Read news ${title} at SB-MechKey`),
       images: [imageUrl],
     },
     alternates: {
@@ -107,7 +107,7 @@ export default async function NewsDetailPage({
   const title = isVi ? article.titleVi : article.titleEn;
   const excerpt = isVi ? article.excerptVi : article.excerptEn;
   const content = isVi ? article.contentVi : article.contentEn;
-  const imageUrl = article.image || `${baseUrl}/images/logo-khangmy.webp`;
+  const imageUrl = article.image || `${baseUrl}/images/mechkey/logo.svg`;
   const publishedTime = article.createdAt;
   const modifiedTime = article.updatedAt || article.createdAt;
 
@@ -129,7 +129,7 @@ export default async function NewsDetailPage({
       name: COMPANY_INFO.name.vi,
       logo: {
         "@type": "ImageObject",
-        url: `${baseUrl}/images/logo-khangmy.webp`,
+        url: `${baseUrl}/images/mechkey/logo.svg`,
       },
     },
     mainEntityOfPage: {

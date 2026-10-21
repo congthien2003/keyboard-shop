@@ -120,13 +120,13 @@ export default function ContactsPage() {
   const getStatusColor = (status: ContactStatus) => {
     switch (status) {
       case ContactStatus.OPEN:
-        return "bg-blue-100 text-blue-700";
+        return "bg-secondary text-foreground";
       case ContactStatus.IN_PROGRESS:
-        return "bg-yellow-100 text-yellow-700";
+        return "bg-secondary text-foreground";
       case ContactStatus.CLOSED:
-        return "bg-green-100 text-green-700";
+        return "bg-secondary text-foreground";
       default:
-        return "bg-gray-100 text-gray-700";
+        return "bg-secondary text-muted-foreground";
     }
   };
 
@@ -230,7 +230,7 @@ export default function ContactsPage() {
                     contacts.map((contact) => (
                       <TableRow
                         key={contact.id}
-                        className={`${contact.status === ContactStatus.OPEN ? "bg-blue-50" : ""}`}
+                        className={`${contact.status === ContactStatus.OPEN ? "bg-secondary/50" : ""}`}
                       >
                         <TableCell>
                           <div className="font-medium">{contact.name}</div>

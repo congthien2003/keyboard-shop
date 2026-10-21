@@ -14,6 +14,7 @@ interface AddToCartSectionProps {
   priceVND: number;
   image: string;
   unit: string;
+  unitVi?: string;
   orderLabel: string;
   addToCartLabel: string;
   contactLabel: string;
@@ -28,12 +29,14 @@ export function AddToCartSection({
   priceVND,
   image,
   unit,
+  unitVi,
   orderLabel,
   addToCartLabel,
   contactLabel,
   lang,
 }: AddToCartSectionProps) {
   const [quantity, setQuantity] = useState(1);
+  const [added, setAdded] = useState(false);
 
   const handleQuantityChange = (change: number) => {
     const newQuantity = quantity + change;
@@ -41,6 +44,8 @@ export function AddToCartSection({
   };
 
   const handleAddToCart = () => {
+    if (!Number.isSafeInteger(quantity) || quantity < 1) return;
+    setAdded(true);
     addToCart({
       id: productId,
       name: productName,
@@ -49,6 +54,7 @@ export function AddToCartSection({
       priceVND: priceVND,
       image: image,
       unit: unit,
+      unitVi,
       quantity,
     });
   };
@@ -71,9 +77,10 @@ export function AddToCartSection({
             <Minus className="h-4 w-4" />
           </Button>
           <Input
+            aria-label={lang === "vi" ? "Số lượng" : "Quantity"}
             type="number"
             value={quantity}
-            onChange={(e) => setQuantity(Number(e.target.value))}
+            onChange={(e) => { const value = Number(e.target.value); setQuantity(Number.isSafeInteger(value) && value > 0 ? value : 1); }}
             className="w-16 text-center"
             min="1"
           />
@@ -94,7 +101,7 @@ export function AddToCartSection({
           size="lg"
         >
           <ShoppingCart className="h-5 w-5" />
-          {addToCartLabel}
+          {added ? (lang === "vi" ? "Đã thêm vào giỏ" : "Added to cart") : addToCartLabel}
         </Button>
         <Button
           onClick={handleContact}

@@ -240,12 +240,12 @@ export default function NewsPage() {
                             </td>
                             <td className="px-4 py-3">
                               {news.published ? (
-                                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700 flex items-center gap-1 w-fit">
+                                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-secondary text-foreground flex items-center gap-1 w-fit">
                                   <Eye className="h-3 w-3" />
                                   {t("admin.news.published") || "Đã xuất bản"}
                                 </span>
                               ) : (
-                                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700 flex items-center gap-1 w-fit">
+                                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-secondary text-muted-foreground flex items-center gap-1 w-fit">
                                   <EyeOff className="h-3 w-3" />
                                   {t("admin.news.draft") || "Nháp"}
                                 </span>
@@ -253,7 +253,7 @@ export default function NewsPage() {
                             </td>
                             <td className="px-4 py-3">
                               {news.timeReading ? (
-                                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 flex items-center gap-1 w-fit">
+                                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-secondary text-foreground flex items-center gap-1 w-fit">
                                   <Clock className="h-3 w-3" />
                                   {news.timeReading}{" "}
                                   {t("admin.news.table.minutes") || "phút"}

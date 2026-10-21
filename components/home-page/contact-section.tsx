@@ -17,10 +17,10 @@ export async function ContactSection({ lang }: Props) {
     formTitle: t("contact.formTitle"),
     info: {
       title: t("contact.info.title"),
-      address: t("contact.info.address"),
-      phone: t("contact.info.phone"),
-      email: t("contact.info.email"),
-      hours: t("contact.info.hours"),
+      address: COMPANY_INFO.office.address[lang],
+      phone: COMPANY_INFO.contact.phone,
+      email: COMPANY_INFO.contact.email,
+      hours: "",
     },
     placeholders: {
       name: t("contact.name"),

@@ -32,11 +32,7 @@ export function AdminSidebar() {
       href: "/admin/products",
       icon: Package,
     },
-    // {
-    // 	key: "dashboard",
-    // 	href: "/admin/dashboard",
-    // 	icon: LayoutDashboard,
-    // },
+    { key: "dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
     {
       key: "categories",
       href: "/admin/categories",
@@ -67,14 +63,14 @@ export function AdminSidebar() {
       <div className="p-6 border-b border-border bg-primary/5">
         <div className="flex items-center gap-3">
           <Image
-            src="/images/logo-khangmy.webp"
+            src="/images/mechkey/logo.svg"
             alt="Logo"
             width={50}
             height={50}
             className="rounded-full"
           />
           <div>
-            <h2 className="font-bold text-lg text-primary">FreshFruit</h2>
+            <h2 className="font-bold text-lg text-primary">SB-MechKey</h2>
             <p className="text-xs text-muted-foreground">
               {t("admin.sidebar.adminPanel") || "Admin Panel"}
             </p>
@@ -140,7 +136,7 @@ export function AdminSidebar() {
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background border-b border-border h-16 flex items-center justify-between px-4">
         <div className="flex items-center gap-3">
           <Image
-            src="/images/logo-khangmy.webp"
+            src="/images/mechkey/logo.svg"
             alt="Logo"
             width={40}
             height={40}

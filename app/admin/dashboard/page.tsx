@@ -38,40 +38,40 @@ export default function AdminDashboard() {
       title: t("admin.dashboard.totalProducts") || "Tổng sản phẩm",
       value: "248",
       icon: Package,
-      color: "text-blue-600",
-      bgColor: "bg-blue-100",
+      color: "text-foreground",
+      bgColor: "bg-secondary",
       trend: "+12%",
     },
     {
       title: t("admin.dashboard.totalOrders") || "Đơn hàng",
       value: "1,234",
       icon: ShoppingCart,
-      color: "text-green-600",
-      bgColor: "bg-green-100",
+      color: "text-foreground",
+      bgColor: "bg-secondary",
       trend: "+23%",
     },
     {
       title: t("admin.dashboard.totalRevenue") || "Doanh thu",
       value: "₫125M",
       icon: DollarSign,
-      color: "text-yellow-600",
-      bgColor: "bg-yellow-100",
+      color: "text-foreground",
+      bgColor: "bg-secondary",
       trend: "+18%",
     },
     {
       title: t("admin.dashboard.totalContacts") || "Liên hệ",
       value: "89",
       icon: MessageSquare,
-      color: "text-purple-600",
-      bgColor: "bg-purple-100",
+      color: "text-foreground",
+      bgColor: "bg-secondary",
       trend: "+5%",
     },
     {
       title: t("admin.dashboard.totalNews") || "Tin tức",
       value: "45",
       icon: Newspaper,
-      color: "text-orange-600",
-      bgColor: "bg-orange-100",
+      color: "text-foreground",
+      bgColor: "bg-secondary",
       trend: "+8%",
     },
     {
@@ -118,13 +118,13 @@ export default function AdminDashboard() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case "completed":
-        return "bg-green-100 text-green-700";
+        return "bg-secondary text-foreground";
       case "processing":
-        return "bg-blue-100 text-blue-700";
+        return "bg-secondary text-foreground";
       case "pending":
-        return "bg-yellow-100 text-yellow-700";
+        return "bg-secondary text-foreground";
       default:
-        return "bg-gray-100 text-gray-700";
+        return "bg-secondary text-muted-foreground";
     }
   };
 
@@ -169,7 +169,7 @@ export default function AdminDashboard() {
                             {stat.title}
                           </p>
                           <p className="text-3xl font-bold">{stat.value}</p>
-                          <p className="text-sm text-green-600 mt-2 flex items-center gap-1">
+                          <p className="text-sm text-foreground mt-2 flex items-center gap-1">
                             <TrendingUp className="h-4 w-4" />
                             {stat.trend}
                           </p>

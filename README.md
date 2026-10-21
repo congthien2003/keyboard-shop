@@ -1,187 +1,61 @@
-# 🍎 FreshFruit - Database Setup Guide
+# SB-MechKey
 
-> Hướng dẫn thiết lập cơ sở dữ liệu cho dự án FreshFruit
+Shop keyboard và phụ kiện, dùng Next.js App Router, React, Tailwind CSS và Prisma/PostgreSQL. Storefront có tiếng Việt/Anh; Admin quản lý sản phẩm, danh mục, bài viết, liên hệ và đơn hàng.
 
----
+## Cấu hình
 
-## 📋 Yêu cầu
+Sao chép `.env.example` sang `.env` nếu chưa có. Nếu đã có `.env`, bổ sung các biến cần thiết và giữ nguyên kết nối database của bạn.
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop) đã được cài đặt và đang chạy
-- [Node.js](https://nodejs.org/) và npm/npx đã được cài đặt
-- [Prisma CLI](https://www.prisma.io/docs/concepts/overview/prisma-in-your-stack/prisma-cli) (sẽ được cài đặt qua npx)
+- `DATABASE_URL`: PostgreSQL được sử dụng bởi Prisma.
+- `NEXT_PUBLIC_SITE_URL`: URL đầy đủ, ví dụ `https://shop.example.com`. Mặc định phát triển là `http://localhost:3000`.
+- `NEXT_PUBLIC_SHOP_PHONE`, `NEXT_PUBLIC_SHOP_EMAIL`, `NEXT_PUBLIC_SHOP_ADDRESS`, `NEXT_PUBLIC_SHOP_ZALO`, `NEXT_PUBLIC_SHOP_FACEBOOK`: để trống nếu chưa có. Giao diện không hiển thị kênh liên hệ chưa cấu hình.
 
----
+Các biến `NEXT_PUBLIC_*` được đưa vào client bundle khi build; cần build lại khi đổi cấu hình triển khai. Database phải sẵn sàng cho các trang đọc catalog và danh mục.
 
-## 🚀 Thiết lập Database
+Docker Compose dùng PostgreSQL 18. Database mặc định cho volume mới là `sb_mechkey_dev`, có thể đổi bằng `POSTGRES_DB`. Với volume cũ, đổi biến này không tự tạo hoặc đổi tên database: giữ `DATABASE_URL` trỏ đúng database đang có. Không cần xóa volume.
 
-### Bước 1: Khởi động Docker Container
+## Các lệnh để chủ repository tự chạy
 
-**Quan trọng:** Nếu file `docker-compose.yml` có placeholder `{MSSQL_SA_PASSWORD}`, bạn cần thay thế nó bằng password thực tế trước khi chạy container.
-
-Đảm bảo Docker Desktop đang chạy, sau đó khởi động SQL Server container:
-
-```bash
-docker compose up -d
-```
-
-> 💡 **Lưu ý:**
->
-> - Lệnh này sẽ tạo và chạy SQL Server container ở chế độ background (`-d`)
-> - SQL Server có thể mất khoảng 10-30 giây để khởi động hoàn toàn
-> - Bạn có thể kiểm tra logs bằng `docker compose logs mssql` để xem trạng thái khởi động
-
----
-
-### Bước 2: Kết nối đến SQL Server
-
-Kết nối vào SQL Server database với thông tin sau:
-
-| Thuộc tính   | Giá trị                   |
-| ------------ | ------------------------- |
-| **Username** | `sa`                      |
-| **Password** | `YourStrong@Pass123`      |
-| **Host**     | `localhost`               |
-| **Port**     | `1432`                    |
-| **Database** | `KhangMyDB` (tự động tạo) |
-
-#### Tạo Database (nếu cần)
-
-Database `KhangMyDB` sẽ được tạo tự động khi chạy migration. Nếu cần tạo thủ công:
-
-```sql
-CREATE DATABASE KhangMyDB;
-```
-
----
-
-### Bước 3: Cấu hình Environment Variables
-
-1. Tạo file `.env` từ template `.env.example`:
-
-```bash
-cp .env.example .env
-```
-
-2. Điền các thông tin cấu hình database vào file `.env` theo mẫu:
-
-```env
-DATABASE_URL="sqlserver://localhost:1432;database=KhangMyDB;user=sa;password=YourStrong@Pass123;encrypt=true;trustServerCertificate=true"
-MSSQL_SA_PASSWORD=YourStrong@Pass123
-```
-
-> ⚠️ **Quan trọng:** Password phải khớp giữa `DATABASE_URL` và `MSSQL_SA_PASSWORD`. Đảm bảo thay `{MSSQL_SA_PASSWORD}` trong docker-compose.yml bằng password thực tế nếu cần.
-
----
-
-### Bước 4: Áp dụng Migrations
-
-Chạy migration để tạo các bảng trong database:
-
-```bash
+```powershell
+npm install
 npx prisma migrate deploy
-```
-
----
-
-### Bước 5: Generate Prisma Client
-
-Tạo Prisma Client để sử dụng trong ứng dụng:
-
-```bash
 npx prisma generate
+npm run seed:keyboard
+npm run dev
 ```
 
-✅ **Hoàn tất!** Database đã sẵn sàng để sử dụng.
+Migration mới chỉ bổ sung các trường thông số vào `Product`: `brand`, `layout`, `switchType`, `connectivity`, `hotSwappable`. Không đổi ID hoặc xóa dữ liệu hiện tại. Các trường cũ `weight`, `unit`, `fromCountry` được giữ nguyên ý nghĩa.
 
----
+`seed:keyboard` chỉ dành cho database phát triển: tạo 7 danh mục và 21 sản phẩm mẫu song ngữ, sử dụng ảnh minh họa SVG trong `public/images/mechkey`. Giá, thương hiệu sản phẩm mẫu và thông số là dữ liệu minh họa, không phải chào bán thực tế. Mỗi cấu hình được lưu như một sản phẩm độc lập.
 
-## 🔄 Cập nhật Schema
+Seed chạy trong transaction và upsert theo UUID cố định, không nhân bản khi chạy lại. Chạy lại sẽ đặt lại nội dung các bản ghi mẫu; bản ghi ngoài tập UUID mẫu không bị sửa hoặc xóa. Chuyển shop cũ cần xử lý sản phẩm/bài viết trái cây qua Admin; seed không tự xóa dữ liệu đó, đặc biệt sản phẩm đang được đơn hàng tham chiếu.
 
-### Khi có thay đổi Schema mới
+## Catalog và đặt hàng
 
-Nếu bạn đã chỉnh sửa file `prisma/schema.prisma` và cần tạo migration mới:
+Danh sách tại `/vi/san-pham` hoặc `/en/san-pham` hỗ trợ query `q`, `category`, `brand`, `layout`, `connectivity`, `sort`, `page`. `sort` nhận `price-asc`, `price-desc`; mặc định mới nhất. Lọc/sắp xếp trước khi phân trang 12 sản phẩm; thay bộ lọc đưa về trang đầu.
 
-```bash
-npx prisma migrate dev --name <tên_migration>
+Các trường thông số được nhập trong Admin và hiển thị trên trang chi tiết. `connectivity` nhận danh sách `USB-C`, `Bluetooth`, `2.4GHz`; `hotSwappable` nhận có/không/không áp dụng. Mỗi sản phẩm có một danh mục chính.
+
+Giỏ hàng dùng khóa `sb_mechkey_cart_v1`, tách khỏi giỏ cũ. Giữ cách tính tiền và phí giao hàng hiện có: VI dùng VND, EN dùng USD; không bổ sung cổng thanh toán. Thông báo đặt hàng thành công nghĩa là yêu cầu đã được lưu, không phải xác nhận đã thanh toán.
+
+## Kiểm tra do chủ repository thực hiện
+
+```powershell
+npx tsc --noEmit
+npm run build
 ```
 
-**Ví dụ:**
+Build hiện kế thừa cấu hình bỏ qua lỗi TypeScript/ESLint trong `next.config.mjs`, vì vậy cần chạy TypeScript riêng. Chưa có bộ test tự động được bổ sung cho đợt refactor này.
 
-```bash
-npx prisma migrate dev --name add_user_table
-```
+Checklist thủ công:
 
-### Generate lại Prisma Client
+- Desktop/mobile: header, menu, tìm kiếm, bộ lọc, không tràn ngang; thao tác bằng bàn phím và reduced motion.
+- VI/EN: điều hướng, nội dung, giá, thông số và form Admin.
+- Catalog: lọc kết hợp, giá tăng/giảm, phân trang sau lọc, kết quả rỗng, URL trang không hợp lệ.
+- Chi tiết: gallery, ảnh thiếu/lỗi, thông số không áp dụng, sản phẩm liên quan cùng danh mục.
+- Trạng thái bán: đang bán có thêm giỏ; hết hàng và liên hệ không cho thêm trực tiếp.
+- Admin: tạo/sửa/xóa sản phẩm và danh mục, lưu lại các thông số tùy chọn.
+- Giỏ hàng: số lượng nguyên dương, thêm/xóa, gửi đơn thành công, lỗi mạng giữ giỏ, chống gửi lặp khi đang xử lý.
+- Seed trên database phát triển: chạy lại không trùng bản ghi, dữ liệu ngoài tập seed vẫn giữ nguyên.
 
-Sau khi tạo migration, luôn nhớ generate lại Prisma Client:
-
-```bash
-npx prisma generate
-```
-
----
-
-## 📚 Các lệnh hữu ích khác
-
-| Lệnh                       | Mô tả                                                           |
-| -------------------------- | --------------------------------------------------------------- |
-| `npx prisma studio`        | Mở Prisma Studio để xem và chỉnh sửa database qua giao diện web |
-| `npx prisma migrate reset` | Xóa toàn bộ database và chạy lại tất cả migrations              |
-| `npx prisma db push`       | Đẩy schema trực tiếp lên database (không tạo migration file)    |
-| `docker compose down`      | Dừng và xóa Docker containers                                   |
-
----
-
-## 🐛 Troubleshooting
-
-### Container không khởi động được
-
-```bash
-# Kiểm tra trạng thái containers
-docker compose ps
-
-# Xem logs để debug
-docker compose logs mssql
-```
-
-### Lỗi kết nối database
-
-- Đảm bảo Docker Desktop đang chạy
-- Kiểm tra port `1432` chưa bị sử dụng bởi ứng dụng khác
-- Xác nhận thông tin kết nối trong file `.env` đúng với docker-compose.yml
-- Đảm bảo password trong `.env` khớp với `MSSQL_SA_PASSWORD` trong docker-compose.yml
-- SQL Server có thể mất vài giây để khởi động hoàn toàn, hãy đợi một chút và thử lại
-
-### Migration bị lỗi
-
-```bash
-# Reset database và chạy lại migration
-npx prisma migrate reset
-```
-
----
-
-## 📝 Ghi chú
-
-- Database sẽ được lưu trong Docker volume `mssql_data` (quản lý tự động bởi Docker)
-- Để backup database, bạn có thể sử dụng `docker volume` commands hoặc SQL Server backup tools
-- Password mặc định là `YourStrong@Pass123` - trong môi trường production, **PHẢI** thay đổi password mạnh hơn
-- Đảm bảo `MSSQL_SA_PASSWORD` trong docker-compose.yml khớp với password trong `.env`
-- SQL Server yêu cầu password có độ phức tạp cao (chữ hoa, chữ thường, số, ký tự đặc biệt)
-
----
-
-## 🔗 Tài liệu tham khảo
-
-- [Prisma Documentation](https://www.prisma.io/docs)
-- [Prisma SQL Server Guide](https://www.prisma.io/docs/concepts/database-connectors/sql-server)
-- [SQL Server Documentation](https://learn.microsoft.com/en-us/sql/sql-server/)
-- [Docker Compose Documentation](https://docs.docker.com/compose/)
-
----
-
-<div align="center">
-
-**Happy Coding! 🚀**
-
-</div>
+Chưa chạy build, test, lint, migration, generate, seed hoặc kiểm tra runtime trong quá trình triển khai theo yêu cầu của chủ repository.

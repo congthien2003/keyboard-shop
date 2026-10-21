@@ -1,192 +1,34 @@
-import { getTranslations, createTranslator, Locale } from "@/lib/i18n-server";
-import { productService } from "@/services/product-service";
+import Link from "next/link";
+import { prisma } from "@/lib/prisma";
 import { categoryService } from "@/services/category-service";
-import { CategoryFilterSection } from "./components/category-filter-section";
-import { ProductsGrid } from "./components/products-grid";
-import { Pagination } from "./components/pagination";
-import { ProductsHero } from "./components/products-hero";
-import { Metadata } from "next";
-import { COMPANY_INFO } from "@/data/company-info";
-
-const baseUrl = `https://${COMPANY_INFO.contact.website}`;
-
-// Define props for the page, including search parameters
-type Props = {
-  params: Promise<{ lang: Locale }>;
-  searchParams: Promise<{
-    page?: string;
-    limit?: string;
-    category?: string;
-  }>;
-};
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: Locale }>;
-}): Promise<Metadata> {
-  const { lang } = await params;
-  const isVi = lang === "vi";
-  const translations = await getTranslations(lang);
-  const t = createTranslator(translations);
-
-  const title = isVi
-    ? "Sản Phẩm - Trái Cây Cao Cấp | FreshFruit"
-    : "Products - Premium Fresh Fruits | FreshFruit";
-  const description = isVi
-    ? "Khám phá bộ sưu tập trái cây cao cấp nhập khẩu và nội địa của FreshFruit. Trái cây tươi ngon, chất lượng cao, đa dạng chủng loại."
-    : "Discover FreshFruit's collection of premium imported and local fruits. Fresh, high-quality fruits with diverse varieties.";
-
-  return {
-    title,
-    description,
-    keywords: isVi
-      ? "trái cây, trái cây cao cấp, trái cây nhập khẩu, trái cây tươi, FreshFruit, sản phẩm trái cây"
-      : "fruits, premium fruits, imported fruits, fresh fruits, FreshFruit, fruit products",
-    openGraph: {
-      title,
-      description,
-      url: `${baseUrl}/${lang}/san-pham`,
-      siteName: isVi
-        ? "FreshFruit - Trái Cây Tươi Ngon"
-        : "FreshFruit - Premium Fresh Fruits",
-      images: [
-        {
-          url: `${baseUrl}/images/logo-khangmy.webp`,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
-      locale: isVi ? "vi_VN" : "en_US",
-      alternateLocale: isVi ? "en_US" : "vi_VN",
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [`${baseUrl}/images/logo-khangmy.webp`],
-    },
-    alternates: {
-      canonical: `${baseUrl}/${lang}/san-pham`,
-      languages: {
-        vi: `${baseUrl}/vi/san-pham`,
-        en: `${baseUrl}/en/san-pham`,
-        "x-default": `${baseUrl}/vi/san-pham`,
-      },
-    },
-  };
-}
-
-export default async function ProductsPage({ params, searchParams }: Props) {
-  const { lang } = await params;
-  const resolvedSearchParams = await searchParams;
-  const isVi = lang === "vi";
-  // 1. Load translations from the server
-  const translations = await getTranslations(lang);
-  const t = createTranslator(translations);
-
-  // 2. Fetch data based on search params
-  const page = Number(resolvedSearchParams.page) || 1;
-  const limit = Number(resolvedSearchParams.limit) || 12;
-  const categorySlug = resolvedSearchParams.category;
-
-  // Fetch data server-side
-  const [allProducts, fetchedCategories] = await Promise.all([
-    productService.getAllProducts(),
-    categoryService.getAllCategories(),
-  ]);
-
-  // Pagination
-  const totalPages = Math.ceil(allProducts.length / limit);
-  const startIndex = (page - 1) * limit;
-  const endIndex = startIndex + limit;
-  const currentProducts = allProducts.slice(startIndex, endIndex);
-
-  // Prepare translated texts for child components
-  const heroTxt = {
-    title: t("products.title"),
-    subtitle: t("products.subtitle"),
-  };
-
-  const filterTxt = {
-    title: t("products.categories.title"),
-    all: t("products.categories.all"),
-  };
-
-  // Structured data for products page
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: isVi ? "Sản Phẩm Trái Cây" : "Fruit Products",
-    description: isVi
-      ? "Bộ sưu tập trái cây cao cấp nhập khẩu và nội địa của FreshFruit"
-      : "FreshFruit's collection of premium imported and local fruits",
-    url: `${baseUrl}/${lang}/san-pham`,
-    mainEntity: {
-      "@type": "ItemList",
-      numberOfItems: allProducts.length,
-      itemListElement: currentProducts.slice(0, 10).map((product, index) => {
-        const translateVi = product.translates.find((t) => t.lang === "vi");
-        const translateEn = product.translates.find((t) => t.lang === "en");
-        const translate = isVi ? translateVi : translateEn || translateVi;
-
-        return {
-          "@type": "ListItem",
-          position: index + 1,
-          item: {
-            "@type": "Product",
-            name: translate?.name || "",
-            description: translate?.description || "",
-            image: product.thumbnail || `${baseUrl}/images/logo-khangmy.webp`,
-            url: `${baseUrl}/${lang}/san-pham/${product.slug}`,
-          },
-        };
-      }),
-    },
-  };
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
-      />
-      <div className="min-h-screen bg-background">
-        {/* H1 is in ProductsHero component */}
-        <ProductsHero lang={lang} txt={heroTxt} />
-
-        <section className="storefront-section !pt-12">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col gap-4">
-              {/* Category Filter (Client Component) */}
-              <CategoryFilterSection
-                lang={lang}
-                categories={fetchedCategories}
-                activeCategory={categorySlug}
-                txt={filterTxt}
-              />
-
-              {/* Products Grid and Pagination */}
-              <div className="">
-                <ProductsGrid products={currentProducts} lang={lang} />
-                <Pagination
-                  lang={lang}
-                  currentPage={page}
-                  totalPages={totalPages}
-                  txt={{
-                    previous: t("common.pagination.previous"),
-                    next: t("common.pagination.next"),
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
+import { ProductCard } from "@/components/common/product-card";
+import { CatalogFilters } from "./components/catalog-filters";
+import type { Locale } from "@/lib/i18n-server";
+import type { Prisma } from "@prisma/client";
+export const metadata = { title: "Keyboard & accessories" };
+type Query = { q?: string; category?: string; brand?: string; layout?: string; connectivity?: string; sort?: string; page?: string };
+export default async function ProductsPage({ params, searchParams }: { params: Promise<{ lang: Locale }>; searchParams: Promise<Query> }) {
+ const [{ lang }, raw] = await Promise.all([params, searchParams]); const vi = lang === "vi";
+ const query: Query = Object.fromEntries(Object.entries(raw).filter(([,v]) => typeof v === "string"));
+ const categories = await categoryService.getAllCategories();
+ const selected = categories.find(c => c.id === query.category || c.translates.some(t => t.slug === query.category));
+ const where: Prisma.ProductWhereInput = {
+  ...(query.category ? { categoryId: selected?.id || "00000000-0000-0000-0000-000000000000" } : {}),
+  ...(query.q?.trim() ? { translates: { some: { name: { contains: query.q.trim(), mode: "insensitive" } } } } : {}),
+  ...(query.brand ? { brand: query.brand } : {}), ...(query.layout ? { layout: query.layout } : {}),
+  ...(query.connectivity ? { connectivity: { has: query.connectivity } } : {}),
+ };
+ const [rows, facets] = await Promise.all([prisma.product.findMany({ where, include: { translates: true }, orderBy: [{ createdAt: "desc" }, { id: "asc" }] }), prisma.product.findMany({ select: { brand: true, layout: true, connectivity: true } })]);
+ if (query.sort === "price-asc" || query.sort === "price-desc") rows.sort((a,b) => { const price = (p: typeof a) => (p.translates.find(t => t.lang === lang) || p.translates[0])?.price || 0; return (price(a)-price(b)) * (query.sort === "price-desc" ? -1 : 1); });
+ const totalPages = Math.max(1, Math.ceil(rows.length/12));
+ const requested = Number(query.page); const page = Math.min(totalPages, Number.isSafeInteger(requested) && requested > 0 ? requested : 1);
+ const products = rows.slice((page-1)*12,page*12).map(p => { let images: string[] = []; try { const parsed = JSON.parse(p.image); if (Array.isArray(parsed)) images = parsed.filter((v): v is string => typeof v === "string"); } catch {} return { ...p, image: images }; });
+ const href = (n: number) => { const qs = new URLSearchParams(Object.entries(query).filter(([k,v]) => k !== "page" && !!v) as [string,string][]); qs.set("page",String(n)); return `/${lang}/san-pham?${qs}`; };
+ return <div className="sb-container py-12 md:py-16"><p className="sb-kicker mb-4">THE COLLECTION / SB-MECHKEY</p><h1 className="mb-4 text-4xl font-extrabold tracking-tight md:text-6xl">{vi ? "Chọn phím. Chọn chất." : "Find your next keystroke."}</h1><p className="mb-10 max-w-2xl text-muted-foreground">{vi ? "Bàn phím, linh kiện và những mảnh ghép cho góc bàn của bạn." : "Keyboards, components and the finishing touches for your desk."}</p>
+ <CatalogFilters lang={lang} categories={categories.map(c => ({ value: c.translates.find(t => t.lang === lang)?.slug || c.id, label: (c.translates.find(t => t.lang === lang) || c.translates[0])?.name || c.id }))} brands={[...new Set(facets.map(p => p.brand).filter((x): x is string => !!x))].sort()} layouts={[...new Set(facets.map(p => p.layout).filter((x): x is string => !!x))].sort()} connections={[...new Set(facets.flatMap(p => p.connectivity))].sort()}/>
+ <div className="my-6 flex justify-between text-sm text-muted-foreground"><span>{rows.length} {vi ? "sản phẩm" : "products"}</span><span>{vi ? "Trang" : "Page"} {page} / {totalPages}</span></div>
+ <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">{products.map(p => <ProductCard key={p.id} product={p} lang={lang}/>)}</div>
+ {!products.length && <div className="storefront-card py-20 text-center"><h2 className="text-xl font-semibold">{vi ? "Chưa tìm thấy sản phẩm" : "No products found"}</h2><p className="my-4 text-muted-foreground">{vi ? "Thử từ khóa hoặc bộ lọc khác." : "Try a different search or filter."}</p><Link className="sb-button-outline" href={`/${lang}/san-pham`}>{vi ? "Xóa bộ lọc" : "Clear filters"}</Link></div>}
+ {totalPages > 1 && <nav aria-label={vi ? "Phân trang" : "Pagination"} className="mt-10 flex items-center justify-center gap-5">{page > 1 && <Link className="sb-button-outline" href={href(page-1)}>{vi ? "Trước" : "Previous"}</Link>}<span>{page} / {totalPages}</span>{page < totalPages && <Link className="sb-button-outline" href={href(page+1)}>{vi ? "Tiếp" : "Next"}</Link>}</nav>}
+ </div>;
 }

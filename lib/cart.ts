@@ -10,7 +10,7 @@ export type CartItem = {
   quantity: number;
 };
 
-const CART_KEY = "km_cart";
+const CART_KEY = "sb_mechkey_cart_v1";
 
 function safeParse<T>(value: string | null, fallback: T): T {
   try {
@@ -42,7 +42,7 @@ export function clearCart() {
 export function addToCart(
   item: Omit<CartItem, "quantity"> & { quantity?: number },
 ) {
-  const quantity = item.quantity ?? 1;
+  const quantity = Number.isSafeInteger(item.quantity) && (item.quantity ?? 0) > 0 ? item.quantity! : 1;
   const cart = getCart();
   const existingIndex = cart.findIndex((it) => it.id === item.id);
   if (existingIndex >= 0) {
@@ -58,7 +58,7 @@ export function updateQuantity(id: string, quantity: number) {
   const cart = getCart();
   const idx = cart.findIndex((it) => it.id === id);
   if (idx >= 0) {
-    cart[idx].quantity = Math.max(1, quantity);
+    cart[idx].quantity = Number.isSafeInteger(quantity) && quantity > 0 ? quantity : 1;
     saveCart(cart);
   }
   return cart;

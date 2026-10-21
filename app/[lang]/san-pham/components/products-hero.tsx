@@ -13,7 +13,7 @@ export function ProductsHero({ lang, txt }: ProductsHeroProps) {
     <section
       className="relative overflow-hidden py-32 text-primary-foreground md:py-40"
       style={{
-        backgroundImage: "url(/images/hero-banner-10.webp)",
+        backgroundImage: "url(/images/mechkey/keyboard.svg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

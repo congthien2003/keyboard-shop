@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { getTranslations, createTranslator, Locale } from "@/lib/i18n-server";
-import { COMPANY_INFO } from "@/data/company-info";
+import { COMPANY_INFO, SITE_URL } from "@/data/company-info";
 import { CartPageClient } from "./components/cart-page-client";
 
-const baseUrl = `https://${COMPANY_INFO.contact.website}`;
+const baseUrl = SITE_URL;
 
 type Props = {
   params: Promise<{ lang: Locale }>;
@@ -19,27 +19,27 @@ export async function generateMetadata({
   const translations = await getTranslations(lang);
   const t = createTranslator(translations);
 
-  const title = t("cart.title") + (isVi ? " - FreshFruit" : " - FreshFruit");
+  const title = t("cart.title") + (isVi ? " - SB-MechKey" : " - SB-MechKey");
   const description = isVi
-    ? "Giỏ hàng của bạn tại FreshFruit - Xem và đặt hàng trái cây tươi ngon"
-    : "Your cart at FreshFruit - View and order fresh fruits";
+    ? "Giỏ hàng của bạn tại SB-MechKey - Xem và đặt hàng bàn phím và phụ kiện"
+    : "Your cart at SB-MechKey - View and order mechanical keyboards";
 
   return {
     title,
     description,
     keywords: isVi
-      ? "giỏ hàng, đặt hàng, mua hàng, FreshFruit, trái cây"
-      : "cart, order, purchase, FreshFruit, fruits",
+      ? "giỏ hàng, đặt hàng, mua hàng, SB-MechKey, bàn phím"
+      : "cart, order, purchase, SB-MechKey, keyboards",
     openGraph: {
       title,
       description,
       url: `${baseUrl}/${lang}/gio-hang`,
       siteName: isVi
-        ? "FreshFruit - Trái Cây Tươi Ngon"
-        : "FreshFruit - Premium Fresh Fruits",
+        ? "SB-MechKey - Bàn Phím & Phụ Kiện"
+        : "SB-MechKey - Keyboards & Accessories",
       images: [
         {
-          url: `${baseUrl}/images/logo-khangmy.webp`,
+          url: `${baseUrl}/images/mechkey/logo.svg`,
           width: 1200,
           height: 630,
           alt: title,
@@ -53,7 +53,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [`${baseUrl}/images/logo-khangmy.webp`],
+      images: [`${baseUrl}/images/mechkey/logo.svg`],
     },
     alternates: {
       languages: {

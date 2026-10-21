@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { productSpecsSchema } from "@/lib/product-specs";
 import { prisma } from "@/lib/prisma";
 
 function parseImage(json: string) {
@@ -41,11 +42,14 @@ export async function PUT(
   try {
     const { id } = await params;
     const body = await request.json();
+    const specs = productSpecsSchema.safeParse(body);
+    if (!specs.success) return NextResponse.json({ error: "Invalid product specifications", details: specs.error.flatten() }, { status: 400 });
 
     // Update base fields
     const updated = await prisma.product.update({
       where: { id },
       data: {
+        ...specs.data,
         thumbnail: body.thumbnail,
         image: JSON.stringify(body.image || []),
         status: body.status,

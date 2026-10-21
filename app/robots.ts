@@ -1,8 +1,8 @@
 import { MetadataRoute } from "next";
-import { COMPANY_INFO } from "@/data/company-info";
+import { COMPANY_INFO, SITE_URL } from "@/data/company-info";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = `https://${COMPANY_INFO.contact.website}`;
+  const baseUrl = SITE_URL;
 
   return {
     rules: [

@@ -1,4 +1,10 @@
 export type Product = {
+  brand: string | null;
+  layout: string | null;
+  switchType: string | null;
+  connectivity: string[];
+  hotSwappable: boolean | null;
+
   id: string;
   thumbnail: string;
   image: string[];

@@ -46,17 +46,19 @@ export function ProductDetail({
     // 	colorClass = "bg-amber-100 text-amber-800";
     // } else if (product.status === ProductStatus.SOLD) {
     // 	label = lang === "vi" ? "Hết hàng" : "Out of Stock";
-    // 	colorClass = "bg-red-100 text-red-700";
+    // 	colorClass = "bg-primary/15 text-primary";
     // } else {
     // 	label = lang === "vi" ? "Còn hàng" : "In Stock";
-    // 	colorClass = "bg-emerald-100 text-emerald-700";
+    // 	colorClass = "bg-secondary text-foreground";
     // }
     if (product.status === ProductStatus.SOLD) {
       label = lang === "vi" ? "Hết hàng" : "Out of Stock";
-      colorClass = "bg-red-100 text-red-700";
+      colorClass = "bg-primary/15 text-primary";
+    } else if (product.status === ProductStatus.CONTACT) {
+      label = lang === "vi" ? "Liên hệ" : "Contact";
     } else {
       label = lang === "vi" ? "Còn hàng" : "In Stock";
-      colorClass = "bg-emerald-100 text-emerald-700";
+      colorClass = "bg-secondary text-foreground";
     }
 
     return (
@@ -87,13 +89,7 @@ export function ProductDetail({
                 {productName}
               </h1>
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                <div className="flex items-center gap-1">
-                  <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  <span className="font-medium text-foreground">
-                    {product.rating.toFixed(1)} / 5.0
-                  </span>
-                </div>
-                <span>•</span>
+
                 <span>
                   {lang === "vi" ? "Lượt xem" : "Views"}: {product.viewCount}
                 </span>
@@ -137,6 +133,7 @@ export function ProductDetail({
             <Card className="storefront-card bg-secondary/35">
               <CardContent className="p-4">
                 <div className="space-y-3">
+                  {[[lang === "vi" ? "Thương hiệu" : "Brand", product.brand], ["Layout", product.layout], ["Switch", product.switchType], [lang === "vi" ? "Kết nối" : "Connection", product.connectivity?.join(" / ")], ["Hot-swap", product.hotSwappable == null ? null : product.hotSwappable ? (lang === "vi" ? "Có" : "Yes") : (lang === "vi" ? "Không" : "No")]].filter(([, value]) => value).map(([label, value]) => <div key={label} className="flex justify-between gap-4 text-sm"><span className="text-muted-foreground">{label}</span><span className="text-right font-mono">{value}</span></div>)}
                   {translate?.weight ? (
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">
@@ -164,7 +161,7 @@ export function ProductDetail({
             </Card>
 
             {/* Quantity and Actions */}
-            <AddToCartSection
+            {product.status === ProductStatus.ACTIVE ? <AddToCartSection
               productId={product.id}
               productName={translateEn?.name || ""}
               productNameVi={translateVi?.name || ""}
@@ -175,14 +172,15 @@ export function ProductDetail({
                   ? product.image[0]
                   : product.thumbnail) || ""
               }
-              unit={productUnit}
+              unit={translateEn?.unit || ""}
+              unitVi={translateVi?.unit || ""}
               orderLabel={lang === "vi" ? "Đặt hàng" : "Order"}
               addToCartLabel={
                 lang === "vi" ? "Thêm vào giỏ hàng" : "Add to Cart"
               }
               contactLabel={lang === "vi" ? "Liên hệ" : "Contact"}
               lang={lang}
-            />
+            /> : <Link className="sb-button-outline" href={`/${lang}/lien-he`}>{lang === "vi" ? "Liên hệ tư vấn" : "Contact for advice"}</Link>}
 
             {/* Description */}
             {productDescription ? (
@@ -225,8 +223,8 @@ export function ProductDetail({
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-primary px-6 py-3 shadow-sm">
               <p className="text-center text-sm font-bold text-primary-foreground italic">
                 {lang === "vi"
-                  ? "FreshFruit cam kết 100% nói không với chất bảo quản & trái cây Trung Quốc!"
-                  : "FreshFruit commits 100% no preservatives & Chinese fruits!"}
+                  ? "SB-MechKey — Chọn bàn phím phù hợp với cách bạn làm việc và giải trí."
+                  : "SB-MechKey — Find a keyboard that fits the way you work and play."}
               </p>
             </div>
           </div>

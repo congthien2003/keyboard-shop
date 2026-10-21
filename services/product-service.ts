@@ -7,6 +7,12 @@ export type ProductResponse = Product & {
 };
 
 export type CreateProductInput = {
+  brand?: string | null;
+  layout?: string | null;
+  switchType?: string | null;
+  connectivity?: string[];
+  hotSwappable?: boolean | null;
+
   thumbnail: string;
   image: string[]; // gallery urls
   status: ProductStatus;
@@ -69,6 +75,7 @@ class ProductService {
     const created = await prisma.product.create({
       data: {
         thumbnail: input.thumbnail,
+        brand: input.brand, layout: input.layout, switchType: input.switchType, connectivity: input.connectivity ?? [], hotSwappable: input.hotSwappable,
         image: this.stringifyImage(input.image),
         status: input.status,
         slug: productSlug,
@@ -165,6 +172,9 @@ class ProductService {
   ): Promise<ProductResponse> {
     // Prepare base data
     const baseData: any = {};
+    for (const key of ["brand", "layout", "switchType", "connectivity", "hotSwappable"] as const) {
+      if (input[key] !== undefined) baseData[key] = input[key];
+    }
     if (input.thumbnail !== undefined) baseData.thumbnail = input.thumbnail;
     if (input.image !== undefined)
       baseData.image = this.stringifyImage(input.image);

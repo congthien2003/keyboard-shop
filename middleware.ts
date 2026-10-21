@@ -34,7 +34,9 @@ export function middleware(request: NextRequest) {
 
   // If pathname already has a locale, continue
   if (pathnameHasLocale) {
-    return NextResponse.next();
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set("x-shop-locale", pathname.split("/")[1]);
+    return NextResponse.next({ request: { headers: requestHeaders } });
   }
 
   // Redirect root path to default locale

@@ -9,6 +9,12 @@ export type ProductWithTranslates = Product & {
 };
 
 export type CreateProductInput = {
+  brand?: string | null;
+  layout?: string | null;
+  switchType?: string | null;
+  connectivity?: string[];
+  hotSwappable?: boolean | null;
+
   thumbnail: string; // url
   image: string[]; // gallery urls
   status: ProductStatus;

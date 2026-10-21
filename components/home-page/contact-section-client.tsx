@@ -145,6 +145,7 @@ export function ContactSectionClient({ txt, href }: ContactSectionClientProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (loading) return;
     setSubmitStatus("idle");
     setErrorMessage("");
 
@@ -193,18 +194,18 @@ export function ContactSectionClient({ txt, href }: ContactSectionClientProps) {
                 <h3 className="mb-6 text-xl font-semibold">{txt.formTitle}</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {submitStatus === "success" && (
-                    <div className="flex items-center gap-3 rounded-xl border border-emerald-200 bg-emerald-50/80 p-4">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 shrink-0" />
-                      <p className="text-green-800 text-sm">
+                    <div role="status" className="flex items-center gap-3 rounded-xl border border-border bg-secondary p-4">
+                      <CheckCircle2 className="h-5 w-5 text-foreground shrink-0" />
+                      <p className="text-foreground text-sm">
                         {txt.successMessage}
                       </p>
                     </div>
                   )}
 
                   {submitStatus === "error" && (
-                    <div className="flex items-center gap-3 rounded-xl border border-red-200 bg-red-50/80 p-4">
-                      <AlertCircle className="h-5 w-5 text-red-600 shrink-0" />
-                      <p className="text-red-800 text-sm">{errorMessage}</p>
+                    <div role="alert" className="flex items-center gap-3 rounded-xl border border-primary/40 bg-primary/10 p-4">
+                      <AlertCircle className="h-5 w-5 text-destructive shrink-0" />
+                      <p className="text-destructive text-sm">{errorMessage}</p>
                     </div>
                   )}
 
@@ -212,6 +213,7 @@ export function ContactSectionClient({ txt, href }: ContactSectionClientProps) {
                     <div>
                       <Input
                         name="name"
+                        aria-label={txt.placeholders.name}
                         value={formData.name}
                         onChange={handleChange}
                         onBlur={handleBlur}
@@ -225,7 +227,7 @@ export function ContactSectionClient({ txt, href }: ContactSectionClientProps) {
                         required
                       />
                       {errors.name && (
-                        <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                        <p className="mt-1 text-sm text-destructive flex items-center gap-1">
                           <AlertCircle className="h-3 w-3" />
                           {errors.name}
                         </p>
@@ -235,6 +237,7 @@ export function ContactSectionClient({ txt, href }: ContactSectionClientProps) {
                       <Input
                         type="tel"
                         name="phone"
+                        aria-label={txt.placeholders.phone}
                         value={formData.phone}
                         onChange={handleChange}
                         onBlur={handleBlur}
@@ -248,7 +251,7 @@ export function ContactSectionClient({ txt, href }: ContactSectionClientProps) {
                         required
                       />
                       {errors.phone && (
-                        <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                        <p className="mt-1 text-sm text-destructive flex items-center gap-1">
                           <AlertCircle className="h-3 w-3" />
                           {errors.phone}
                         </p>
@@ -259,6 +262,7 @@ export function ContactSectionClient({ txt, href }: ContactSectionClientProps) {
                     <Input
                       type="email"
                       name="email"
+                        aria-label={txt.placeholders.email}
                       value={formData.email}
                       onChange={handleChange}
                       onBlur={handleBlur}
@@ -272,7 +276,7 @@ export function ContactSectionClient({ txt, href }: ContactSectionClientProps) {
                       required
                     />
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                      <p className="mt-1 text-sm text-destructive flex items-center gap-1">
                         <AlertCircle className="h-3 w-3" />
                         {errors.email}
                       </p>
@@ -282,6 +286,7 @@ export function ContactSectionClient({ txt, href }: ContactSectionClientProps) {
                   <div>
                     <Textarea
                       name="message"
+                        aria-label={txt.placeholders.message}
                       value={formData.message}
                       onChange={handleChange}
                       onBlur={handleBlur}
@@ -296,7 +301,7 @@ export function ContactSectionClient({ txt, href }: ContactSectionClientProps) {
                       required
                     />
                     {errors.message && (
-                      <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
+                      <p className="mt-1 text-sm text-destructive flex items-center gap-1">
                         <AlertCircle className="h-3 w-3" />
                         {errors.message}
                       </p>
@@ -317,8 +322,9 @@ export function ContactSectionClient({ txt, href }: ContactSectionClientProps) {
             <Card className="storefront-card">
               <CardContent className="p-6">
                 <h3 className="mb-6 text-xl font-semibold">{txt.info.title}</h3>
+                {!contactInfo.some(info => info.label) && <p className="text-sm leading-7 text-muted-foreground">{txt.subtitle}</p>}
                 <div className="space-y-4">
-                  {contactInfo.map((item) => {
+                  {contactInfo.filter(info => info.label).map((item) => {
                     const Icon = item.icon;
                     const content = (
                       <div className="flex items-center gap-4">
